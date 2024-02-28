@@ -1,0 +1,136 @@
+<?xml version="1.0" encoding="UTF-8"?>
+ <bpmn:definitions xmlns:bpmn="http://www.omg.org/spec/BPMN/20100524/MODEL" xmlns:bpmndi="http://www.omg.org/spec/BPMN/20100524/DI" xmlns:dc="http://www.omg.org/spec/DD/20100524/DC" id="Definitions_428404c9" targetNamespace="http://bpmn.io/schema/bpmn">
+   <bpmn:collaboration id="Collaboration_6ede114e">
+     <bpmn:participant id="Participant_567adf15" name="Customer Support" processRef="Process_ca02b2f7"></bpmn:participant>
+     <bpmn:participant id="Participant_e80979a3" name="Customer" processRef="Process_d4892f23"></bpmn:participant>
+     <bpmn:messageFlow id="Flow_58be30ce" name="claim" sourceRef="Activity_aed41fe0" targetRef="Activity_102a9d06"></bpmn:messageFlow>
+     <bpmn:messageFlow id="Flow_d5711c81" name="refusal" sourceRef="Activity_6829a436" targetRef="Activity_59ef423d"></bpmn:messageFlow>
+   </bpmn:collaboration>
+   <bpmn:process id="Process_ca02b2f7" isExecutable="true">
+     <bpmn:startEvent id="Event_c9b29457" name="Begin of Customer Support Process">
+       <bpmn:outgoing>Flow_818af7a5</bpmn:outgoing>
+     </bpmn:startEvent>
+     <bpmn:endEvent id="Event_bc50dd5f" name="End of Customer Support Process">
+       <bpmn:incoming>Flow_898e99d1</bpmn:incoming>
+     </bpmn:endEvent>
+     <bpmn:task id="Activity_102a9d06" name="Check incoming claim">
+       <bpmn:incoming>Flow_818af7a5</bpmn:incoming>
+       <bpmn:outgoing>Flow_be3f8a66</bpmn:outgoing>
+     </bpmn:task>
+     <bpmn:task id="Activity_6829a436" name="Deny warranty claim">
+       <bpmn:incoming>Flow_be3f8a66</bpmn:incoming>
+       <bpmn:outgoing>Flow_898e99d1</bpmn:outgoing>
+     </bpmn:task>
+     <bpmn:sequenceFlow id="Flow_818af7a5" sourceRef="Event_c9b29457" targetRef="Activity_102a9d06"></bpmn:sequenceFlow>
+     <bpmn:sequenceFlow id="Flow_be3f8a66" name="decide" sourceRef="Activity_102a9d06" targetRef="Activity_6829a436"></bpmn:sequenceFlow>
+     <bpmn:sequenceFlow id="Flow_898e99d1" sourceRef="Activity_6829a436" targetRef="Event_bc50dd5f"></bpmn:sequenceFlow>
+   </bpmn:process>
+   <bpmn:process id="Process_d4892f23" isExecutable="false">
+     <bpmn:startEvent id="Event_5cf06ff8" name="Begin of Customer Process">
+       <bpmn:outgoing>Flow_90924a96</bpmn:outgoing></bpmn:startEvent>
+     <bpmn:endEvent id="Event_783e62e5" name="End of Customer Process">
+       <bpmn:incoming>Flow_a268f4ac</bpmn:incoming>
+     </bpmn:endEvent>
+     <bpmn:intermediateCatchEvent id="Event_efd83c32" name="Waiting for answer">
+       <incoming>Flow_e59d9455</incoming>
+       <outgoing>Flow_bcbbe77f</outgoing>
+       <bpmn:timerEventDefinition id="TimerEventDefinition_36ab1aea">
+         <bpmn:timeDuration xsi:type="bpmn:tFormalExpression">PT1M</bpmn:timeDuration>
+       </bpmn:timerEventDefinition>
+     </bpmn:intermediateCatchEvent>
+     <bpmn:task id="Activity_aed41fe0" name="Notice of defect">
+       <bpmn:incoming>Flow_90924a96</bpmn:incoming>
+       <bpmn:outgoing>Flow_e59d9455</bpmn:outgoing>
+     </bpmn:task>
+     <bpmn:task id="Activity_59ef423d" name="Receipt warranty refusal">
+       <bpmn:incoming>Flow_bcbbe77f</bpmn:incoming>
+       <bpmn:outgoing>Flow_a268f4ac</bpmn:outgoing>
+     </bpmn:task>
+     <bpmn:sequenceFlow id="Flow_90924a96" sourceRef="Event_5cf06ff8" targetRef="Activity_aed41fe0"></bpmn:sequenceFlow>
+     <bpmn:sequenceFlow id="Flow_e59d9455" sourceRef="Activity_aed41fe0" targetRef="Event_efd83c32"></bpmn:sequenceFlow>
+     <bpmn:sequenceFlow id="Flow_bcbbe77f" sourceRef="Event_efd83c32" targetRef="Activity_59ef423d"></bpmn:sequenceFlow>
+     <bpmn:sequenceFlow id="Flow_a268f4ac" sourceRef="Activity_59ef423d" targetRef="Event_783e62e5"></bpmn:sequenceFlow>
+   </bpmn:process>
+   <bpmndi:BPMNDiagram id="BPMNDiagram_1">
+     <bpmndi:BPMNPlane id="BPMNPlane_1" bpmnElement="Collaboration_6ede114e">
+       <bpmndi:BPMNShape id="Participant_567adf15_di" bpmnElement="Participant_567adf15" isHorizontal="true">
+         <dc:Bounds x="150" y="80" width="800" height="160"></dc:Bounds>
+       </bpmndi:BPMNShape>
+       <bpmndi:BPMNShape id="Participant_e80979a3_di" bpmnElement="Participant_e80979a3" isHorizontal="true">
+         <dc:Bounds x="150" y="360" width="800" height="160"></dc:Bounds>
+       </bpmndi:BPMNShape>
+       <bpmndi:BPMNShape id="Event_c9b29457_di" bpmnElement="Event_c9b29457">
+         <dc:Bounds x="225" y="142" width="36" height="36"></dc:Bounds>
+       </bpmndi:BPMNShape>
+       <bpmndi:BPMNShape id="Event_bc50dd5f_di" bpmnElement="Event_bc50dd5f">
+         <dc:Bounds x="822" y="142" width="36" height="36"></dc:Bounds>
+       </bpmndi:BPMNShape>
+       <bpmndi:BPMNShape id="Activity_102a9d06_di" bpmnElement="Activity_102a9d06">
+         <dc:Bounds x="320" y="120" width="100" height="80"></dc:Bounds>
+       </bpmndi:BPMNShape>
+       <bpmndi:BPMNShape id="Activity_6829a436_di" bpmnElement="Activity_6829a436">
+         <dc:Bounds x="580" y="120" width="100" height="80"></dc:Bounds>
+       </bpmndi:BPMNShape>
+       <bpmndi:BPMNShape id="Event_5cf06ff8_di" bpmnElement="Event_5cf06ff8">
+         <dc:Bounds x="225" y="422" width="36" height="36"></dc:Bounds>
+       </bpmndi:BPMNShape>
+       <bpmndi:BPMNShape id="Event_783e62e5_di" bpmnElement="Event_783e62e5">
+         <dc:Bounds x="822" y="422" width="36" height="36"></dc:Bounds>
+       </bpmndi:BPMNShape>
+       <bpmndi:BPMNShape id="Activity_aed41fe0_di" bpmnElement="Activity_aed41fe0">
+         <dc:Bounds x="320" y="400" width="100" height="80"></dc:Bounds>
+       </bpmndi:BPMNShape>
+       <bpmndi:BPMNShape id="Event_efd83c32_di" bpmnElement="Event_efd83c32">
+         <dc:Bounds x="482" y="422" width="36" height="36"></dc:Bounds>
+       </bpmndi:BPMNShape>
+       <bpmndi:BPMNShape id="Activity_59ef423d_di" bpmnElement="Activity_59ef423d">
+         <dc:Bounds x="580" y="400" width="100" height="80"></dc:Bounds>
+       </bpmndi:BPMNShape>
+       <bpmndi:BPMNEdge id="Flow_818af7a5_di" bpmnElement="Flow_818af7a5">
+         <di:waypoint x="261" y="160"></di:waypoint>
+         <di:waypoint x="320" y="160"></di:waypoint>
+       </bpmndi:BPMNEdge>
+       <bpmndi:BPMNEdge id="Flow_be3f8a66_di" bpmnElement="Flow_be3f8a66">
+         <di:waypoint x="420" y="160"></di:waypoint>
+         <di:waypoint x="580" y="160"></di:waypoint>
+         <bpmndi:BPMNLabel>
+           <dc:Bounds x="485" y="142" width="33" height="14"></dc:Bounds>
+         </bpmndi:BPMNLabel>
+       </bpmndi:BPMNEdge>
+       <bpmndi:BPMNEdge id="Flow_898e99d1_di" bpmnElement="Flow_898e99d1">
+         <di:waypoint x="680" y="160"></di:waypoint>
+         <di:waypoint x="822" y="160"></di:waypoint>
+       </bpmndi:BPMNEdge>
+       <bpmndi:BPMNEdge id="Flow_90924a96_di" bpmnElement="Flow_90924a96">
+         <di:waypoint x="261" y="440"></di:waypoint>
+         <di:waypoint x="320" y="440"></di:waypoint>
+       </bpmndi:BPMNEdge>
+       <bpmndi:BPMNEdge id="Flow_e59d9455_di" bpmnElement="Flow_e59d9455">
+         <di:waypoint x="420" y="440"></di:waypoint>
+         <di:waypoint x="482" y="440"></di:waypoint>
+       </bpmndi:BPMNEdge>
+       <bpmndi:BPMNEdge id="Flow_bcbbe77f_di" bpmnElement="Flow_bcbbe77f">
+         <di:waypoint x="518" y="440"></di:waypoint>
+         <di:waypoint x="580" y="440"></di:waypoint>
+       </bpmndi:BPMNEdge>
+       <bpmndi:BPMNEdge id="Flow_a268f4ac_di" bpmnElement="Flow_a268f4ac">
+         <di:waypoint x="680" y="440"></di:waypoint>
+         <di:waypoint x="822" y="440"></di:waypoint>
+       </bpmndi:BPMNEdge>
+       <bpmndi:BPMNEdge id="Flow_58be30ce_di" bpmnElement="Flow_58be30ce">
+         <di:waypoint x="370" y="400"></di:waypoint>
+         <di:waypoint x="370" y="200"></di:waypoint>
+         <bpmndi:BPMNLabel>
+           <dc:Bounds x="387" y="290" width="26" height="14"></dc:Bounds>
+         </bpmndi:BPMNLabel>
+       </bpmndi:BPMNEdge>
+       <bpmndi:BPMNEdge id="Flow_d5711c81_di" bpmnElement="Flow_d5711c81">
+         <di:waypoint x="630" y="200"></di:waypoint>
+         <di:waypoint x="630" y="400"></di:waypoint>
+         <bpmndi:BPMNLabel>
+           <dc:Bounds x="643" y="290" width="34" height="14"></dc:Bounds>
+         </bpmndi:BPMNLabel>
+       </bpmndi:BPMNEdge>
+     </bpmndi:BPMNPlane>
+   </bpmndi:BPMNDiagram>
+ </bpmn:definitions>

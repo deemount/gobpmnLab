@@ -1,0 +1,14 @@
+.DS_Store
+*.code-workspace
+formio
+/models/__temp
+/files/bpmn
+/files/json
+/src
+/node_modules
+.npmrc
+package-lock.json
+package.json
+webpack.config.js
+.log
+cpu.prof

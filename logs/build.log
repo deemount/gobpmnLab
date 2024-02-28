@@ -1,0 +1,276 @@
+
+2023/11/28 18:52:51 step 1 >> main.go: init factory
+2023/11/28 18:52:51 BpmnFactory.go: files/bpmn
+2023/11/28 18:52:51 BpmnFactory.go: created filename diagram_146.bpmn
+2023/11/28 18:52:51 step 2 >> main.go: init engine
+2023/11/28 18:52:51 BpmnEngine.go: return new engine with name goBPMN
+2023/11/28 18:52:51 step 3 >> main.go: init process instance
+2023/11/28 18:52:51 main.go: Init done
+
+
+2023/11/28 18:52:51 main.go: bpmnFactory.Build
+2023/11/28 18:52:51 BpmnFactory.go: set model
+2023/11/28 18:52:51 factory/Builder.go (inject): > NewReflect of interface{} p. Start injecting fields
+2023/11/28 18:52:51 factory/Builder.go (inject): > length of anonymous fields is 4
+
+2023/11/28 18:52:51 factory/Builder.go (inject): >> start range through anonymous fields 1 of 4
+2023/11/28 18:52:51 factory/Builder.go (inject): >> create fieldMap map[int][]interface {}{} with length 7
+2023/11/28 18:52:51 factory/Builder.go (inject): >> create hashSlice []interface {}{interface {}(nil), interface {}(nil), interface {}(nil), interface {}(nil), interface {}(nil), interface {}(nil), interface {}(nil)} with length 7
+
+2023/11/28 18:52:51 factory/Builder.go (inject): >> append to anonymMap[0] the name Pool
+2023/11/28 18:52:51 factory/Builder.go (inject): --> append to fieldMap[0] the name CustomerSupportIsExecutable
+2023/11/28 18:52:51 factory/Builder.go (inject): inject first bool field CustomerSupportIsExecutable once
+2023/11/28 18:52:51 factory/Builder.go (inject): >> field injection 1 of 7 done
+
+2023/11/28 18:52:51 factory/Builder.go (inject): --> append to fieldMap[1] the name CustomerIsExecutable
+2023/11/28 18:52:51 factory/Builder.go (inject): second bool field CustomerIsExecutable stays false
+2023/11/28 18:52:51 factory/Builder.go (inject): >> field injection 2 of 7 done
+2023/11/28 18:52:51 factory/Builder.go (inject): --> append to fieldMap[2] the name Collaboration
+2023/11/28 18:52:51 factory/Builder.go (inject): inject first at process index [0] => [Pool] on current fieldname Collaboration (10517fbe) with hash value
+2023/11/28 18:52:51 factory/Builder.go (inject): inject next fieldname at Pool: CustomerSupportID (780a57dd)
+2023/11/28 18:52:51 factory/Builder.go (inject): >> field injection 3 of 7 done
+2023/11/28 18:52:51 factory/Builder.go (inject): --> append to fieldMap[3] the name CustomerSupportID
+2023/11/28 18:52:51 factory/Builder.go (inject): current fieldname CustomerSupportID (780a57dd) has got hash value before
+2023/11/28 18:52:51 factory/Builder.go (inject): previous fieldname was Collaboration (10517fbe)
+2023/11/28 18:52:51 factory/Builder.go (inject): inject next fieldname at Pool: CustomerSupportProcess (43e6f025)
+2023/11/28 18:52:51 factory/Builder.go (inject): >> field injection 4 of 7 done
+2023/11/28 18:52:51 factory/Builder.go (inject): --> append to fieldMap[4] the name CustomerSupportProcess
+2023/11/28 18:52:51 factory/Builder.go (inject): current fieldname CustomerSupportProcess (43e6f025) has got hash value before
+2023/11/28 18:52:51 factory/Builder.go (inject): previous fieldname was CustomerSupportID (780a57dd)
+2023/11/28 18:52:51 factory/Builder.go (inject): inject next fieldname at Pool: CustomerID (784937de)
+2023/11/28 18:52:51 factory/Builder.go (inject): >> field injection 5 of 7 done
+2023/11/28 18:52:51 factory/Builder.go (inject): --> append to fieldMap[5] the name CustomerID
+2023/11/28 18:52:51 factory/Builder.go (inject): current fieldname CustomerID (784937de) has got hash value before
+2023/11/28 18:52:51 factory/Builder.go (inject): previous fieldname was CustomerSupportProcess (43e6f025)
+2023/11/28 18:52:51 factory/Builder.go (inject): inject next fieldname at Pool: CustomerProcess (58742faa)
+2023/11/28 18:52:51 factory/Builder.go (inject): >> field injection 6 of 7 done
+2023/11/28 18:52:51 factory/Builder.go (inject): --> append to fieldMap[6] the name CustomerProcess
+2023/11/28 18:52:51 factory/Builder.go (inject): current fieldname CustomerProcess (58742faa) has got hash value before
+2023/11/28 18:52:51 factory/Builder.go (inject): previous fieldname was CustomerID (784937de)
+2023/11/28 18:52:51 factory/Builder.go (inject): current fieldname CustomerProcess has no fieldname to the next
+2023/11/28 18:52:51 factory/Builder.go (inject): >> field injection 7 of 7 done
+2023/11/28 18:52:51 factory/Builder.go (inject): >> show current hashSlice []interface {}{true, false, "10517fbe", "780a57dd", "43e6f025", "784937de", "58742faa"}
+
+2023/11/28 18:52:51 factory/Builder.go (inject): >> start range through anonymous fields 2 of 4
+2023/11/28 18:52:51 factory/Builder.go (inject): >> create fieldMap map[int][]interface {}{} with length 2
+2023/11/28 18:52:51 factory/Builder.go (inject): >> create hashSlice []interface {}{interface {}(nil), interface {}(nil)} with length 2
+
+2023/11/28 18:52:51 factory/Builder.go (inject): >> append to anonymMap[1] the name Message
+2023/11/28 18:52:51 factory/Builder.go (inject): --> append to fieldMap[0] the name CustomerToCustomerSupportMessage
+2023/11/28 18:52:51 factory/Builder.go (inject): --> detected field CustomerToCustomerSupportMessage contains anonymous field Message
+2023/11/28 18:52:51 factory/Builder.go (inject): inject first at process index [1] => [Message] on current fieldname CustomerToCustomerSupportMessage (62224ea1) with hash value
+2023/11/28 18:52:51 factory/Builder.go (inject): current fieldname CustomerToCustomerSupportMessage has no previous field
+2023/11/28 18:52:51 factory/Builder.go (inject): inject next fieldname at Message: CustomerSupportToCustomerMessage (fa9d59b1)
+2023/11/28 18:52:51 factory/Builder.go (inject): >> field injection 1 of 2 done
+2023/11/28 18:52:51 factory/Builder.go (inject): --> append to fieldMap[1] the name CustomerSupportToCustomerMessage
+2023/11/28 18:52:51 factory/Builder.go (inject): --> detected field CustomerSupportToCustomerMessage contains anonymous field Message
+2023/11/28 18:52:51 factory/Builder.go (inject): current fieldname CustomerSupportToCustomerMessage (fa9d59b1) has got hash value before
+2023/11/28 18:52:51 factory/Builder.go (inject): previous fieldname was CustomerToCustomerSupportMessage (62224ea1)
+2023/11/28 18:52:51 factory/Builder.go (inject): current fieldname CustomerSupportToCustomerMessage has no fieldname to the next
+2023/11/28 18:52:51 factory/Builder.go (inject): >> field injection 2 of 2 done
+2023/11/28 18:52:51 factory/Builder.go (inject): >> show current hashSlice []interface {}{"62224ea1", "fa9d59b1"}
+
+2023/11/28 18:52:51 factory/Builder.go (inject): >> start range through anonymous fields 3 of 4
+2023/11/28 18:52:51 factory/Builder.go (inject): >> create fieldMap map[int][]interface {}{} with length 7
+2023/11/28 18:52:51 factory/Builder.go (inject): >> create hashSlice []interface {}{interface {}(nil), interface {}(nil), interface {}(nil), interface {}(nil), interface {}(nil), interface {}(nil), interface {}(nil)} with length 7
+2023/11/28 18:52:51 factory/Builder.go (inject): >> append to anonymMap[2] the name CustomerSupport
+2023/11/28 18:52:51 factory/Builder.go (inject): --> append to fieldMap[0] the name CustomerSupportStartEvent
+2023/11/28 18:52:51 factory/Builder.go (inject): --> detected field CustomerSupportStartEvent contains anonymous field CustomerSupport
+2023/11/28 18:52:51 factory/Builder.go (inject): inject first at process index [2] => [Customer Support] on current fieldname CustomerSupportStartEvent (642a9bcc) with hash value
+2023/11/28 18:52:51 factory/Builder.go (inject): current fieldname CustomerSupportStartEvent has no previous field
+2023/11/28 18:52:51 factory/Builder.go (inject): inject next fieldname at CustomerSupport: FromCustomerSupportStartEvent (89cda62b)
+2023/11/28 18:52:51 factory/Builder.go (inject): >> field injection 1 of 7 done
+2023/11/28 18:52:51 factory/Builder.go (inject): --> append to fieldMap[1] the name FromCustomerSupportStartEvent
+2023/11/28 18:52:51 factory/Builder.go (inject): --> detected field FromCustomerSupportStartEvent contains anonymous field CustomerSupport
+2023/11/28 18:52:51 factory/Builder.go (inject): current fieldname FromCustomerSupportStartEvent (89cda62b) has got hash value before
+2023/11/28 18:52:51 factory/Builder.go (inject): previous fieldname was CustomerSupportStartEvent (642a9bcc)
+2023/11/28 18:52:51 factory/Builder.go (inject): inject next fieldname at CustomerSupport: CheckIncomingClaimTask (2e9ac1ec)
+2023/11/28 18:52:51 factory/Builder.go (inject): >> field injection 2 of 7 done
+2023/11/28 18:52:51 factory/Builder.go (inject): --> append to fieldMap[2] the name CheckIncomingClaimTask
+2023/11/28 18:52:51 factory/Builder.go (inject): current fieldname CheckIncomingClaimTask (2e9ac1ec) has got hash value before
+2023/11/28 18:52:51 factory/Builder.go (inject): previous fieldname was FromCustomerSupportStartEvent (89cda62b)
+2023/11/28 18:52:51 factory/Builder.go (inject): inject next fieldname at CustomerSupport: FromCheckIncomingClaimTask (2d112b35)
+2023/11/28 18:52:51 factory/Builder.go (inject): >> field injection 3 of 7 done
+2023/11/28 18:52:51 factory/Builder.go (inject): --> append to fieldMap[3] the name FromCheckIncomingClaimTask
+2023/11/28 18:52:51 factory/Builder.go (inject): current fieldname FromCheckIncomingClaimTask (2d112b35) has got hash value before
+2023/11/28 18:52:51 factory/Builder.go (inject): previous fieldname was CheckIncomingClaimTask (2e9ac1ec)
+2023/11/28 18:52:51 factory/Builder.go (inject): inject next fieldname at CustomerSupport: DenyWarrantyClaimTask (932a7b31)
+2023/11/28 18:52:51 factory/Builder.go (inject): >> field injection 4 of 7 done
+2023/11/28 18:52:51 factory/Builder.go (inject): --> append to fieldMap[4] the name DenyWarrantyClaimTask
+2023/11/28 18:52:51 factory/Builder.go (inject): current fieldname DenyWarrantyClaimTask (932a7b31) has got hash value before
+2023/11/28 18:52:51 factory/Builder.go (inject): previous fieldname was FromCheckIncomingClaimTask (2d112b35)
+2023/11/28 18:52:51 factory/Builder.go (inject): inject next fieldname at CustomerSupport: FromDenyWarrantyClaimTask (81b44587)
+2023/11/28 18:52:51 factory/Builder.go (inject): >> field injection 5 of 7 done
+2023/11/28 18:52:51 factory/Builder.go (inject): --> append to fieldMap[5] the name FromDenyWarrantyClaimTask
+2023/11/28 18:52:51 factory/Builder.go (inject): current fieldname FromDenyWarrantyClaimTask (81b44587) has got hash value before
+2023/11/28 18:52:51 factory/Builder.go (inject): previous fieldname was DenyWarrantyClaimTask (932a7b31)
+2023/11/28 18:52:51 factory/Builder.go (inject): inject next fieldname at CustomerSupport: CustomerSupportEndEvent (ea1e71e1)
+2023/11/28 18:52:51 factory/Builder.go (inject): >> field injection 6 of 7 done
+2023/11/28 18:52:51 factory/Builder.go (inject): --> append to fieldMap[6] the name CustomerSupportEndEvent
+2023/11/28 18:52:51 factory/Builder.go (inject): --> detected field CustomerSupportEndEvent contains anonymous field CustomerSupport
+2023/11/28 18:52:51 factory/Builder.go (inject): current fieldname CustomerSupportEndEvent (ea1e71e1) has got hash value before
+2023/11/28 18:52:51 factory/Builder.go (inject): previous fieldname was FromDenyWarrantyClaimTask (81b44587)
+2023/11/28 18:52:51 factory/Builder.go (inject): current fieldname CustomerSupportEndEvent has no fieldname to the next
+2023/11/28 18:52:51 factory/Builder.go (inject): >> field injection 7 of 7 done
+2023/11/28 18:52:51 factory/Builder.go (inject): >> show current hashSlice []interface {}{"642a9bcc", "89cda62b", "2e9ac1ec", "2d112b35", "932a7b31", "81b44587", "ea1e71e1"}
+
+2023/11/28 18:52:51 factory/Builder.go (inject): >> start range through anonymous fields 4 of 4
+2023/11/28 18:52:51 factory/Builder.go (inject): >> create fieldMap map[int][]interface {}{} with length 10
+2023/11/28 18:52:51 factory/Builder.go (inject): >> create hashSlice []interface {}{interface {}(nil), interface {}(nil), interface {}(nil), interface {}(nil), interface {}(nil), interface {}(nil), interface {}(nil), interface {}(nil), interface {}(nil), interface {}(nil)} with length 10
+2023/11/28 18:52:51 factory/Builder.go (inject): >> append to anonymMap[3] the name Customer
+2023/11/28 18:52:51 factory/Builder.go (inject): --> append to fieldMap[0] the name CustomerStartEvent
+2023/11/28 18:52:51 factory/Builder.go (inject): --> detected field CustomerStartEvent contains anonymous field Customer
+2023/11/28 18:52:51 factory/Builder.go (inject): inject first at process index [3] => [Customer] on current fieldname CustomerStartEvent (12ad41de) with hash value 
+2023/11/28 18:52:51 factory/Builder.go (inject): current fieldname CustomerStartEvent has no previous field
+2023/11/28 18:52:51 factory/Builder.go (inject): inject next fieldname at Customer: FromCustomerStartEvent (0fbe92fc)
+2023/11/28 18:52:51 factory/Builder.go (inject): >> field injection 1 of 10 done
+2023/11/28 18:52:51 factory/Builder.go (inject): --> append to fieldMap[1] the name FromCustomerStartEvent
+2023/11/28 18:52:51 factory/Builder.go (inject): --> detected field FromCustomerStartEvent contains anonymous field Customer
+2023/11/28 18:52:51 factory/Builder.go (inject): current fieldname FromCustomerStartEvent (0fbe92fc) has got hash value before
+2023/11/28 18:52:51 factory/Builder.go (inject): previous fieldname was CustomerStartEvent (12ad41de)
+2023/11/28 18:52:51 factory/Builder.go (inject): inject next fieldname at Customer: NoticeOfDefectTask (cd318c9d)
+2023/11/28 18:52:51 factory/Builder.go (inject): >> field injection 2 of 10 done
+2023/11/28 18:52:51 factory/Builder.go (inject): --> append to fieldMap[2] the name NoticeOfDefectTask
+2023/11/28 18:52:51 factory/Builder.go (inject): current fieldname NoticeOfDefectTask (cd318c9d) has got hash value before
+2023/11/28 18:52:51 factory/Builder.go (inject): previous fieldname was FromCustomerStartEvent (0fbe92fc)
+2023/11/28 18:52:51 factory/Builder.go (inject): inject next fieldname at Customer: FromNoticeOfDefectTask (3c655c25)
+2023/11/28 18:52:51 factory/Builder.go (inject): >> field injection 3 of 10 done
+2023/11/28 18:52:51 factory/Builder.go (inject): --> append to fieldMap[3] the name FromNoticeOfDefectTask
+2023/11/28 18:52:51 factory/Builder.go (inject): current fieldname FromNoticeOfDefectTask (3c655c25) has got hash value before
+2023/11/28 18:52:51 factory/Builder.go (inject): previous fieldname was NoticeOfDefectTask (cd318c9d)
+2023/11/28 18:52:51 factory/Builder.go (inject): inject next fieldname at Customer: WaitingForAnswerTask (596a81a3)
+2023/11/28 18:52:51 factory/Builder.go (inject): >> field injection 4 of 10 done
+2023/11/28 18:52:51 factory/Builder.go (inject): --> append to fieldMap[4] the name WaitingForAnswerTask
+2023/11/28 18:52:51 factory/Builder.go (inject): current fieldname WaitingForAnswerTask (596a81a3) has got hash value before
+2023/11/28 18:52:51 factory/Builder.go (inject): previous fieldname was FromNoticeOfDefectTask (3c655c25)
+2023/11/28 18:52:51 factory/Builder.go (inject): inject next fieldname at Customer: TimerEventDefinitionWaitingForAnswer (e46c2df1)
+2023/11/28 18:52:51 factory/Builder.go (inject): >> field injection 5 of 10 done
+2023/11/28 18:52:51 factory/Builder.go (inject): --> append to fieldMap[5] the name TimerEventDefinitionWaitingForAnswer
+2023/11/28 18:52:51 factory/Builder.go (inject): current fieldname TimerEventDefinitionWaitingForAnswer (e46c2df1) has got hash value before
+2023/11/28 18:52:51 factory/Builder.go (inject): previous fieldname was WaitingForAnswerTask (596a81a3)
+2023/11/28 18:52:51 factory/Builder.go (inject): inject next fieldname at Customer: FromWaitingForAnswerTask (294bbe65)
+2023/11/28 18:52:51 factory/Builder.go (inject): >> field injection 6 of 10 done
+2023/11/28 18:52:51 factory/Builder.go (inject): --> append to fieldMap[6] the name FromWaitingForAnswerTask
+2023/11/28 18:52:51 factory/Builder.go (inject): current fieldname FromWaitingForAnswerTask (294bbe65) has got hash value before
+2023/11/28 18:52:51 factory/Builder.go (inject): previous fieldname was TimerEventDefinitionWaitingForAnswer (e46c2df1)
+2023/11/28 18:52:51 factory/Builder.go (inject): inject next fieldname at Customer: ReceiptWarrantyRefusalTask (7e3188ab)
+2023/11/28 18:52:51 factory/Builder.go (inject): >> field injection 7 of 10 done
+2023/11/28 18:52:51 factory/Builder.go (inject): --> append to fieldMap[7] the name ReceiptWarrantyRefusalTask
+2023/11/28 18:52:51 factory/Builder.go (inject): current fieldname ReceiptWarrantyRefusalTask (7e3188ab) has got hash value before
+2023/11/28 18:52:51 factory/Builder.go (inject): previous fieldname was FromWaitingForAnswerTask (294bbe65)
+2023/11/28 18:52:51 factory/Builder.go (inject): inject next fieldname at Customer: FromReceiptWarrantyRefusalTask (bb952c5f)
+2023/11/28 18:52:51 factory/Builder.go (inject): >> field injection 8 of 10 done
+2023/11/28 18:52:51 factory/Builder.go (inject): --> append to fieldMap[8] the name FromReceiptWarrantyRefusalTask
+2023/11/28 18:52:51 factory/Builder.go (inject): current fieldname FromReceiptWarrantyRefusalTask (bb952c5f) has got hash value before
+2023/11/28 18:52:51 factory/Builder.go (inject): previous fieldname was ReceiptWarrantyRefusalTask (7e3188ab)
+2023/11/28 18:52:51 factory/Builder.go (inject): inject next fieldname at Customer: CustomerEndEvent (732c05be)
+2023/11/28 18:52:51 factory/Builder.go (inject): >> field injection 9 of 10 done
+2023/11/28 18:52:51 factory/Builder.go (inject): --> append to fieldMap[9] the name CustomerEndEvent
+2023/11/28 18:52:51 factory/Builder.go (inject): --> detected field CustomerEndEvent contains anonymous field Customer
+2023/11/28 18:52:51 factory/Builder.go (inject): current fieldname CustomerEndEvent (732c05be) has got hash value before
+2023/11/28 18:52:51 factory/Builder.go (inject): previous fieldname was FromReceiptWarrantyRefusalTask (bb952c5f)
+2023/11/28 18:52:51 factory/Builder.go (inject): current fieldname CustomerEndEvent has no fieldname to the next
+2023/11/28 18:52:51 factory/Builder.go (inject): >> field injection 10 of 10 done
+2023/11/28 18:52:51 factory/Builder.go (inject): >> show current hashSlice []interface {}{"12ad41de", "0fbe92fc", "cd318c9d", "3c655c25", "596a81a3", "e46c2df1", "294bbe65", "7e3188ab", "bb952c5f", "732c05be"}
+
+2023/11/28 18:52:51 r &map[Customer:[12ad41de 0fbe92fc cd318c9d 3c655c25 596a81a3 e46c2df1 294bbe65 7e3188ab bb952c5f 732c05be] CustomerSupport:[642a9bcc 89cda62b 2e9ac1ec 2d112b35 932a7b31 81b44587 ea1e71e1] Message:[62224ea1 fa9d59b1] Pool:[true false 10517fbe 780a57dd 43e6f025 784937de 58742faa]]
+
+2023/11/28 18:52:51 factory/Builder.go (inject): > merged hashSlice with hashMap map[Customer:[12ad41de 0fbe92fc cd318c9d 3c655c25 596a81a3 e46c2df1 294bbe65 7e3188ab bb952c5f 732c05be] CustomerSupport:[642a9bcc 89cda62b 2e9ac1ec 2d112b35 932a7b31 81b44587 ea1e71e1] Message:[62224ea1 fa9d59b1] Pool:[true false 10517fbe 780a57dd 43e6f025 784937de 58742faa]]
+2023/11/28 18:52:51 factory/Builder.go (inject): > merged anonymMap with fieldMap to processMap map[Customer:map[0:[CustomerStartEvent] 1:[FromCustomerStartEvent] 2:[NoticeOfDefectTask] 3:[FromNoticeOfDefectTask] 4:[WaitingForAnswerTask] 5:[TimerEventDefinitionWaitingForAnswer] 6:[FromWaitingForAnswerTask] 7:[ReceiptWarrantyRefusalTask] 8:[FromReceiptWarrantyRefusalTask] 9:[CustomerEndEvent]] CustomerSupport:map[0:[CustomerSupportStartEvent] 1:[FromCustomerSupportStartEvent] 2:[CheckIncomingClaimTask] 3:[FromCheckIncomingClaimTask] 4:[DenyWarrantyClaimTask] 5:[FromDenyWarrantyClaimTask] 6:[CustomerSupportEndEvent]] Message:map[0:[CustomerToCustomerSupportMessage] 1:[CustomerSupportToCustomerMessage]] Pool:map[0:[CustomerSupportIsExecutable] 1:[CustomerIsExecutable] 2:[Collaboration] 3:[CustomerSupportID] 4:[CustomerSupportProcess] 5:[CustomerID] 6:[CustomerProcess]]]
+
+2023/11/28 18:52:51 factory.reflect: count app words 107
+2023/11/28 18:52:51 factory/Builder.go (inject): eof inject; detect 2 of reflected public methods
+
+2023/11/28 18:52:51 examples/collaborative_process/collaborative_process.go (New): result of Builder.Map map[string][]interface {}{"Customer":[]interface {}{"12ad41de", "0fbe92fc", "cd318c9d", "3c655c25", "596a81a3", "e46c2df1", "294bbe65", "7e3188ab", "bb952c5f", "732c05be"}, "CustomerSupport":[]interface {}{"642a9bcc", "89cda62b", "2e9ac1ec", "2d112b35", "932a7b31", "81b44587", "ea1e71e1"}, "Message":[]interface {}{"62224ea1", "fa9d59b1"}, "Pool":[]interface {}{true, false, "10517fbe", "780a57dd", "43e6f025", "784937de", "58742faa"}}
+
+2023/11/28 18:52:51 models/bpmn/canvas/Delegates.go (setLabel): set label
+
+2023/11/28 18:52:51 models/bpmn/canvas/Delegates.go (setWaypoints): got waypoints 2
+2023/11/28 18:52:51 models/bpmn/canvas/Delegates.go (setWaypoints): set waypoints for Flow_62224ea1_di
+2023/11/28 18:52:51 models/bpmn/canvas/Delegates.go (setEdge): set edge for Flow_62224ea1_di (Flow_62224ea1)
+2023/11/28 18:52:51 models/bpmn/canvas/Delegates.go (setLabel): set label
+
+2023/11/28 18:52:51 models/bpmn/canvas/Delegates.go (setWaypoints): got waypoints 4
+2023/11/28 18:52:51 models/bpmn/canvas/Delegates.go (setWaypoints): set waypoints for Flow_fa9d59b1_di
+2023/11/28 18:52:51 models/bpmn/canvas/Delegates.go (setEdge): set edge for Flow_fa9d59b1_di (Flow_fa9d59b1)
+
+2023/11/28 18:52:51 models/bpmn/canvas/Delegates.go (setPool): set bounds for Participant_780a57dd_di (Participant_780a57dd)
+2023/11/28 18:52:51 models/bpmn/canvas/Delegates.go (setPool): set bounds for Participant_784937de_di (Participant_784937de)
+
+2023/11/28 18:52:51 models/bpmn/canvas/Delegates.go (findCoordinatesByPreviousBounds): no bounds set in shape, but found previous bounds
+2023/11/28 18:52:51 models/bpmn/canvas/Delegates.go (findCoordinatesByPreviousBounds): got shape type event
+2023/11/28 18:52:51 models/bpmn/canvas/Delegates.go (findCoordinatesByPreviousBounds): got previous bounds 129, 52
+2023/11/28 18:52:51 models/bpmn/canvas/Delegates.go (setBounds): set bounds (coordinates: 179, 159, size: 36, 36) for Event_642a9bcc_di (Event_642a9bcc)
+2023/11/28 18:52:51 models/bpmn/canvas/Delegates.go (setShape): set shape for Event_642a9bcc_di (Event_642a9bcc)
+
+2023/11/28 18:52:51 models/bpmn/canvas/Delegates.go (setWaypoints): got waypoints 0
+2023/11/28 18:52:51 models/bpmn/canvas/Delegates.go (setWaypoints): set waypoints for Flow_89cda62b_di
+2023/11/28 18:52:51 models/bpmn/canvas/Delegates.go (setEdge): set edge for Flow_89cda62b_di (Flow_89cda62b)
+2023/11/28 18:52:51 models/bpmn/canvas/Delegates.go (findCoordinatesByPreviousWaypoint): no bounds set in shape, but found previous waypoint
+2023/11/28 18:52:51 models/bpmn/canvas/Delegates.go (findCoordinatesByPreviousWaypoint): got shape type activity
+2023/11/28 18:52:51 models/bpmn/canvas/Delegates.go (findCoordinatesByPreviousWaypoint): got previous waypoint 270, 177
+2023/11/28 18:52:51 models/bpmn/canvas/Delegates.go (setBounds): set bounds (coordinates: 270, 137, size: 100, 80) for Activity_2e9ac1ec_di (Activity_2e9ac1ec)
+2023/11/28 18:52:51 models/bpmn/canvas/Delegates.go (setShape): set shape for Activity_2e9ac1ec_di (Activity_2e9ac1ec)
+2023/11/28 18:52:51 models/bpmn/canvas/Delegates.go (setLabel): set label
+2023/11/28 18:52:51 models/bpmn/canvas/Delegates.go (setWaypoints): got waypoints 0
+2023/11/28 18:52:51 models/bpmn/canvas/Delegates.go (setWaypoints): set waypoints for Flow_2d112b35_di
+2023/11/28 18:52:51 models/bpmn/canvas/Delegates.go (setEdge): set edge for Flow_2d112b35_di (Flow_2d112b35)
+2023/11/28 18:52:51 models/bpmn/canvas/Delegates.go (findCoordinatesByPreviousWaypoint): no bounds set in shape, but found previous waypoint
+2023/11/28 18:52:51 models/bpmn/canvas/Delegates.go (findCoordinatesByPreviousWaypoint): got shape type activity
+2023/11/28 18:52:51 models/bpmn/canvas/Delegates.go (findCoordinatesByPreviousWaypoint): got previous waypoint 425, 177
+2023/11/28 18:52:51 models/bpmn/canvas/Delegates.go (setBounds): set bounds (coordinates: 425, 137, size: 100, 80) for Activity_932a7b31_di (Activity_932a7b31)
+2023/11/28 18:52:51 models/bpmn/canvas/Delegates.go (setShape): set shape for Activity_932a7b31_di (Activity_932a7b31)
+2023/11/28 18:52:51 models/bpmn/canvas/Delegates.go (setWaypoints): got waypoints 0
+2023/11/28 18:52:51 models/bpmn/canvas/Delegates.go (setWaypoints): set waypoints for Flow_81b44587_di
+2023/11/28 18:52:51 models/bpmn/canvas/Delegates.go (setEdge): set edge for Flow_81b44587_di (Flow_81b44587)
+2023/11/28 18:52:51 models/bpmn/canvas/Delegates.go (findCoordinatesByPreviousWaypoint): no bounds set in shape, but found previous waypoint
+2023/11/28 18:52:51 models/bpmn/canvas/Delegates.go (findCoordinatesByPreviousWaypoint): got shape type event
+2023/11/28 18:52:51 models/bpmn/canvas/Delegates.go (findCoordinatesByPreviousWaypoint): got previous waypoint 580, 177
+2023/11/28 18:52:51 models/bpmn/canvas/Delegates.go (setBounds): set bounds (coordinates: 580, 159, size: 36, 36) for Event_ea1e71e1_di (Event_ea1e71e1)
+2023/11/28 18:52:51 models/bpmn/canvas/Delegates.go (setShape): set shape for Event_ea1e71e1_di (Event_ea1e71e1)
+2023/11/28 18:52:51 models/bpmn/canvas/Delegates.go (findCoordinatesByPreviousBounds): no bounds set in shape, but found previous bounds
+2023/11/28 18:52:51 models/bpmn/canvas/Delegates.go (findCoordinatesByPreviousBounds): got shape type event
+2023/11/28 18:52:51 models/bpmn/canvas/Delegates.go (findCoordinatesByPreviousBounds): got previous bounds 129, 352
+2023/11/28 18:52:51 models/bpmn/canvas/Delegates.go (setBounds): set bounds (coordinates: 179, 459, size: 36, 36) for Event_12ad41de_di (Event_12ad41de)
+2023/11/28 18:52:51 models/bpmn/canvas/Delegates.go (setShape): set shape for Event_12ad41de_di (Event_12ad41de)
+2023/11/28 18:52:51 models/bpmn/canvas/Delegates.go (setWaypoints): got waypoints 0
+2023/11/28 18:52:51 models/bpmn/canvas/Delegates.go (setWaypoints): set waypoints for Flow_0fbe92fc_di
+2023/11/28 18:52:51 models/bpmn/canvas/Delegates.go (setEdge): set edge for Flow_0fbe92fc_di (Flow_0fbe92fc)
+2023/11/28 18:52:51 models/bpmn/canvas/Delegates.go (findCoordinatesByPreviousWaypoint): no bounds set in shape, but found previous waypoint
+2023/11/28 18:52:51 models/bpmn/canvas/Delegates.go (findCoordinatesByPreviousWaypoint): got shape type activity
+2023/11/28 18:52:51 models/bpmn/canvas/Delegates.go (findCoordinatesByPreviousWaypoint): got previous waypoint 270, 477
+2023/11/28 18:52:51 models/bpmn/canvas/Delegates.go (setBounds): set bounds (coordinates: 270, 437, size: 100, 80) for Activity_cd318c9d_di (Activity_cd318c9d)
+2023/11/28 18:52:51 models/bpmn/canvas/Delegates.go (setShape): set shape for Activity_cd318c9d_di (Activity_cd318c9d)
+2023/11/28 18:52:51 models/bpmn/canvas/Delegates.go (setWaypoints): got waypoints 0
+2023/11/28 18:52:51 models/bpmn/canvas/Delegates.go (setWaypoints): set waypoints for Flow_3c655c25_di
+2023/11/28 18:52:51 models/bpmn/canvas/Delegates.go (setEdge): set edge for Flow_3c655c25_di (Flow_3c655c25)
+2023/11/28 18:52:51 models/bpmn/canvas/Delegates.go (findCoordinatesByPreviousWaypoint): no bounds set in shape, but found previous waypoint
+2023/11/28 18:52:51 models/bpmn/canvas/Delegates.go (findCoordinatesByPreviousWaypoint): got shape type event
+2023/11/28 18:52:51 models/bpmn/canvas/Delegates.go (findCoordinatesByPreviousWaypoint): got previous waypoint 425, 477
+2023/11/28 18:52:51 models/bpmn/canvas/Delegates.go (setBounds): set bounds (coordinates: 425, 459, size: 36, 36) for Event_596a81a3_di (Event_596a81a3)
+2023/11/28 18:52:51 models/bpmn/canvas/Delegates.go (setShape): set shape for Event_596a81a3_di (Event_596a81a3)
+2023/11/28 18:52:51 models/bpmn/canvas/Delegates.go (setWaypoints): got waypoints 0
+2023/11/28 18:52:51 models/bpmn/canvas/Delegates.go (setWaypoints): set waypoints for Flow_294bbe65_di
+2023/11/28 18:52:51 models/bpmn/canvas/Delegates.go (setEdge): set edge for Flow_294bbe65_di (Flow_294bbe65)
+2023/11/28 18:52:51 models/bpmn/canvas/Delegates.go (findCoordinatesByPreviousWaypoint): no bounds set in shape, but found previous waypoint
+2023/11/28 18:52:51 models/bpmn/canvas/Delegates.go (findCoordinatesByPreviousWaypoint): got shape type activity
+2023/11/28 18:52:51 models/bpmn/canvas/Delegates.go (findCoordinatesByPreviousWaypoint): got previous waypoint 516, 477
+2023/11/28 18:52:51 models/bpmn/canvas/Delegates.go (setBounds): set bounds (coordinates: 516, 437, size: 100, 80) for Activity_7e3188ab_di (Activity_7e3188ab)
+2023/11/28 18:52:51 models/bpmn/canvas/Delegates.go (setShape): set shape for Activity_7e3188ab_di (Activity_7e3188ab)
+2023/11/28 18:52:51 models/bpmn/canvas/Delegates.go (setWaypoints): got waypoints 0
+2023/11/28 18:52:51 models/bpmn/canvas/Delegates.go (setWaypoints): set waypoints for Flow_bb952c5f_di
+2023/11/28 18:52:51 models/bpmn/canvas/Delegates.go (setEdge): set edge for Flow_bb952c5f_di (Flow_bb952c5f)
+2023/11/28 18:52:51 models/bpmn/canvas/Delegates.go (findCoordinatesByPreviousWaypoint): no bounds set in shape, but found previous waypoint
+2023/11/28 18:52:51 models/bpmn/canvas/Delegates.go (findCoordinatesByPreviousWaypoint): got shape type event
+2023/11/28 18:52:51 models/bpmn/canvas/Delegates.go (findCoordinatesByPreviousWaypoint): got previous waypoint 671, 477
+2023/11/28 18:52:51 models/bpmn/canvas/Delegates.go (setBounds): set bounds (coordinates: 671, 459, size: 36, 36) for Event_732c05be_di (Event_732c05be)
+2023/11/28 18:52:51 models/bpmn/canvas/Delegates.go (setShape): set shape for Event_732c05be_di (Event_732c05be)
+2023/11/28 18:52:51 BpmnFactory.go: create bpmn
+2023/11/28 18:52:51 main.go: instance.GetProcessInfo
+2023/11/28 18:52:51 engine: request created file
+2023/11/28 18:52:51 BpmnEngine.go: load bpmn file from files/bpmn/diagram_146.bpmn
+2023/11/28 18:52:51 engine: unmarshal file
+2023/11/28 18:52:51 main: instance.Create
+2023/11/28 18:52:51 main: instance.Run
+2023/11/28 18:52:51 main: do your stuff here
+2023/11/28 18:52:51 total time: 16.382375ms

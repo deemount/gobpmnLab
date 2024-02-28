@@ -1,0 +1,16 @@
+{
+  "data": [
+    {
+      "type": "collaborative",
+      "name": "Customer and Customer Support",
+      "version": "0.1.0",
+      "executable": true
+    },
+    {
+      "type": "",
+      "name": "Black Box",
+      "version": "0.1.0",
+      "executable": false
+    }
+  ]
+}
