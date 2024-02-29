@@ -1,0 +1,520 @@
+{
+   "id": "Definitions_e0f12a07",
+   "collaboration": [
+     {
+       "id": "Collaboration_9280b39b",
+       "participant": [
+         {
+           "id": "Participant_020387e4",
+           "name": "Customer Support",
+           "processRef": "Process_260dac15"
+         },
+         {
+           "id": "Participant_d0421a29",
+           "name": "Customer",
+           "processRef": "Process_ad58c4a6"
+         }
+       ],
+       "messageFlow": [
+         {
+           "id": "Flow_f5acf047",
+           "name": "claim",
+           "sourceRef": "Activity_a117312e",
+           "targetRef": "Activity_dac23f85"
+         },
+         {
+           "id": "Flow_38b9be61",
+           "name": "refusal",
+           "sourceRef": "Activity_c8de6eff",
+           "targetRef": "Activity_e25b3865"
+         }
+       ]
+     }
+   ],
+   "process": [
+     {
+       "id": "Process_260dac15",
+       "startEvent": [
+         {
+           "id": "Event_4d346aec",
+           "outgoing": [
+             {
+               "flow": "Flow_0a06523d"
+             }
+           ]
+         }
+       ],
+       "endEvent": [
+         {
+           "id": "Event_6352f2a1",
+           "incoming": [
+             {
+               "flow": "Flow_aa53fb38"
+             }
+           ]
+         }
+       ],
+       "task": [
+         {
+           "id": "Activity_dac23f85",
+           "name": "Check incoming claim",
+           "incoming": [
+             {
+               "flow": "Flow_0a06523d"
+             }
+           ],
+           "outgoing": [
+             {
+               "flow": "Flow_d91f5453"
+             }
+           ]
+         },
+         {
+           "id": "Activity_c8de6eff",
+           "name": "Deny warranty claim",
+           "incoming": [
+             {
+               "flow": "Flow_d91f5453"
+             }
+           ],
+           "outgoing": [
+             {
+               "flow": "Flow_aa53fb38"
+             }
+           ]
+         }
+       ],
+       "isExecutable": true,
+       "sequenceFlow": [
+         {
+           "id": "Flow_0a06523d",
+           "sourceRef": "Event_4d346aec",
+           "targetRef": "Activity_dac23f85"
+         },
+         {
+           "id": "Flow_d91f5453",
+           "name": "decide",
+           "sourceRef": "Activity_dac23f85",
+           "targetRef": "Activity_c8de6eff"
+         },
+         {
+           "id": "Flow_aa53fb38",
+           "sourceRef": "Activity_c8de6eff",
+           "targetRef": "Event_6352f2a1"
+         }
+       ]
+     },
+     {
+       "id": "Process_ad58c4a6",
+       "startEvent": [
+         {
+           "id": "Event_52bb88f2",
+           "outgoing": [
+             {
+               "flow": "Flow_f9505e97"
+             }
+           ]
+         }
+       ],
+       "endEvent": [
+         {
+           "id": "Event_da517f6f",
+           "incoming": [
+             {
+               "flow": "Flow_bab3fa15"
+             }
+           ]
+         }
+       ],
+       "intermediateCatchEvent": [
+         {
+           "id": "Event_b4e6c87a",
+           "name": "Waiting for answer",
+           "incoming": [
+             {
+               "flow": "Flow_d0ce19e8"
+             }
+           ],
+           "outgoing": [
+             {
+               "flow": "Flow_28836dc7"
+             }
+           ],
+           "timerEventDefinition": [
+             {
+               "id": "TimerEventDefinition_7f2b1777",
+               "timeDuration": [
+                 {
+                   "timerDefType": "bpmn:tFormalExpression",
+                   "timerDef": "PT1M"
+                 }
+               ]
+             }
+           ]
+         }
+       ],
+       "task": [
+         {
+           "id": "Activity_a117312e",
+           "name": "Notice of defect",
+           "incoming": [
+             {
+               "flow": "Flow_f9505e97"
+             }
+           ],
+           "outgoing": [
+             {
+               "flow": "Flow_d0ce19e8"
+             }
+           ]
+         },
+         {
+           "id": "Activity_e25b3865",
+           "name": "Receipt warranty refusal",
+           "incoming": [
+             {
+               "flow": "Flow_28836dc7"
+             }
+           ],
+           "outgoing": [
+             {
+               "flow": "Flow_bab3fa15"
+             }
+           ]
+         }
+       ],
+       "sequenceFlow": [
+         {
+           "id": "Flow_f9505e97",
+           "sourceRef": "Event_52bb88f2",
+           "targetRef": "Activity_a117312e"
+         },
+         {
+           "id": "Flow_d0ce19e8",
+           "sourceRef": "Activity_a117312e",
+           "targetRef": "Event_b4e6c87a"
+         },
+         {
+           "id": "Flow_28836dc7",
+           "sourceRef": "Event_b4e6c87a",
+           "targetRef": "Activity_e25b3865"
+         },
+         {
+           "id": "Flow_bab3fa15",
+           "sourceRef": "Activity_e25b3865",
+           "targetRef": "Event_da517f6f"
+         }
+       ]
+     }
+   ],
+   "diagram": [
+     {
+       "id": "BPMNDiagram_1",
+       "plane": [
+         {
+           "id": "BPMNPlane_1",
+           "bpmnElement": "Collaboration_9280b39b",
+           "shape": [
+             {
+               "id": "Participant_020387e4_di",
+               "bpmnElement": "Participant_020387e4",
+               "isHorizontal": true,
+               "bounds": [
+                 {
+                   "x": 129,
+                   "y": 52,
+                   "Width": 600,
+                   "Height": 250
+                 }
+               ]
+             },
+             {
+               "id": "Event_4d346aec_di",
+               "bpmnElement": "Event_4d346aec",
+               "bounds": [
+                 {
+                   "x": 179,
+                   "y": 159,
+                   "Width": 36,
+                   "Height": 36
+                 }
+               ]
+             },
+             {
+               "id": "Activity_dac23f85_di",
+               "bpmnElement": "Activity_dac23f85",
+               "bounds": [
+                 {
+                   "x": 270,
+                   "y": 137,
+                   "Width": 100,
+                   "Height": 80
+                 }
+               ]
+             },
+             {
+               "id": "Activity_c8de6eff_di",
+               "bpmnElement": "Activity_c8de6eff",
+               "bounds": [
+                 {
+                   "x": 425,
+                   "y": 137,
+                   "Width": 100,
+                   "Height": 80
+                 }
+               ]
+             },
+             {
+               "id": "Event_6352f2a1_di",
+               "bpmnElement": "Event_6352f2a1",
+               "bounds": [
+                 {
+                   "x": 580,
+                   "y": 159,
+                   "Width": 36,
+                   "Height": 36
+                 }
+               ]
+             },
+             {
+               "id": "Participant_d0421a29_di",
+               "bpmnElement": "Participant_d0421a29",
+               "isHorizontal": true,
+               "bounds": [
+                 {
+                   "x": 129,
+                   "y": 352,
+                   "Width": 600,
+                   "Height": 250
+                 }
+               ]
+             },
+             {
+               "id": "Event_52bb88f2_di",
+               "bpmnElement": "Event_52bb88f2",
+               "bounds": [
+                 {
+                   "x": 179,
+                   "y": 459,
+                   "Width": 36,
+                   "Height": 36
+                 }
+               ]
+             },
+             {
+               "id": "Activity_a117312e_di",
+               "bpmnElement": "Activity_a117312e",
+               "bounds": [
+                 {
+                   "x": 270,
+                   "y": 437,
+                   "Width": 100,
+                   "Height": 80
+                 }
+               ]
+             },
+             {
+               "id": "Event_b4e6c87a_di",
+               "bpmnElement": "Event_b4e6c87a",
+               "bounds": [
+                 {
+                   "x": 425,
+                   "y": 459,
+                   "Width": 36,
+                   "Height": 36
+                 }
+               ]
+             },
+             {
+               "id": "Activity_e25b3865_di",
+               "bpmnElement": "Activity_e25b3865",
+               "bounds": [
+                 {
+                   "x": 516,
+                   "y": 437,
+                   "Width": 100,
+                   "Height": 80
+                 }
+               ]
+             },
+             {
+               "id": "Event_da517f6f_di",
+               "bpmnElement": "Event_da517f6f",
+               "bounds": [
+                 {
+                   "x": 671,
+                   "y": 459,
+                   "Width": 36,
+                   "Height": 36
+                 }
+               ]
+             }
+           ],
+           "edge": [
+             {
+               "bpmnElement": "Flow_0a06523d",
+               "waypoint": [
+                 {
+                   "x": 215,
+                   "y": 177
+                 },
+                 {
+                   "x": 270,
+                   "y": 177
+                 }
+               ]
+             },
+             {
+               "bpmnElement": "Flow_d91f5453",
+               "waypoint": [
+                 {
+                   "x": 370,
+                   "y": 177
+                 },
+                 {
+                   "x": 425,
+                   "y": 177
+                 }
+               ],
+               "label": [
+                 {
+                   "label": [
+                     {
+                       "x": 485,
+                       "y": 142,
+                       "Width": 33,
+                       "Height": 14
+                     }
+                   ]
+                 }
+               ]
+             },
+             {
+               "bpmnElement": "Flow_aa53fb38",
+               "waypoint": [
+                 {
+                   "x": 525,
+                   "y": 177
+                 },
+                 {
+                   "x": 580,
+                   "y": 177
+                 }
+               ]
+             },
+             {
+               "bpmnElement": "Flow_f9505e97",
+               "waypoint": [
+                 {
+                   "x": 215,
+                   "y": 477
+                 },
+                 {
+                   "x": 270,
+                   "y": 477
+                 }
+               ]
+             },
+             {
+               "bpmnElement": "Flow_d0ce19e8",
+               "waypoint": [
+                 {
+                   "x": 370,
+                   "y": 477
+                 },
+                 {
+                   "x": 425,
+                   "y": 477
+                 }
+               ]
+             },
+             {
+               "bpmnElement": "Flow_28836dc7",
+               "waypoint": [
+                 {
+                   "x": 461,
+                   "y": 477
+                 },
+                 {
+                   "x": 516,
+                   "y": 477
+                 }
+               ]
+             },
+             {
+               "bpmnElement": "Flow_bab3fa15",
+               "waypoint": [
+                 {
+                   "x": 616,
+                   "y": 477
+                 },
+                 {
+                   "x": 671,
+                   "y": 477
+                 }
+               ]
+             },
+             {
+               "bpmnElement": "Flow_f5acf047",
+               "waypoint": [
+                 {
+                   "x": 320,
+                   "y": 437
+                 },
+                 {
+                   "x": 320,
+                   "y": 217
+                 }
+               ],
+               "label": [
+                 {
+                   "label": [
+                     {
+                       "x": 337,
+                       "y": 317,
+                       "Width": 26,
+                       "Height": 14
+                     }
+                   ]
+                 }
+               ]
+             },
+             {
+               "bpmnElement": "Flow_38b9be61",
+               "waypoint": [
+                 {
+                   "x": 475,
+                   "y": 217
+                 },
+                 {
+                   "x": 475,
+                   "y": 391
+                 },
+                 {
+                   "x": 566,
+                   "y": 391
+                 },
+                 {
+                   "x": 566,
+                   "y": 437
+                 }
+               ],
+               "label": [
+                 {
+                   "label": [
+                     {
+                       "x": 493,
+                       "y": 317,
+                       "Width": 34,
+                       "Height": 14
+                     }
+                   ]
+                 }
+               ]
+             }
+           ]
+         }
+       ]
+     }
+   ]
+ }
