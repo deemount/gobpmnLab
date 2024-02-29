@@ -101,7 +101,19 @@ go run main.go
 
 Now open the browser at [localhost:8080](https://localhost:8080)
 
-## Repositories
+## Wiki
+
+There's actually no wiki for this repository installed ...
+
+**Start here** [gobpmn](https://github.com/deemount/gobpmn)
+
+## Testing
+
+You can also test the idea behind it directly. Simply follow the link to the lab
+
++ [gobpmnLab](https://github.com/deemount/gobpmnLab)
+
+## Modules
 
 + [gobpmnTypes](https://github.com/deemount/gobpmnTypes)
 + [gobpmnModels](https://github.com/deemount/gobpmnModels)
