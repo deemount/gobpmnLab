@@ -1,25 +1,28 @@
 name: Go
 on: [push,pull_request]
 jobs:
-
   test:
     permissions:
       contents: read
     name: Test
     runs-on: ubuntu-latest
     steps:
-
-    - uses: actions/setup-go@v4
+    - uses: actions/checkout@v4
+    - uses: actions/setup-go@v5
       with:
-        go-version: '1.21.x'
+        go-version-file: 'go.mod'
         cache: true
+    - run: go version
+    - run: go mod download
+    - run: go mod verify
+    - run: go mod tidy
+    - run: go mod vendor
+    - run: go mod graph
+    - run: go mod why
     - name: Test
       run: go test -v -race -coverpkg=./... -coverprofile=coverage.txt ./...
-
-    - uses: actions/checkout@v4
-    - name: Setup Go ${{ matrix.go-version }}
-      uses: actions/setup-go@v4
-      with:
-        go-version: ${{ matrix.go-version }}
-    - name: Display Go version
-      run: go version
+    - name: Coverage
+      run: go tool cover -func=coverage.txt
+    - name: Run
+      run: go run main.go
+      
