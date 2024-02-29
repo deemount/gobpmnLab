@@ -3,7 +3,7 @@ package camunda
 import (
 	"fmt"
 
-	"github.com/deemount/gobpmnLab/models/bpmn/impl"
+	gobpmnTypes "github.com/deemount/gobpmnTypes"
 )
 
 // NewCamundaFormField ...
@@ -66,23 +66,23 @@ func (formfield *CamundaFormField) SetCamundaValidation() {
 /* Attributes */
 
 // GetID ...
-func (formfield CamundaFormField) GetID() impl.STR_PTR {
+func (formfield CamundaFormField) GetID() gobpmnTypes.STR_PTR {
 	return &formfield.ID
 }
 
 // GetLabel ...
-func (formfield CamundaFormField) GetLabel() impl.STR_PTR {
+func (formfield CamundaFormField) GetLabel() gobpmnTypes.STR_PTR {
 	return &formfield.Label
 }
 
 // GetType ...
 // can be: string, long, boolean, date, enum, custom type
-func (formfield CamundaFormField) GetType() impl.STR_PTR {
+func (formfield CamundaFormField) GetType() gobpmnTypes.STR_PTR {
 	return &formfield.Typ
 }
 
 // GetDefaultValue ...
-func (formfield CamundaFormField) GetDefaultValue() impl.STR_PTR {
+func (formfield CamundaFormField) GetDefaultValue() gobpmnTypes.STR_PTR {
 	return &formfield.DefaultValue
 }
 

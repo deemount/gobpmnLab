@@ -1,6 +1,6 @@
 package camunda
 
-import "github.com/deemount/gobpmnLab/models/bpmn/impl"
+import gobpmnTypes "github.com/deemount/gobpmnTypes"
 
 /*
  * Base
@@ -69,20 +69,20 @@ type CamundaConnectorIDRepository interface{}
 
 // CamundaConstraintRepository ...
 type CamundaConstraintRepository interface {
-	impl.IFBaseName
-	impl.IFBaseConfig
+	gobpmnTypes.IFBaseName
+	gobpmnTypes.IFBaseConfig
 }
 
 // CamundaEntryRepository ...
 type CamundaEntryRepository interface {
-	impl.IFBaseValue
-	impl.IFBaseKey
+	gobpmnTypes.IFBaseValue
+	gobpmnTypes.IFBaseKey
 }
 
 // CamundaExecutionListener ...
 type CamundaExecutionListenerRepository interface {
-	impl.IFBaseEvent
-	impl.IFBaseClass
+	gobpmnTypes.IFBaseEvent
+	gobpmnTypes.IFBaseClass
 	CamundaBaseScriptElements
 	SetDelegateExpression(expr string)
 	GetDelegateExpression() *string
@@ -98,7 +98,7 @@ type CamundaFailedJobRetryCycleRepository interface{}
 
 // CamundaFieldRepository ...
 type CamundaFieldRepository interface {
-	impl.IFBaseName
+	gobpmnTypes.IFBaseName
 	SetCamundaExpression()
 	GetCamundaExpression() *CamundaExpression
 	SetCamundaString()
@@ -113,10 +113,10 @@ type CamundaFormDataRepository interface {
 
 // CamundaFormField ...
 type CamundaFormFieldRepository interface {
-	impl.IFBaseID
-	impl.IFBaseLabel
-	impl.IFBaseType
-	impl.IFBaseDefaultValue
+	gobpmnTypes.IFBaseID
+	gobpmnTypes.IFBaseLabel
+	gobpmnTypes.IFBaseType
+	gobpmnTypes.IFBaseDefaultValue
 	SetCamundaProperties()
 	GetCamundaProperties() *CamundaProperties
 	SetCamundaValidation()
@@ -137,8 +137,8 @@ type CamundaInputOutputRepository interface {
 // CamundaInputParameterRepository ...
 type CamundaInputParameterRepository interface {
 	CamundaBaseScriptElements
-	impl.IFBaseLocalVariableName
-	impl.IFBaseVariableAssignmentValue
+	gobpmnTypes.IFBaseLocalVariableName
+	gobpmnTypes.IFBaseVariableAssignmentValue
 	SetCamundaList()
 	GetCamundaList() *CamundaList
 	SetCamundaMap()
@@ -163,8 +163,8 @@ type CamundaOutRepository interface{}
 // CamundaOutputParameter ...
 type CamundaOutputParameterRepository interface {
 	CamundaBaseScriptElements
-	impl.IFBaseLocalVariableName
-	impl.IFBaseVariableAssignmentValue
+	gobpmnTypes.IFBaseLocalVariableName
+	gobpmnTypes.IFBaseVariableAssignmentValue
 	SetCamundaList()
 	GetCamundaList() *CamundaList
 	SetCamundaMap()
@@ -179,13 +179,13 @@ type CamundaPropertiesRepository interface {
 
 // CamundaPropertyRepository ...
 type CamundaPropertyRepository interface {
-	impl.IFBaseName
-	impl.IFBaseValue
+	gobpmnTypes.IFBaseName
+	gobpmnTypes.IFBaseValue
 }
 
 // CamundaScriptRepository ...
 type CamundaScriptRepository interface {
-	impl.IFBaseScriptFormat
+	gobpmnTypes.IFBaseScriptFormat
 }
 
 // CamundaStringRepository ...
@@ -193,9 +193,9 @@ type CamundaStringRepository interface{}
 
 // CamundaTaskListener ...
 type CamundaTaskListenerRepository interface {
-	impl.IFBaseEvent
-	impl.IFBaseClass
-	impl.IFBaseListenerID
+	gobpmnTypes.IFBaseEvent
+	gobpmnTypes.IFBaseClass
+	gobpmnTypes.IFBaseListenerID
 	SetCamundaField(num int)
 	GetCamundaField(num int) *CamundaField
 }
@@ -208,5 +208,5 @@ type CamundaValidationRepository interface {
 
 // CamundaValueRepository ...
 type CamundaValueRepository interface {
-	impl.IFBaseValue
+	gobpmnTypes.IFBaseValue
 }

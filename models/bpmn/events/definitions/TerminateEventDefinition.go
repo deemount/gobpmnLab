@@ -1,7 +1,7 @@
 package definitions
 
 import (
-	"github.com/deemount/gobpmnLab/models/bpmn/impl"
+	gobpmnTypes "github.com/deemount/gobpmnTypes"
 )
 
 // NewTerminateEventDefinition ...
@@ -31,6 +31,6 @@ func (ted *TerminateEventDefinition) SetID(typ string, suffix interface{}) {
 /** BPMN **/
 
 // GetID ...
-func (ted TerminateEventDefinition) GetID() impl.STR_PTR {
+func (ted TerminateEventDefinition) GetID() gobpmnTypes.STR_PTR {
 	return &ted.ID
 }

@@ -7,10 +7,10 @@ import (
 	"github.com/deemount/gobpmnLab/models/bpmn/events/elements"
 	"github.com/deemount/gobpmnLab/models/bpmn/flow"
 	"github.com/deemount/gobpmnLab/models/bpmn/gateways"
-	"github.com/deemount/gobpmnLab/models/bpmn/impl"
 	"github.com/deemount/gobpmnLab/models/bpmn/loop"
 	"github.com/deemount/gobpmnLab/models/bpmn/marker"
 	"github.com/deemount/gobpmnLab/models/bpmn/tasks"
+	gobpmnTypes "github.com/deemount/gobpmnTypes"
 )
 
 func NewAdHocSubProcess() AdHocSubProcessRepository {
@@ -206,12 +206,12 @@ func (adhoc *AdHocSubProcess) SetSequenceFlow(num int) {
 /** BPMN **/
 
 // GetID ...
-func (adhoc *AdHocSubProcess) GetID() impl.STR_PTR {
+func (adhoc *AdHocSubProcess) GetID() gobpmnTypes.STR_PTR {
 	return &adhoc.ID
 }
 
 // GetName ...
-func (adhoc AdHocSubProcess) GetName() impl.STR_PTR {
+func (adhoc AdHocSubProcess) GetName() gobpmnTypes.STR_PTR {
 	return &adhoc.Name
 }
 

@@ -3,7 +3,7 @@ package data
 import (
 	"fmt"
 
-	"github.com/deemount/gobpmnLab/models/bpmn/impl"
+	gobpmnTypes "github.com/deemount/gobpmnTypes"
 )
 
 // NewDataObject ...
@@ -36,6 +36,6 @@ func (do *DataObject) SetID(typ string, suffix interface{}) {
 /* Attributes */
 
 // GetID ...
-func (do DataObject) GetID() impl.STR_PTR {
+func (do DataObject) GetID() gobpmnTypes.STR_PTR {
 	return &do.ID
 }

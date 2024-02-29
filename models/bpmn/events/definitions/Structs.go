@@ -2,8 +2,8 @@ package definitions
 
 import (
 	"github.com/deemount/gobpmnLab/models/bpmn/conditional"
-	"github.com/deemount/gobpmnLab/models/bpmn/impl"
 	"github.com/deemount/gobpmnLab/models/bpmn/time"
+	gobpmnTypes "github.com/deemount/gobpmnTypes"
 )
 
 type DelegateParameter struct {
@@ -105,7 +105,7 @@ type TStartEvent struct {
 
 // CancelEventDefinition ...
 type CancelEventDefinition struct {
-	impl.CoreID
+	gobpmnTypes.CoreID
 }
 
 // CompensateEventDefinition ...
@@ -116,60 +116,60 @@ type TCompensateEventDefinition struct{}
 
 // ConditionalEventDefinition ...
 type ConditionalEventDefinition struct {
-	impl.CoreID
+	gobpmnTypes.CoreID
 	CamundaVariableName string                  `xml:"camunda:variableName" json:"variableName,omitempty"`
 	Condition           []conditional.Condition `xml:"bpmn:condition,omitempty" json:"condition,omitempty"`
 }
 
 // TConditionalEventDefinition ...
 type TConditionalEventDefinition struct {
-	impl.CoreID
+	gobpmnTypes.CoreID
 	CamundaVariableName string                  `xml:"variableName" json:"variableName,omitempty"`
 	Condition           []conditional.Condition `xml:"condition,omitempty" json:"condition,omitempty"`
 }
 
 // ErrorEventDefinition ...
 type ErrorEventDefinition struct {
-	impl.CoreID
+	gobpmnTypes.CoreID
 }
 
 // EscalationEventDefinition ...
 type EscalationEventDefinition struct {
-	impl.CoreID
+	gobpmnTypes.CoreID
 }
 
 // LinkEventDefinition ...
 type LinkEventDefinition struct {
-	impl.CoreID
+	gobpmnTypes.CoreID
 }
 
 // MessageEventDefinition ...
 type MessageEventDefinition struct {
-	impl.CoreID
+	gobpmnTypes.CoreID
 	MsgRef string `xml:"messageRef,attr,omitempty" json:"messageRef,omitempty"`
 }
 
 // SignalEventDefinition ...
 type SignalEventDefinition struct {
-	impl.CoreID
+	gobpmnTypes.CoreID
 	SignalRef string `xml:"signalRef,attr,omitempty" json:"signalRef,omitempty"`
 }
 
 // TerminateEventDefinition ...
 type TerminateEventDefinition struct {
-	impl.CoreID
+	gobpmnTypes.CoreID
 }
 
 // TimerEventDefinition ...
 type TimerEventDefinition struct {
-	impl.CoreID
+	gobpmnTypes.CoreID
 	TimeDate     []time.TimeDate     `xml:"bpmn:timeDate,omitempty" json:"timeDate,omitempty"`
 	TimeDuration []time.TimeDuration `xml:"bpmn:timeDuration,omitempty" json:"timeDuration,omitempty"`
 }
 
 // TTimerEventDefinition ...
 type TTimerEventDefinition struct {
-	impl.CoreID
+	gobpmnTypes.CoreID
 	TimeDate     []time.TimeDate     `xml:"timeDate,omitempty" json:"timeDate,omitempty"`
 	TimeDuration []time.TimeDuration `xml:"timeDuration,omitempty" json:"timeDuration,omitempty"`
 }

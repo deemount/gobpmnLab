@@ -1,6 +1,6 @@
 package canvas
 
-import "github.com/deemount/gobpmnLab/models/bpmn/impl"
+import gobpmnTypes "github.com/deemount/gobpmnTypes"
 
 // NewWaypoint ...
 func NewWaypoint() WaypointRepository {
@@ -36,16 +36,16 @@ func (wp *Waypoint) SetCoordinates(x, y int) {
 /* Attributes */
 
 // GetX ...
-func (wp Waypoint) GetX() impl.INT_PTR {
+func (wp Waypoint) GetX() gobpmnTypes.INT_PTR {
 	return &wp.X
 }
 
 // GetY ...
-func (wp Waypoint) GetY() impl.INT_PTR {
+func (wp Waypoint) GetY() gobpmnTypes.INT_PTR {
 	return &wp.Y
 }
 
 // GetCoordinates ...
-func (wp Waypoint) GetCoordinates() (impl.INT_PTR, impl.INT_PTR) {
+func (wp Waypoint) GetCoordinates() (gobpmnTypes.INT_PTR, gobpmnTypes.INT_PTR) {
 	return &wp.X, &wp.Y
 }

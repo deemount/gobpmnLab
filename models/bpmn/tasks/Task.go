@@ -5,8 +5,8 @@ import (
 
 	"github.com/deemount/gobpmnLab/models/bpmn/attributes"
 	"github.com/deemount/gobpmnLab/models/bpmn/flow"
-	"github.com/deemount/gobpmnLab/models/bpmn/impl"
 	"github.com/deemount/gobpmnLab/models/bpmn/marker"
+	gobpmnTypes "github.com/deemount/gobpmnTypes"
 )
 
 // NewTask ...
@@ -99,29 +99,29 @@ func (task *Task) SetOutgoing(num int) {
 /** BPMN **/
 
 // GetID ...
-func (task Task) GetID() impl.STR_PTR {
+func (task Task) GetID() gobpmnTypes.STR_PTR {
 	return &task.ID
 }
 
 // GetName ...
-func (task Task) GetName() impl.STR_PTR {
+func (task Task) GetName() gobpmnTypes.STR_PTR {
 	return &task.Name
 }
 
 /** Camunda **/
 
 // GetCamundaAsyncBefore ...
-func (task Task) GetCamundaAsyncBefore() impl.BOOL_PTR {
+func (task Task) GetCamundaAsyncBefore() gobpmnTypes.BOOL_PTR {
 	return &task.CamundaAsyncBefore
 }
 
 // GetCamundaAsyncAfter ...
-func (task Task) GetCamundaAsyncAfter() impl.BOOL_PTR {
+func (task Task) GetCamundaAsyncAfter() gobpmnTypes.BOOL_PTR {
 	return &task.CamundaAsyncAfter
 }
 
 // GetCamundaJobPriority ...
-func (task Task) GetCamundaJobPriority() impl.INT_PTR {
+func (task Task) GetCamundaJobPriority() gobpmnTypes.INT_PTR {
 	return &task.CamundaJobPriority
 }
 

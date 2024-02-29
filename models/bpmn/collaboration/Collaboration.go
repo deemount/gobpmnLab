@@ -5,7 +5,7 @@ import (
 
 	"github.com/deemount/gobpmnLab/models/bpmn/attributes"
 	"github.com/deemount/gobpmnLab/models/bpmn/flow"
-	"github.com/deemount/gobpmnLab/models/bpmn/impl"
+	gobpmnTypes "github.com/deemount/gobpmnTypes"
 )
 
 // NewCollaboration ...
@@ -66,7 +66,7 @@ func (collaboration *Collaboration) SetMessageFlow(num int) {
 /** BPMN **/
 
 // GetID ...
-func (collaboration Collaboration) GetID() impl.STR_PTR {
+func (collaboration Collaboration) GetID() gobpmnTypes.STR_PTR {
 	return &collaboration.ID
 }
 

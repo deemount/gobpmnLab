@@ -3,13 +3,13 @@ package collaboration
 import (
 	"github.com/deemount/gobpmnLab/models/bpmn/attributes"
 	"github.com/deemount/gobpmnLab/models/bpmn/flow"
-	"github.com/deemount/gobpmnLab/models/bpmn/impl"
 	"github.com/deemount/gobpmnLab/models/bpmn/loop"
+	gobpmnTypes "github.com/deemount/gobpmnTypes"
 )
 
 // CollaborationRepository ...
 type CollaborationRepository interface {
-	impl.IFBaseID
+	gobpmnTypes.IFBaseID
 	attributes.AttributesBaseElements
 
 	SetParticipant(num int)
@@ -21,8 +21,8 @@ type CollaborationRepository interface {
 
 // ParticipantRepository ...
 type ParticipantRepository interface {
-	impl.IFBaseID
-	impl.IFBaseName
+	gobpmnTypes.IFBaseID
+	gobpmnTypes.IFBaseName
 
 	SetProcessRef(typ string, suffix string)
 	GetProcessRef() *string

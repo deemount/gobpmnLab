@@ -2,7 +2,7 @@ package attributes
 
 import (
 	"github.com/deemount/gobpmnLab/models/bpmn/camunda"
-	"github.com/deemount/gobpmnLab/models/bpmn/impl"
+	gobpmnTypes "github.com/deemount/gobpmnTypes"
 )
 
 type Attributes struct {
@@ -32,5 +32,5 @@ type TExtensionElements struct {
 
 // Property ...
 type Property struct {
-	impl.BaseAttributes
+	gobpmnTypes.BaseAttributes
 }

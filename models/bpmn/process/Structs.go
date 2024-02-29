@@ -6,16 +6,16 @@ import (
 	"github.com/deemount/gobpmnLab/models/bpmn/events"
 	"github.com/deemount/gobpmnLab/models/bpmn/flow"
 	"github.com/deemount/gobpmnLab/models/bpmn/gateways"
-	"github.com/deemount/gobpmnLab/models/bpmn/impl"
 	"github.com/deemount/gobpmnLab/models/bpmn/marker"
 	"github.com/deemount/gobpmnLab/models/bpmn/pool"
 	"github.com/deemount/gobpmnLab/models/bpmn/subprocesses"
 	"github.com/deemount/gobpmnLab/models/bpmn/tasks"
+	gobpmnTypes "github.com/deemount/gobpmnTypes"
 )
 
 // Process ...
 type Process struct {
-	impl.BaseAttributes
+	gobpmnTypes.BaseAttributes
 	attributes.Attributes
 	events.ProcessEvents
 	tasks.Tasks
@@ -43,7 +43,7 @@ type Process struct {
 
 // TProcess ...
 type TProcess struct {
-	impl.BaseAttributes
+	gobpmnTypes.BaseAttributes
 	attributes.TAttributes
 	events.TProcessEvents
 	tasks.TTasks

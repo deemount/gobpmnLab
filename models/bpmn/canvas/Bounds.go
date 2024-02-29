@@ -1,6 +1,8 @@
 package canvas
 
-import "github.com/deemount/gobpmnLab/models/bpmn/impl"
+import (
+	gobpmnTypes "github.com/deemount/gobpmnTypes"
+)
 
 // NewBounds ...
 func NewBounds() BoundsRepository {
@@ -48,31 +50,31 @@ func (bnds *Bounds) SetHeight(height int) {
  */
 
 // GetCoordinates ...
-func (bnds Bounds) GetCoordinates() (impl.INT_PTR, impl.INT_PTR) {
+func (bnds Bounds) GetCoordinates() (gobpmnTypes.INT_PTR, gobpmnTypes.INT_PTR) {
 	return &bnds.X, &bnds.Y
 }
 
 // GetX ...
-func (bnds Bounds) GetX() impl.INT_PTR {
+func (bnds Bounds) GetX() gobpmnTypes.INT_PTR {
 	return &bnds.X
 }
 
 // GetY ...
-func (bnds Bounds) GetY() impl.INT_PTR {
+func (bnds Bounds) GetY() gobpmnTypes.INT_PTR {
 	return &bnds.Y
 }
 
 // GetSize ...
-func (bnds Bounds) GetSize() (impl.INT_PTR, impl.INT_PTR) {
+func (bnds Bounds) GetSize() (gobpmnTypes.INT_PTR, gobpmnTypes.INT_PTR) {
 	return &bnds.Width, &bnds.Height
 }
 
 // GetWidth ...
-func (bnds Bounds) GetWidth() impl.INT_PTR {
+func (bnds Bounds) GetWidth() gobpmnTypes.INT_PTR {
 	return &bnds.Width
 }
 
 // GetHeight ...
-func (bnds Bounds) GetHeight() impl.INT_PTR {
+func (bnds Bounds) GetHeight() gobpmnTypes.INT_PTR {
 	return &bnds.Height
 }

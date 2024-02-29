@@ -4,8 +4,8 @@ import (
 	"fmt"
 
 	"github.com/deemount/gobpmnLab/models/bpmn/attributes"
-	"github.com/deemount/gobpmnLab/models/bpmn/impl"
 	"github.com/deemount/gobpmnLab/models/bpmn/marker"
+	gobpmnTypes "github.com/deemount/gobpmnTypes"
 )
 
 func NewServiceTask() ServiceTaskRepository {
@@ -85,29 +85,29 @@ func (serviceTask *ServiceTask) SetOutgoing(num int) {
 /** BPMN **/
 
 // GetID ...
-func (serviceTask ServiceTask) GetID() impl.STR_PTR {
+func (serviceTask ServiceTask) GetID() gobpmnTypes.STR_PTR {
 	return &serviceTask.ID
 }
 
 // GetName ...
-func (serviceTask ServiceTask) GetName() impl.STR_PTR {
+func (serviceTask ServiceTask) GetName() gobpmnTypes.STR_PTR {
 	return &serviceTask.Name
 }
 
 /** Camunda **/
 
 // GetCamundaAsyncBefore ...
-func (serviceTask ServiceTask) GetCamundaAsyncBefore() impl.BOOL_PTR {
+func (serviceTask ServiceTask) GetCamundaAsyncBefore() gobpmnTypes.BOOL_PTR {
 	return &serviceTask.CamundaAsyncBefore
 }
 
 // GetCamundaAsyncAfter ...
-func (serviceTask ServiceTask) GetCamundaAsyncAfter() impl.BOOL_PTR {
+func (serviceTask ServiceTask) GetCamundaAsyncAfter() gobpmnTypes.BOOL_PTR {
 	return &serviceTask.CamundaAsyncAfter
 }
 
 // GetCamundaJobPriority ...
-func (serviceTask ServiceTask) GetCamundaJobPriority() impl.INT_PTR {
+func (serviceTask ServiceTask) GetCamundaJobPriority() gobpmnTypes.INT_PTR {
 	return &serviceTask.CamundaJobPriority
 }
 

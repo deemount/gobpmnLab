@@ -1,28 +1,28 @@
 package conditional
 
-import "github.com/deemount/gobpmnLab/models/bpmn/impl"
+import gobpmnTypes "github.com/deemount/gobpmnTypes"
 
 // ConditionalScriptFormat ...
 type ConditionalScriptFormat interface {
 	SetScriptFormat(format string)
-	GetScriptFormat() impl.STR_PTR
+	GetScriptFormat() gobpmnTypes.STR_PTR
 }
 
 // ConditionalScript ...
 type ConditionalScript interface {
 	SetScript(script string)
-	GetScript() impl.STR_PTR
+	GetScript() gobpmnTypes.STR_PTR
 }
 
 // ConditionalType ...
 type ConditionalType interface {
 	SetConditionType()
-	GetConditionType() impl.STR_PTR
+	GetConditionType() gobpmnTypes.STR_PTR
 }
 
 type ConditionalExpression interface {
 	SetExpression(expression string)
-	GetExpression() impl.STR_PTR
+	GetExpression() gobpmnTypes.STR_PTR
 }
 
 // CompletionConditionRepository ...

@@ -44,7 +44,7 @@ func main() {
 	}
 	defer pprof.StopCPUProfile()
 
-	logFile, _ := os.Create("bpmnBuilder2Engine.log")
+	logFile, _ := os.Create("logs/build.log")
 	defer logFile.Close()
 	log.SetOutput(logFile)
 
@@ -75,13 +75,4 @@ func main() {
 
 	log.Println("total time:", time.Since(start))
 
-	// TESTING MESSAGE BROKER
-	/*
-		messageBroker.Dial()
-		defer messageBroker.Connection.Close()
-		messageBroker.OpenChannel()
-		defer messageBroker.Channel.Close()
-		messageBroker.DeclareQueue()
-		messageBroker.Publish()
-	*/
 }

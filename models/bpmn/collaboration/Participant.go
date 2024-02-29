@@ -4,8 +4,8 @@ import (
 	"fmt"
 
 	"github.com/deemount/gobpmnLab/models/bpmn/attributes"
-	"github.com/deemount/gobpmnLab/models/bpmn/impl"
 	"github.com/deemount/gobpmnLab/models/bpmn/loop"
+	gobpmnTypes "github.com/deemount/gobpmnTypes"
 )
 
 // NewParticipant ...
@@ -75,12 +75,12 @@ func (participant *Participant) SetParticipantMultiplicity() {
 /** BPMN **/
 
 // GetID ...
-func (participant Participant) GetID() impl.STR_PTR {
+func (participant Participant) GetID() gobpmnTypes.STR_PTR {
 	return &participant.ID
 }
 
 // GetName ...
-func (participant Participant) GetName() impl.STR_PTR {
+func (participant Participant) GetName() gobpmnTypes.STR_PTR {
 	return &participant.Name
 }
 

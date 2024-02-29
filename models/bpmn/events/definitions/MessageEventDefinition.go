@@ -3,7 +3,7 @@ package definitions
 import (
 	"fmt"
 
-	"github.com/deemount/gobpmnLab/models/bpmn/impl"
+	gobpmnTypes "github.com/deemount/gobpmnTypes"
 )
 
 // NewMessageEventDefinition ...
@@ -38,11 +38,11 @@ func (med *MessageEventDefinition) SetMsgRef(suffix string) {
 /** BPMN **/
 
 // GetID ...
-func (med MessageEventDefinition) GetID() impl.STR_PTR {
+func (med MessageEventDefinition) GetID() gobpmnTypes.STR_PTR {
 	return &med.ID
 }
 
 // GetMsgRef ...
-func (med MessageEventDefinition) GetMsgRef() impl.STR_PTR {
+func (med MessageEventDefinition) GetMsgRef() gobpmnTypes.STR_PTR {
 	return &med.MsgRef
 }

@@ -7,8 +7,8 @@ import (
 
 	"github.com/deemount/gobpmnLab/models/bpmn/attributes"
 	"github.com/deemount/gobpmnLab/models/bpmn/events/definitions"
-	"github.com/deemount/gobpmnLab/models/bpmn/impl"
 	"github.com/deemount/gobpmnLab/models/bpmn/marker"
+	gobpmnTypes "github.com/deemount/gobpmnTypes"
 )
 
 // NewStartEvent ...
@@ -129,12 +129,12 @@ func (startEvent *StartEvent) SetOutgoing(num int) {
 /** BPMN **/
 
 // GetID ...
-func (startEvent StartEvent) GetID() impl.STR_PTR {
+func (startEvent StartEvent) GetID() gobpmnTypes.STR_PTR {
 	return &startEvent.ID
 }
 
 // GetName ...
-func (startEvent StartEvent) GetName() impl.STR_PTR {
+func (startEvent StartEvent) GetName() gobpmnTypes.STR_PTR {
 	return &startEvent.Name
 }
 

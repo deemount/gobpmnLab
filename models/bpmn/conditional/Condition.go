@@ -3,7 +3,7 @@ package conditional
 import (
 	"fmt"
 
-	"github.com/deemount/gobpmnLab/models/bpmn/impl"
+	gobpmnTypes "github.com/deemount/gobpmnTypes"
 )
 
 // NewCondition ...
@@ -43,16 +43,16 @@ func (condition *Condition) SetScript(script string) {
 /** BPMN **/
 
 // GetConditionType ...
-func (condition Condition) GetConditionType() impl.STR_PTR {
+func (condition Condition) GetConditionType() gobpmnTypes.STR_PTR {
 	return &condition.ConditionType
 }
 
 // GetScriptFormat ...
-func (condition Condition) GetScriptFormat() impl.STR_PTR {
+func (condition Condition) GetScriptFormat() gobpmnTypes.STR_PTR {
 	return &condition.ScriptFormat
 }
 
 // GetScript ...
-func (condition Condition) GetScript() impl.STR_PTR {
+func (condition Condition) GetScript() gobpmnTypes.STR_PTR {
 	return &condition.Script
 }

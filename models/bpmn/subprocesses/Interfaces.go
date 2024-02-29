@@ -7,15 +7,15 @@ import (
 	"github.com/deemount/gobpmnLab/models/bpmn/events/elements"
 	"github.com/deemount/gobpmnLab/models/bpmn/flow"
 	"github.com/deemount/gobpmnLab/models/bpmn/gateways"
-	"github.com/deemount/gobpmnLab/models/bpmn/impl"
 	"github.com/deemount/gobpmnLab/models/bpmn/loop"
 	"github.com/deemount/gobpmnLab/models/bpmn/marker"
 	"github.com/deemount/gobpmnLab/models/bpmn/tasks"
+	gobpmnTypes "github.com/deemount/gobpmnTypes"
 )
 
 type SubprocessesBase interface {
-	impl.IFBaseID
-	impl.IFBaseName
+	gobpmnTypes.IFBaseID
+	gobpmnTypes.IFBaseName
 	attributes.AttributesBaseElements
 	marker.MarkerIncomingOutgoing
 	camunda.CamundaDefaultAttributes

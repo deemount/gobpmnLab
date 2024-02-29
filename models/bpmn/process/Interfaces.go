@@ -7,16 +7,16 @@ import (
 	"github.com/deemount/gobpmnLab/models/bpmn/events"
 	"github.com/deemount/gobpmnLab/models/bpmn/flow"
 	"github.com/deemount/gobpmnLab/models/bpmn/gateways"
-	"github.com/deemount/gobpmnLab/models/bpmn/impl"
 	"github.com/deemount/gobpmnLab/models/bpmn/pool"
 	"github.com/deemount/gobpmnLab/models/bpmn/subprocesses"
 	"github.com/deemount/gobpmnLab/models/bpmn/tasks"
+	gobpmnTypes "github.com/deemount/gobpmnTypes"
 )
 
 // ProcessRepository ...
 type ProcessRepository interface {
-	impl.IFBaseID
-	impl.IFBaseName
+	gobpmnTypes.IFBaseID
+	gobpmnTypes.IFBaseName
 	attributes.AttributesBaseElements
 	events.ProcessEventsElementsRepository
 	tasks.TasksElementsRepository

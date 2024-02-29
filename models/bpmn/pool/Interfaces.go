@@ -1,17 +1,17 @@
 package pool
 
 import (
-	"github.com/deemount/gobpmnLab/models/bpmn/impl"
+	gobpmnTypes "github.com/deemount/gobpmnTypes"
 )
 
 // FlowNodeRefRepository ...
 type FlowNodeRefRepository interface {
-	impl.IFBaseID
+	gobpmnTypes.IFBaseID
 }
 
 // LaneRepository ...
 type LaneRepository interface {
-	impl.IFBaseID
+	gobpmnTypes.IFBaseID
 
 	SetFlowNodeRef(num int)
 	GetFlowNodeRef(num int) *FlowNodeRef
@@ -19,7 +19,7 @@ type LaneRepository interface {
 
 // LaneSetRepository ...
 type LaneSetRepository interface {
-	impl.IFBaseID
+	gobpmnTypes.IFBaseID
 	SetLane(num int)
 	GetLane(num int) *Lane
 }

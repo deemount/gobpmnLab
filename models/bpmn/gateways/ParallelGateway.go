@@ -4,8 +4,8 @@ import (
 	"fmt"
 
 	"github.com/deemount/gobpmnLab/models/bpmn/attributes"
-	"github.com/deemount/gobpmnLab/models/bpmn/impl"
 	"github.com/deemount/gobpmnLab/models/bpmn/marker"
+	gobpmnTypes "github.com/deemount/gobpmnTypes"
 )
 
 func NewParallelGateway() ParallelGatewayRepository {
@@ -89,12 +89,12 @@ func (parallelGateway *ParallelGateway) SetOutgoing(num int) {
 /** BPMN **/
 
 // GetID ...
-func (parallelGateway ParallelGateway) GetID() impl.STR_PTR {
+func (parallelGateway ParallelGateway) GetID() gobpmnTypes.STR_PTR {
 	return &parallelGateway.ID
 }
 
 // GetName ...
-func (parallelGateway ParallelGateway) GetName() impl.STR_PTR {
+func (parallelGateway ParallelGateway) GetName() gobpmnTypes.STR_PTR {
 	return &parallelGateway.Name
 }
 

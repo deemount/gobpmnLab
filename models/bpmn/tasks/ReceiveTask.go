@@ -4,8 +4,8 @@ import (
 	"fmt"
 
 	"github.com/deemount/gobpmnLab/models/bpmn/attributes"
-	"github.com/deemount/gobpmnLab/models/bpmn/impl"
 	"github.com/deemount/gobpmnLab/models/bpmn/marker"
+	gobpmnTypes "github.com/deemount/gobpmnTypes"
 )
 
 func NewReceiveTask() ReceiveTaskRepository {
@@ -90,34 +90,34 @@ func (receiveTask *ReceiveTask) SetOutgoing(num int) {
 /** BPMN **/
 
 // GetID ...
-func (receiveTask ReceiveTask) GetID() impl.STR_PTR {
+func (receiveTask ReceiveTask) GetID() gobpmnTypes.STR_PTR {
 	return &receiveTask.ID
 }
 
 // GetName ...
-func (receiveTask ReceiveTask) GetName() impl.STR_PTR {
+func (receiveTask ReceiveTask) GetName() gobpmnTypes.STR_PTR {
 	return &receiveTask.Name
 }
 
 // GetMessageRef ...
-func (receiveTask ReceiveTask) GetMessageRef(suffix string) impl.STR_PTR {
+func (receiveTask ReceiveTask) GetMessageRef(suffix string) gobpmnTypes.STR_PTR {
 	return &receiveTask.MessageRef
 }
 
 /** Camunda **/
 
 // GetCamundaAsyncBefore ...
-func (receiveTask ReceiveTask) GetCamundaAsyncBefore() impl.BOOL_PTR {
+func (receiveTask ReceiveTask) GetCamundaAsyncBefore() gobpmnTypes.BOOL_PTR {
 	return &receiveTask.CamundaAsyncBefore
 }
 
 // GetCamundaAsyncAfter ...
-func (receiveTask ReceiveTask) GetCamundaAsyncAfter() impl.BOOL_PTR {
+func (receiveTask ReceiveTask) GetCamundaAsyncAfter() gobpmnTypes.BOOL_PTR {
 	return &receiveTask.CamundaAsyncAfter
 }
 
 // GetCamundaJobPriority ...
-func (receiveTask ReceiveTask) GetCamundaJobPriority() impl.INT_PTR {
+func (receiveTask ReceiveTask) GetCamundaJobPriority() gobpmnTypes.INT_PTR {
 	return &receiveTask.CamundaJobPriority
 }
 

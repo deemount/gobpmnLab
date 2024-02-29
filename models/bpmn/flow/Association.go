@@ -5,7 +5,7 @@ import (
 	"log"
 
 	"github.com/deemount/gobpmnLab/models/bpmn/attributes"
-	"github.com/deemount/gobpmnLab/models/bpmn/impl"
+	gobpmnTypes "github.com/deemount/gobpmnTypes"
 )
 
 // NewAssociation ...
@@ -100,17 +100,17 @@ func (association *Association) SetExtensionElements() {
 /** BPMN **/
 
 // GetID ...
-func (association Association) GetID() impl.STR_PTR {
+func (association Association) GetID() gobpmnTypes.STR_PTR {
 	return &association.ID
 }
 
 // GetSourceRef ...
-func (association Association) GetSourceRef() impl.STR_PTR {
+func (association Association) GetSourceRef() gobpmnTypes.STR_PTR {
 	return &association.SourceRef
 }
 
 // GetTargetRef ...
-func (association Association) GetTargetRef() impl.STR_PTR {
+func (association Association) GetTargetRef() gobpmnTypes.STR_PTR {
 	return &association.TargetRef
 }
 

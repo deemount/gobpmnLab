@@ -3,7 +3,7 @@ package canvas
 import (
 	"fmt"
 
-	"github.com/deemount/gobpmnLab/models/bpmn/impl"
+	gobpmnTypes "github.com/deemount/gobpmnTypes"
 )
 
 // NewShape ...
@@ -102,22 +102,22 @@ func (shape *Shape) SetLabel() {
 /** BPMN **/
 
 // GetID ...
-func (shape Shape) GetID() impl.STR_PTR {
+func (shape Shape) GetID() gobpmnTypes.STR_PTR {
 	return &shape.ID
 }
 
 // GetElement ...
-func (shape Shape) GetElement() impl.STR_PTR {
+func (shape Shape) GetElement() gobpmnTypes.STR_PTR {
 	return &shape.Element
 }
 
 // GetIsHorizontal ...
-func (shape Shape) GetIsHorizontal() impl.BOOL_PTR {
+func (shape Shape) GetIsHorizontal() gobpmnTypes.BOOL_PTR {
 	return &shape.IsHorizontal
 }
 
 // GetIsMarkerVisible ...
-func (shape Shape) GetIsMarkerVisible() impl.BOOL_PTR {
+func (shape Shape) GetIsMarkerVisible() gobpmnTypes.BOOL_PTR {
 	return &shape.IsMarkerVisible
 }
 

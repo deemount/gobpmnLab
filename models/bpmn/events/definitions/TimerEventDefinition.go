@@ -1,8 +1,8 @@
 package definitions
 
 import (
-	"github.com/deemount/gobpmnLab/models/bpmn/impl"
 	"github.com/deemount/gobpmnLab/models/bpmn/time"
+	gobpmnTypes "github.com/deemount/gobpmnTypes"
 )
 
 // NewTimerEventDefinition ...
@@ -46,7 +46,7 @@ func (ted *TimerEventDefinition) SetTimeDuration() {
 /** BPMN **/
 
 // GetID ...
-func (ted TimerEventDefinition) GetID() impl.STR_PTR {
+func (ted TimerEventDefinition) GetID() gobpmnTypes.STR_PTR {
 	return &ted.ID
 }
 

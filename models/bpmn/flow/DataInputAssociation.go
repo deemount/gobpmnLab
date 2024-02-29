@@ -4,7 +4,7 @@ import (
 	"fmt"
 
 	"github.com/deemount/gobpmnLab/models/bpmn/attributes"
-	"github.com/deemount/gobpmnLab/models/bpmn/impl"
+	gobpmnTypes "github.com/deemount/gobpmnTypes"
 )
 
 // NewDataInputAssociation ...
@@ -51,7 +51,7 @@ func (dia *DataInputAssociation) SetExtensionElements() {
 /* Attributes */
 
 // GetID ...
-func (dia DataInputAssociation) GetID() impl.STR_PTR {
+func (dia DataInputAssociation) GetID() gobpmnTypes.STR_PTR {
 	return &dia.ID
 }
 

@@ -4,8 +4,8 @@ import (
 	"fmt"
 
 	"github.com/deemount/gobpmnLab/models/bpmn/attributes"
-	"github.com/deemount/gobpmnLab/models/bpmn/impl"
 	"github.com/deemount/gobpmnLab/models/bpmn/marker"
+	gobpmnTypes "github.com/deemount/gobpmnTypes"
 )
 
 func NewScriptTask() ScriptTaskRepository {
@@ -85,29 +85,29 @@ func (scriptTask *ScriptTask) SetOutgoing(num int) {
 /** BPMN **/
 
 // GetID ...
-func (scriptTask ScriptTask) GetID() impl.STR_PTR {
+func (scriptTask ScriptTask) GetID() gobpmnTypes.STR_PTR {
 	return &scriptTask.ID
 }
 
 // GetName ...
-func (scriptTask ScriptTask) GetName() impl.STR_PTR {
+func (scriptTask ScriptTask) GetName() gobpmnTypes.STR_PTR {
 	return &scriptTask.Name
 }
 
 /** Camunda **/
 
 // GetCamundaAsyncBefore ...
-func (scriptTask ScriptTask) GetCamundaAsyncBefore() impl.BOOL_PTR {
+func (scriptTask ScriptTask) GetCamundaAsyncBefore() gobpmnTypes.BOOL_PTR {
 	return &scriptTask.CamundaAsyncBefore
 }
 
 // GetCamundaAsyncAfter ...
-func (scriptTask ScriptTask) GetCamundaAsyncAfter() impl.BOOL_PTR {
+func (scriptTask ScriptTask) GetCamundaAsyncAfter() gobpmnTypes.BOOL_PTR {
 	return &scriptTask.CamundaAsyncAfter
 }
 
 // GetCamundaJobPriority ...
-func (scriptTask ScriptTask) GetCamundaJobPriority() impl.INT_PTR {
+func (scriptTask ScriptTask) GetCamundaJobPriority() gobpmnTypes.INT_PTR {
 	return &scriptTask.CamundaJobPriority
 }
 

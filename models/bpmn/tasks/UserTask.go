@@ -4,8 +4,8 @@ import (
 	"fmt"
 
 	"github.com/deemount/gobpmnLab/models/bpmn/attributes"
-	"github.com/deemount/gobpmnLab/models/bpmn/impl"
 	"github.com/deemount/gobpmnLab/models/bpmn/marker"
+	gobpmnTypes "github.com/deemount/gobpmnTypes"
 )
 
 func NewUserTask() UserTaskRepository {
@@ -127,66 +127,66 @@ func (utask *UserTask) SetOutgoing(num int) {
 /** BPMN **/
 
 // GetID ...
-func (utask UserTask) GetID() impl.STR_PTR {
+func (utask UserTask) GetID() gobpmnTypes.STR_PTR {
 	return &utask.ID
 }
 
 // GetName ...
-func (utask UserTask) GetName() impl.STR_PTR {
+func (utask UserTask) GetName() gobpmnTypes.STR_PTR {
 	return &utask.Name
 }
 
 /** Camunda **/
 
 // GetCamundaFormKey ...
-func (utask UserTask) GetCamundaFormKey() impl.STR_PTR {
+func (utask UserTask) GetCamundaFormKey() gobpmnTypes.STR_PTR {
 	return &utask.CamundaFormKey
 }
 
 // GetCamundaAsyncBefore ...
-func (utask UserTask) GetCamundaAsyncBefore() impl.BOOL_PTR {
+func (utask UserTask) GetCamundaAsyncBefore() gobpmnTypes.BOOL_PTR {
 	return &utask.CamundaAsyncBefore
 }
 
 // GetCamundaAsyncAfter ...
-func (utask UserTask) GetCamundaAsyncAfter() impl.BOOL_PTR {
+func (utask UserTask) GetCamundaAsyncAfter() gobpmnTypes.BOOL_PTR {
 	return &utask.CamundaAsyncAfter
 }
 
 // GetCamundaJobPriority ...
-func (utask UserTask) GetCamundaJobPriority() impl.INT_PTR {
+func (utask UserTask) GetCamundaJobPriority() gobpmnTypes.INT_PTR {
 	return &utask.CamundaJobPriority
 }
 
 // GetCamundaAssignee ...
-func (utask UserTask) GetCamundaAssignee() impl.STR_PTR {
+func (utask UserTask) GetCamundaAssignee() gobpmnTypes.STR_PTR {
 	return &utask.CamundaAssignee
 }
 
 // GetCamundaCandidUsers ...
-func (ut UserTask) GetCamundaCandidateUsers() impl.STR_PTR {
+func (ut UserTask) GetCamundaCandidateUsers() gobpmnTypes.STR_PTR {
 	return &ut.CamundaCandidateUsers
 }
 
 // GetCamundaCandidGroups ...
-func (ut UserTask) GetCamundaCandidateGroups() impl.STR_PTR {
+func (ut UserTask) GetCamundaCandidateGroups() gobpmnTypes.STR_PTR {
 	return &ut.CamundaCandidateGroups
 }
 
 // GetCamundaDueDate ...
 // rule: due date as an EL expression, e.g. {someDate} or as an ISO date, like 2015-06-29T09:54:00
-func (utask UserTask) GetCamundaDueDate() impl.STR_PTR {
+func (utask UserTask) GetCamundaDueDate() gobpmnTypes.STR_PTR {
 	return &utask.CamundaDueDate
 }
 
 // GetCamundaFollowUpDate
 // rule: due date as an EL expression, e.g. {someDate} or as an ISO date, like 2015-06-29T09:54:00
-func (utask UserTask) GetCamundaFollowUpDate() impl.STR_PTR {
+func (utask UserTask) GetCamundaFollowUpDate() gobpmnTypes.STR_PTR {
 	return &utask.CamundaFollowUpDate
 }
 
 // GetCamundaPriority ...
-func (utask UserTask) GetCamundaPriority() impl.INT_PTR {
+func (utask UserTask) GetCamundaPriority() gobpmnTypes.INT_PTR {
 	return &utask.CamundaPriority
 }
 

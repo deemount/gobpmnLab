@@ -1,6 +1,6 @@
 package camunda
 
-import "github.com/deemount/gobpmnLab/models/bpmn/impl"
+import gobpmnTypes "github.com/deemount/gobpmnTypes"
 
 // NewCamundaProperty ...
 func NewCamundaProperty() CamundaPropertyRepository {
@@ -30,11 +30,11 @@ func (property *CamundaProperty) SetValue(value string) {
 /* Attributes */
 
 // GetName ...
-func (property CamundaProperty) GetName() impl.STR_PTR {
+func (property CamundaProperty) GetName() gobpmnTypes.STR_PTR {
 	return &property.Name
 }
 
 // GetValue ...
-func (property CamundaProperty) GetValue() impl.STR_PTR {
+func (property CamundaProperty) GetValue() gobpmnTypes.STR_PTR {
 	return &property.Value
 }

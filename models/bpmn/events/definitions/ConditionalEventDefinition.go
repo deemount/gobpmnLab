@@ -2,7 +2,7 @@ package definitions
 
 import (
 	"github.com/deemount/gobpmnLab/models/bpmn/conditional"
-	"github.com/deemount/gobpmnLab/models/bpmn/impl"
+	gobpmnTypes "github.com/deemount/gobpmnTypes"
 )
 
 // NewConditionalEventDefinition ...
@@ -46,7 +46,7 @@ func (conditionalEventDefinition *ConditionalEventDefinition) SetCondition() {
 /** BPMN **/
 
 // GetID ...
-func (conditionalEventDefinition ConditionalEventDefinition) GetID() impl.STR_PTR {
+func (conditionalEventDefinition ConditionalEventDefinition) GetID() gobpmnTypes.STR_PTR {
 	return &conditionalEventDefinition.ID
 }
 

@@ -4,7 +4,7 @@ import (
 	"github.com/deemount/gobpmnLab/models/bpmn/attributes"
 	"github.com/deemount/gobpmnLab/models/bpmn/canvas"
 	"github.com/deemount/gobpmnLab/models/bpmn/conditional"
-	"github.com/deemount/gobpmnLab/models/bpmn/impl"
+	gobpmnTypes "github.com/deemount/gobpmnTypes"
 )
 
 // flow
@@ -55,21 +55,21 @@ type TDataInputAssociation struct {
 
 // MessageFlow ...
 type MessageFlow struct {
-	impl.BaseAttributes
+	gobpmnTypes.BaseAttributes
 	attributes.Attributes
 	SourceTargetRef
 }
 
 // TMessageFlow ...
 type TMessageFlow struct {
-	impl.BaseAttributes
+	gobpmnTypes.BaseAttributes
 	attributes.TAttributes
 	SourceTargetRef
 }
 
 // SequenceFlow ...
 type SequenceFlow struct {
-	impl.BaseAttributes
+	gobpmnTypes.BaseAttributes
 	attributes.Attributes
 	SourceTargetRef
 	ConditionExpression []conditional.ConditionExpression `xml:"bpmn:conditionExpression,omitempty" json:"conditionExpression,omitempty"`
@@ -77,7 +77,7 @@ type SequenceFlow struct {
 
 // TSequenceFlow ...
 type TSequenceFlow struct {
-	impl.BaseAttributes
+	gobpmnTypes.BaseAttributes
 	attributes.TAttributes
 	SourceTargetRef
 	ConditionExpression []conditional.ConditionExpression `xml:"conditionExpression,omitempty" json:"conditionExpression,omitempty"`

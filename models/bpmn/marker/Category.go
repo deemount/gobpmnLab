@@ -4,7 +4,7 @@ import (
 	"fmt"
 
 	"github.com/deemount/gobpmnLab/models/bpmn/attributes"
-	"github.com/deemount/gobpmnLab/models/bpmn/impl"
+	gobpmnTypes "github.com/deemount/gobpmnTypes"
 )
 
 func NewCategory() CategoryRepository {
@@ -61,7 +61,7 @@ func (category *Category) SetExtensionElements() {
 /** BPMN **/
 
 // GetID ...
-func (category Category) GetID() impl.STR_PTR {
+func (category Category) GetID() gobpmnTypes.STR_PTR {
 	return &category.ID
 }
 

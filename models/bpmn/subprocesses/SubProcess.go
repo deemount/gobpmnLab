@@ -8,10 +8,10 @@ import (
 	"github.com/deemount/gobpmnLab/models/bpmn/events/elements"
 	"github.com/deemount/gobpmnLab/models/bpmn/flow"
 	"github.com/deemount/gobpmnLab/models/bpmn/gateways"
-	"github.com/deemount/gobpmnLab/models/bpmn/impl"
 	"github.com/deemount/gobpmnLab/models/bpmn/loop"
 	"github.com/deemount/gobpmnLab/models/bpmn/marker"
 	"github.com/deemount/gobpmnLab/models/bpmn/tasks"
+	gobpmnTypes "github.com/deemount/gobpmnTypes"
 )
 
 // NewSubProcess ...
@@ -233,12 +233,12 @@ func (subprocess *SubProcess) SetSequenceFlow(num int) {
 /** BPMN **/
 
 // GetID ...
-func (subprocess SubProcess) GetID() impl.STR_PTR {
+func (subprocess SubProcess) GetID() gobpmnTypes.STR_PTR {
 	return &subprocess.ID
 }
 
 // GetName ...
-func (subprocess SubProcess) GetName() impl.STR_PTR {
+func (subprocess SubProcess) GetName() gobpmnTypes.STR_PTR {
 	return &subprocess.Name
 }
 

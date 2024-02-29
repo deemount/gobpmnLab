@@ -1,7 +1,7 @@
 package definitions
 
 import (
-	"github.com/deemount/gobpmnLab/models/bpmn/impl"
+	gobpmnTypes "github.com/deemount/gobpmnTypes"
 )
 
 // NewErrorEventDefinition ...
@@ -31,6 +31,6 @@ func (eed *ErrorEventDefinition) SetID(typ string, suffix interface{}) {
 /** BPMN **/
 
 // GetID ...
-func (eed ErrorEventDefinition) GetID() impl.STR_PTR {
+func (eed ErrorEventDefinition) GetID() gobpmnTypes.STR_PTR {
 	return &eed.ID
 }

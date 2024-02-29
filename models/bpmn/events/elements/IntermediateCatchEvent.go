@@ -7,8 +7,8 @@ import (
 
 	"github.com/deemount/gobpmnLab/models/bpmn/attributes"
 	"github.com/deemount/gobpmnLab/models/bpmn/events/definitions"
-	"github.com/deemount/gobpmnLab/models/bpmn/impl"
 	"github.com/deemount/gobpmnLab/models/bpmn/marker"
+	gobpmnTypes "github.com/deemount/gobpmnTypes"
 )
 
 // NewIntermediateCatchEvent ...
@@ -115,12 +115,12 @@ func (ice *IntermediateCatchEvent) SetMessageEventDefinition() {
 /** BPMN **/
 
 // GetID ...
-func (ice IntermediateCatchEvent) GetID() impl.STR_PTR {
+func (ice IntermediateCatchEvent) GetID() gobpmnTypes.STR_PTR {
 	return &ice.ID
 }
 
 // GetName ...
-func (ice IntermediateCatchEvent) GetName() impl.STR_PTR {
+func (ice IntermediateCatchEvent) GetName() gobpmnTypes.STR_PTR {
 	return &ice.Name
 }
 

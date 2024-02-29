@@ -7,8 +7,8 @@ import (
 
 	"github.com/deemount/gobpmnLab/models/bpmn/attributes"
 	"github.com/deemount/gobpmnLab/models/bpmn/events/definitions"
-	"github.com/deemount/gobpmnLab/models/bpmn/impl"
 	"github.com/deemount/gobpmnLab/models/bpmn/marker"
+	gobpmnTypes "github.com/deemount/gobpmnTypes"
 )
 
 // NewEndEvent ...
@@ -116,12 +116,12 @@ func (endEvent *EndEvent) SetTerminateEventDefinition() {
 /** BPMN **/
 
 // GetID ...
-func (endEvent EndEvent) GetID() impl.STR_PTR {
+func (endEvent EndEvent) GetID() gobpmnTypes.STR_PTR {
 	return &endEvent.ID
 }
 
 // GetName ...
-func (endEvent EndEvent) GetName() impl.STR_PTR {
+func (endEvent EndEvent) GetName() gobpmnTypes.STR_PTR {
 	return &endEvent.Name
 }
 

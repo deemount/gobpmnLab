@@ -2,7 +2,7 @@ package data
 
 import (
 	"github.com/deemount/gobpmnLab/models/bpmn/attributes"
-	"github.com/deemount/gobpmnLab/models/bpmn/impl"
+	gobpmnTypes "github.com/deemount/gobpmnTypes"
 )
 
 // DataObject ...
@@ -12,26 +12,26 @@ type DataObject struct {
 
 // DataObjectReference ...
 type DataObjectReference struct {
-	impl.BaseAttributes
+	gobpmnTypes.BaseAttributes
 	attributes.Attributes
 	DataObjectRef string `xml:"dataObjectRef,attr,omitempty" json:"dataObjectRef"`
 }
 
 // TDataObjectReference ...
 type TDataObjectReference struct {
-	impl.BaseAttributes
+	gobpmnTypes.BaseAttributes
 	attributes.TAttributes
 	DataObjectRef string `xml:"dataObjectRef,attr,omitempty" json:"dataObjectRef"`
 }
 
 // DataStoreReference ...
 type DataStoreReference struct {
-	impl.BaseAttributes
+	gobpmnTypes.BaseAttributes
 	attributes.Attributes
 }
 
 // TDataStoreReference ...
 type TDataStoreReference struct {
-	impl.BaseAttributes
+	gobpmnTypes.BaseAttributes
 	attributes.TAttributes
 }

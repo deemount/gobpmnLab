@@ -4,7 +4,7 @@ import (
 	"fmt"
 
 	"github.com/deemount/gobpmnLab/models/bpmn/attributes"
-	"github.com/deemount/gobpmnLab/models/bpmn/impl"
+	gobpmnTypes "github.com/deemount/gobpmnTypes"
 )
 
 // NewGroup ...
@@ -60,7 +60,7 @@ func (group *Group) SetExtensionElements() {
 /** BPMN **/
 
 // GetID ...
-func (group Group) GetID() impl.STR_PTR {
+func (group Group) GetID() gobpmnTypes.STR_PTR {
 	return &group.ID
 
 }

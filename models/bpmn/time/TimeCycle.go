@@ -3,7 +3,7 @@ package time
 import (
 	"fmt"
 
-	"github.com/deemount/gobpmnLab/models/bpmn/impl"
+	gobpmnTypes "github.com/deemount/gobpmnTypes"
 )
 
 // NewTimeCycle ...
@@ -38,11 +38,11 @@ func (timecycle *TimeCycle) SetTimerDefinition(timerDefinition string) {
 /** BPMN **/
 
 // GetTimerDefinitionType ...
-func (timecycle TimeCycle) GetTimerDefinitionType() impl.STR_PTR {
+func (timecycle TimeCycle) GetTimerDefinitionType() gobpmnTypes.STR_PTR {
 	return &timecycle.TimerDefType
 }
 
 // GetTimerDefinition ...
-func (timecycle TimeCycle) GetTimerDefinition() impl.STR_PTR {
+func (timecycle TimeCycle) GetTimerDefinition() gobpmnTypes.STR_PTR {
 	return &timecycle.TimerDef
 }

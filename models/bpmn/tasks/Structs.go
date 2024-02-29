@@ -5,8 +5,8 @@ import (
 	"github.com/deemount/gobpmnLab/models/bpmn/camunda"
 	"github.com/deemount/gobpmnLab/models/bpmn/canvas"
 	"github.com/deemount/gobpmnLab/models/bpmn/flow"
-	"github.com/deemount/gobpmnLab/models/bpmn/impl"
 	"github.com/deemount/gobpmnLab/models/bpmn/marker"
+	gobpmnTypes "github.com/deemount/gobpmnTypes"
 )
 
 // tasks
@@ -56,7 +56,7 @@ type TTasks struct {
 
 // BusinessRuleTask ...
 type BusinessRuleTask struct {
-	impl.BaseAttributes
+	gobpmnTypes.BaseAttributes
 	attributes.Attributes
 	camunda.CoreAttributes
 	marker.IncomingOutgoing
@@ -65,7 +65,7 @@ type BusinessRuleTask struct {
 
 // TBusinessRuleTask ...
 type TBusinessRuleTask struct {
-	impl.BaseAttributes
+	gobpmnTypes.BaseAttributes
 	attributes.TAttributes
 	camunda.TCoreAttributes
 	marker.TIncomingOutgoing
@@ -74,7 +74,7 @@ type TBusinessRuleTask struct {
 
 // ManualTask ...
 type ManualTask struct {
-	impl.BaseAttributes
+	gobpmnTypes.BaseAttributes
 	attributes.Attributes
 	camunda.CoreAttributes
 	marker.IncomingOutgoing
@@ -82,7 +82,7 @@ type ManualTask struct {
 
 // TManualTask ...
 type TManualTask struct {
-	impl.BaseAttributes
+	gobpmnTypes.BaseAttributes
 	attributes.TAttributes
 	camunda.TCoreAttributes
 	marker.TIncomingOutgoing
@@ -90,7 +90,7 @@ type TManualTask struct {
 
 // ReceiveTask ...
 type ReceiveTask struct {
-	impl.BaseAttributes
+	gobpmnTypes.BaseAttributes
 	attributes.Attributes
 	camunda.CoreAttributes
 	marker.IncomingOutgoing
@@ -99,7 +99,7 @@ type ReceiveTask struct {
 
 // TReceiveTask ...
 type TReceiveTask struct {
-	impl.BaseAttributes
+	gobpmnTypes.BaseAttributes
 	attributes.TAttributes
 	camunda.TCoreAttributes
 	marker.TIncomingOutgoing
@@ -108,7 +108,7 @@ type TReceiveTask struct {
 
 // ScriptTask ...
 type ScriptTask struct {
-	impl.BaseAttributes
+	gobpmnTypes.BaseAttributes
 	attributes.Attributes
 	camunda.CoreAttributes
 	marker.IncomingOutgoing
@@ -116,7 +116,7 @@ type ScriptTask struct {
 
 // TScriptTask ...
 type TScriptTask struct {
-	impl.BaseAttributes
+	gobpmnTypes.BaseAttributes
 	attributes.TAttributes
 	camunda.TCoreAttributes
 	marker.TIncomingOutgoing
@@ -124,7 +124,7 @@ type TScriptTask struct {
 
 // SendTask ...
 type SendTask struct {
-	impl.BaseAttributes
+	gobpmnTypes.BaseAttributes
 	attributes.Attributes
 	camunda.CoreAttributes
 	marker.IncomingOutgoing
@@ -132,7 +132,7 @@ type SendTask struct {
 
 // TSendTask ...
 type TSendTask struct {
-	impl.BaseAttributes
+	gobpmnTypes.BaseAttributes
 	attributes.TAttributes
 	camunda.TCoreAttributes
 	marker.TIncomingOutgoing
@@ -140,7 +140,7 @@ type TSendTask struct {
 
 // ServiceTask ...
 type ServiceTask struct {
-	impl.BaseAttributes
+	gobpmnTypes.BaseAttributes
 	attributes.Attributes
 	camunda.CoreAttributes
 	marker.IncomingOutgoing
@@ -148,7 +148,7 @@ type ServiceTask struct {
 
 // TServiceTask ...
 type TServiceTask struct {
-	impl.BaseAttributes
+	gobpmnTypes.BaseAttributes
 	attributes.TAttributes
 	camunda.TCoreAttributes
 	marker.TIncomingOutgoing
@@ -156,7 +156,7 @@ type TServiceTask struct {
 
 // Task ...
 type Task struct {
-	impl.BaseAttributes
+	gobpmnTypes.BaseAttributes
 	attributes.Attributes
 	camunda.CoreAttributes
 	marker.IncomingOutgoing
@@ -166,7 +166,7 @@ type Task struct {
 
 // TTask ...
 type TTask struct {
-	impl.BaseAttributes
+	gobpmnTypes.BaseAttributes
 	attributes.TAttributes
 	camunda.TCoreAttributes
 	marker.TIncomingOutgoing
@@ -176,7 +176,7 @@ type TTask struct {
 
 // UserTask ...
 type UserTask struct {
-	impl.BaseAttributes
+	gobpmnTypes.BaseAttributes
 	attributes.Attributes
 	camunda.CoreAttributes
 	marker.IncomingOutgoing
@@ -191,7 +191,7 @@ type UserTask struct {
 
 // TUserTask ...
 type TUserTask struct {
-	impl.BaseAttributes
+	gobpmnTypes.BaseAttributes
 	attributes.TAttributes
 	camunda.TCoreAttributes
 	marker.TIncomingOutgoing

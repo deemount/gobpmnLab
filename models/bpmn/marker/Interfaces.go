@@ -2,7 +2,7 @@ package marker
 
 import (
 	"github.com/deemount/gobpmnLab/models/bpmn/attributes"
-	"github.com/deemount/gobpmnLab/models/bpmn/impl"
+	gobpmnTypes "github.com/deemount/gobpmnTypes"
 )
 
 /*
@@ -43,8 +43,8 @@ type MarkerIncomingOutgoing interface {
 
 // MarkerBase ...
 type MarkerBase interface {
-	impl.IFBaseID
-	impl.IFBaseName
+	gobpmnTypes.IFBaseID
+	gobpmnTypes.IFBaseName
 }
 
 /*
@@ -53,7 +53,7 @@ type MarkerBase interface {
 
 // CategoryRepository ...
 type CategoryRepository interface {
-	impl.IFBaseID
+	gobpmnTypes.IFBaseID
 	attributes.AttributesBaseElements
 
 	SetCategoryValue()
@@ -62,7 +62,7 @@ type CategoryRepository interface {
 
 // CategoryValueRepository ...
 type CategoryValueRepository interface {
-	impl.IFBaseID
+	gobpmnTypes.IFBaseID
 
 	SetValue(value string)
 	GetValue() *string
@@ -76,7 +76,7 @@ type OutgoingRepository interface{ MarkerFlow }
 
 // GroupRepository ...
 type GroupRepository interface {
-	impl.IFBaseID
+	gobpmnTypes.IFBaseID
 
 	SetCategoryValueRef(suffix string)
 	GetCategoryValueRef() *string

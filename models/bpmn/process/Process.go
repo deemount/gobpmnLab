@@ -9,10 +9,10 @@ import (
 	"github.com/deemount/gobpmnLab/models/bpmn/events/elements"
 	"github.com/deemount/gobpmnLab/models/bpmn/flow"
 	"github.com/deemount/gobpmnLab/models/bpmn/gateways"
-	"github.com/deemount/gobpmnLab/models/bpmn/impl"
 	"github.com/deemount/gobpmnLab/models/bpmn/pool"
 	"github.com/deemount/gobpmnLab/models/bpmn/subprocesses"
 	"github.com/deemount/gobpmnLab/models/bpmn/tasks"
+	gobpmnTypes "github.com/deemount/gobpmnTypes"
 )
 
 // NewProcess ...
@@ -252,12 +252,12 @@ func (process *Process) SetDataObject(num int) {
 /*** Attributes ***/
 
 // GetID ...
-func (process Process) GetID() impl.STR_PTR {
+func (process Process) GetID() gobpmnTypes.STR_PTR {
 	return &process.ID
 }
 
 // GetName ...
-func (process Process) GetName() impl.STR_PTR {
+func (process Process) GetName() gobpmnTypes.STR_PTR {
 	return &process.Name
 }
 

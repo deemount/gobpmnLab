@@ -3,7 +3,7 @@ package pool
 import (
 	"fmt"
 
-	"github.com/deemount/gobpmnLab/models/bpmn/impl"
+	gobpmnTypes "github.com/deemount/gobpmnTypes"
 )
 
 // NewLaneSet ...
@@ -49,7 +49,7 @@ func (ls *LaneSet) SetLane(num int) {
 /** BPMN **/
 
 // GetID ...
-func (ls LaneSet) GetID() impl.STR_PTR {
+func (ls LaneSet) GetID() gobpmnTypes.STR_PTR {
 	return &ls.ID
 }
 

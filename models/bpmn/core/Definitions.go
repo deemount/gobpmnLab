@@ -7,10 +7,10 @@ import (
 	"github.com/deemount/gobpmnLab/models/bpmn/canvas"
 	"github.com/deemount/gobpmnLab/models/bpmn/collaboration"
 	"github.com/deemount/gobpmnLab/models/bpmn/events"
-	"github.com/deemount/gobpmnLab/models/bpmn/impl"
 	"github.com/deemount/gobpmnLab/models/bpmn/marker"
 	"github.com/deemount/gobpmnLab/models/bpmn/process"
 	"github.com/deemount/gobpmnLab/utils"
+	gobpmnTypes "github.com/deemount/gobpmnTypes"
 )
 
 var (
@@ -218,7 +218,7 @@ func (definitions *Definitions) SetMainElements(num int) {
 /** BPMN **/
 
 // GetID ...
-func (definitions Definitions) GetID() impl.STR_PTR {
+func (definitions Definitions) GetID() gobpmnTypes.STR_PTR {
 	return &definitions.ID
 }
 

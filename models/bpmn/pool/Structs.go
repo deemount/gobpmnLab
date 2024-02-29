@@ -1,7 +1,7 @@
 package pool
 
 import (
-	"github.com/deemount/gobpmnLab/models/bpmn/impl"
+	gobpmnTypes "github.com/deemount/gobpmnTypes"
 )
 
 // pool
@@ -17,29 +17,29 @@ type DelegateParameter struct {
 
 // FlowNodeRef ...
 type FlowNodeRef struct {
-	impl.CoreInnerID
+	gobpmnTypes.CoreInnerID
 }
 
 // Lane ...
 type Lane struct {
-	impl.CoreID
+	gobpmnTypes.CoreID
 	FlowNodeRef []FlowNodeRef `xml:"bpmn:flowNodeRef,omitempty" json:"flowNodeRef,omitempty"`
 }
 
 // TLane ...
 type TLane struct {
-	impl.CoreID
+	gobpmnTypes.CoreID
 	FlowNodeRef []FlowNodeRef `xml:"flowNodeRef,omitempty" json:"flowNodeRef,omitempty"`
 }
 
 // LaneSet ...
 type LaneSet struct {
-	impl.CoreID
+	gobpmnTypes.CoreID
 	Lane []Lane `xml:"bpmn:lane,omitempty" json:"lane,omitempty"`
 }
 
 // TLaneSet ...
 type TLaneSet struct {
-	impl.CoreID
+	gobpmnTypes.CoreID
 	Lane []TLane `xml:"lane,omitempty" json:"lane,omitempty"`
 }

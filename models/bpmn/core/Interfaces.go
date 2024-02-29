@@ -4,9 +4,9 @@ import (
 	"github.com/deemount/gobpmnLab/models/bpmn/canvas"
 	"github.com/deemount/gobpmnLab/models/bpmn/collaboration"
 	"github.com/deemount/gobpmnLab/models/bpmn/events"
-	"github.com/deemount/gobpmnLab/models/bpmn/impl"
 	"github.com/deemount/gobpmnLab/models/bpmn/marker"
 	"github.com/deemount/gobpmnLab/models/bpmn/process"
+	gobpmnTypes "github.com/deemount/gobpmnTypes"
 )
 
 type DefinitionsElements interface {
@@ -23,7 +23,7 @@ type DefinitionsElements interface {
 
 // DefinitionsRepository ...
 type DefinitionsRepository interface {
-	impl.IFBaseID
+	gobpmnTypes.IFBaseID
 	DefinitionsElements
 	SetBpmn()
 	SetBpmnDI()

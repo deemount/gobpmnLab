@@ -1,6 +1,6 @@
 package camunda
 
-import "github.com/deemount/gobpmnLab/models/bpmn/impl"
+import gobpmnTypes "github.com/deemount/gobpmnTypes"
 
 // NewCamundaValue ...
 func NewCamundaValue() CamundaValueRepository {
@@ -25,6 +25,6 @@ func (value *CamundaValue) SetValue(val string) {
 /* Content */
 
 // GetValue ...
-func (value CamundaValue) GetValue() impl.STR_PTR {
+func (value CamundaValue) GetValue() gobpmnTypes.STR_PTR {
 	return &value.Value
 }

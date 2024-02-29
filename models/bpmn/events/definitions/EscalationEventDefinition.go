@@ -1,8 +1,6 @@
 package definitions
 
-import (
-	"github.com/deemount/gobpmnLab/models/bpmn/impl"
-)
+import gobpmnTypes "github.com/deemount/gobpmnTypes"
 
 // NewEscalationEventDefinition
 func NewEscalationEventDefinition() EscalationEventDefinitionRepository {
@@ -31,6 +29,6 @@ func (esced *EscalationEventDefinition) SetID(typ string, suffix interface{}) {
 /** BPMN **/
 
 // GetID ...
-func (esced EscalationEventDefinition) GetID() impl.STR_PTR {
+func (esced EscalationEventDefinition) GetID() gobpmnTypes.STR_PTR {
 	return &esced.ID
 }

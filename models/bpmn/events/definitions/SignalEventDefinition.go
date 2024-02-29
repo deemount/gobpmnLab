@@ -3,7 +3,7 @@ package definitions
 import (
 	"fmt"
 
-	"github.com/deemount/gobpmnLab/models/bpmn/impl"
+	gobpmnTypes "github.com/deemount/gobpmnTypes"
 )
 
 // NewSignalEventDefinition ...
@@ -38,7 +38,7 @@ func (sed *SignalEventDefinition) SetSignalRef(suffix string) {
 /** BPMN **/
 
 // GetID ...
-func (sed SignalEventDefinition) GetID() impl.STR_PTR {
+func (sed SignalEventDefinition) GetID() gobpmnTypes.STR_PTR {
 	return &sed.ID
 }
 

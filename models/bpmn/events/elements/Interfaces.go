@@ -5,8 +5,8 @@ import (
 
 	"github.com/deemount/gobpmnLab/models/bpmn/attributes"
 	"github.com/deemount/gobpmnLab/models/bpmn/events/definitions"
-	"github.com/deemount/gobpmnLab/models/bpmn/impl"
 	"github.com/deemount/gobpmnLab/models/bpmn/marker"
+	gobpmnTypes "github.com/deemount/gobpmnTypes"
 )
 
 // Notice: belongs to definitions package
@@ -55,8 +55,8 @@ type EventElementsCoreThrowCatchElements interface {
 
 // BoundaryEventRepository ...
 type BoundaryEventRepository interface {
-	impl.IFBaseID
-	impl.IFBaseName
+	gobpmnTypes.IFBaseID
+	gobpmnTypes.IFBaseName
 	EventElementsDefinitions
 	marker.MarkerOutgoing
 
@@ -80,8 +80,8 @@ type TBoundaryEventRepository interface {
 
 // EndEventRepository ...
 type EndEventRepository interface {
-	impl.IFBaseID
-	impl.IFBaseName
+	gobpmnTypes.IFBaseID
+	gobpmnTypes.IFBaseName
 	EventElementsCamundaBase
 	marker.MarkerIncoming
 	attributes.AttributesBaseElements
@@ -101,8 +101,8 @@ type TEndEventRepository interface {
 
 // IntermediateCatchEventRepository ...
 type IntermediateCatchEventRepository interface {
-	impl.IFBaseID
-	impl.IFBaseName
+	gobpmnTypes.IFBaseID
+	gobpmnTypes.IFBaseName
 	EventElementsCamundaBase
 	attributes.AttributesBaseElements
 	marker.MarkerIncomingOutgoing
@@ -124,8 +124,8 @@ type TIntermediateCatchEventRepository interface {
 
 // IntermediateThrowEventRepository ...
 type IntermediateThrowEventRepository interface {
-	impl.IFBaseID
-	impl.IFBaseName
+	gobpmnTypes.IFBaseID
+	gobpmnTypes.IFBaseName
 	marker.MarkerIncomingOutgoing
 	attributes.AttributesBaseElements
 	EventElementsCoreThrowCatchElements
@@ -146,8 +146,8 @@ type TIntermediateThrowEventRepository interface {
 
 // StartEventRepository ...
 type StartEventRepository interface {
-	impl.IFBaseID
-	impl.IFBaseName
+	gobpmnTypes.IFBaseID
+	gobpmnTypes.IFBaseName
 	EventElementsCamundaBase
 	marker.MarkerOutgoing
 	attributes.AttributesBaseElements
@@ -185,12 +185,12 @@ type TStartEventRepository interface {
 
 // MessageRepository ...
 type MessageRepository interface {
-	impl.IFBaseID
-	impl.IFBaseName
+	gobpmnTypes.IFBaseID
+	gobpmnTypes.IFBaseName
 }
 
 // SignalRepository ...
 type SignalRepository interface {
-	impl.IFBaseID
-	impl.IFBaseName
+	gobpmnTypes.IFBaseID
+	gobpmnTypes.IFBaseName
 }

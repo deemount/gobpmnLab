@@ -3,7 +3,7 @@ package flow
 import (
 	"github.com/deemount/gobpmnLab/models/bpmn/attributes"
 	"github.com/deemount/gobpmnLab/models/bpmn/conditional"
-	"github.com/deemount/gobpmnLab/models/bpmn/impl"
+	gobpmnTypes "github.com/deemount/gobpmnTypes"
 )
 
 /*
@@ -13,9 +13,9 @@ import (
 // FlowBaseReference ...
 type FlowBaseReferences interface {
 	SetSourceRef(typ string, sourceRef interface{})
-	GetSourceRef() impl.STR_PTR
+	GetSourceRef() gobpmnTypes.STR_PTR
 	SetTargetRef(typ string, targetRef interface{})
-	GetTargetRef() impl.STR_PTR
+	GetTargetRef() gobpmnTypes.STR_PTR
 }
 
 // FlowSequenceFlow ...
@@ -26,8 +26,8 @@ type FlowSequenceFlow interface {
 
 // FlowBase ...
 type FlowBase interface {
-	impl.IFBaseID
-	impl.IFBaseName
+	gobpmnTypes.IFBaseID
+	gobpmnTypes.IFBaseName
 }
 
 /*
@@ -36,7 +36,7 @@ type FlowBase interface {
 
 // AssociationRepository ...
 type AssociationRepository interface {
-	impl.IFBaseID
+	gobpmnTypes.IFBaseID
 	attributes.AttributesBaseElements
 
 	FlowBaseReferences
@@ -44,7 +44,7 @@ type AssociationRepository interface {
 
 // DataInputAssociationRepository ...
 type DataInputAssociationRepository interface {
-	impl.IFBaseID
+	gobpmnTypes.IFBaseID
 	attributes.AttributesBaseElements
 }
 

@@ -1,6 +1,6 @@
 package conditional
 
-import "github.com/deemount/gobpmnLab/models/bpmn/impl"
+import gobpmnTypes "github.com/deemount/gobpmnTypes"
 
 // NewConditionExpression ...
 func NewConditionExpression() ConditionExpressionRepository {
@@ -46,21 +46,21 @@ func (conditionExpression *ConditionExpression) SetExpression(expression string)
 /** BPMN **/
 
 // GetConditionType ...
-func (conditionExpression ConditionExpression) GetConditionType() impl.STR_PTR {
+func (conditionExpression ConditionExpression) GetConditionType() gobpmnTypes.STR_PTR {
 	return &conditionExpression.ConditionType
 }
 
 // GetScriptFormat ...
-func (conditionExpression ConditionExpression) GetScriptFormat() impl.STR_PTR {
+func (conditionExpression ConditionExpression) GetScriptFormat() gobpmnTypes.STR_PTR {
 	return &conditionExpression.ScriptFormat
 }
 
 // GetScript ...
-func (conditionExpression ConditionExpression) GetScript() impl.STR_PTR {
+func (conditionExpression ConditionExpression) GetScript() gobpmnTypes.STR_PTR {
 	return &conditionExpression.Script
 }
 
 // GetExpression ...
-func (conditionExpression ConditionExpression) GetExpression() impl.STR_PTR {
+func (conditionExpression ConditionExpression) GetExpression() gobpmnTypes.STR_PTR {
 	return &conditionExpression.Expression
 }

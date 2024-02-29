@@ -3,7 +3,7 @@ package canvas
 import (
 	"fmt"
 
-	"github.com/deemount/gobpmnLab/models/bpmn/impl"
+	gobpmnTypes "github.com/deemount/gobpmnTypes"
 )
 
 // NewPlane ...
@@ -81,12 +81,12 @@ func (plane *Plane) SetEdge(num int) {
 /** BPMN **/
 
 // GetID ...
-func (plane Plane) GetID() impl.STR_PTR {
+func (plane Plane) GetID() gobpmnTypes.STR_PTR {
 	return &plane.ID
 }
 
 // GetElement ...
-func (plane Plane) GetElement() impl.STR_PTR {
+func (plane Plane) GetElement() gobpmnTypes.STR_PTR {
 	return &plane.Element
 }
 

@@ -3,7 +3,7 @@ package canvas
 import (
 	"fmt"
 
-	"github.com/deemount/gobpmnLab/models/bpmn/impl"
+	gobpmnTypes "github.com/deemount/gobpmnTypes"
 )
 
 // NewDiagram ...
@@ -47,7 +47,7 @@ func (diagram *Diagram) SetPlane() {
 /* Attributes */
 
 // GetID ...
-func (diagram Diagram) GetID() impl.STR_PTR {
+func (diagram Diagram) GetID() gobpmnTypes.STR_PTR {
 	return &diagram.ID
 }
 

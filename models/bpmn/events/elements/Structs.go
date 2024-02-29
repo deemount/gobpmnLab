@@ -5,8 +5,8 @@ import (
 	"github.com/deemount/gobpmnLab/models/bpmn/camunda"
 	"github.com/deemount/gobpmnLab/models/bpmn/canvas"
 	"github.com/deemount/gobpmnLab/models/bpmn/events/definitions"
-	"github.com/deemount/gobpmnLab/models/bpmn/impl"
 	"github.com/deemount/gobpmnLab/models/bpmn/marker"
+	gobpmnTypes "github.com/deemount/gobpmnTypes"
 )
 
 // event
@@ -35,7 +35,7 @@ type DelegateParameter struct {
 
 // BoundaryEvent ...
 type BoundaryEvent struct {
-	impl.BaseAttributes
+	gobpmnTypes.BaseAttributes
 	definitions.Boundaries
 	AttachedToRef  string            `xml:"attachedToRef,attr,omitempty" json:"attachedToRef,omitempty"`
 	CancelActivity bool              `xml:"cancelActivity,attr,omitempty" json:"cancelActivity,omitempty"` // maybe @deprecated in new modeler
@@ -44,7 +44,7 @@ type BoundaryEvent struct {
 
 // TBoundaryEvent ...
 type TBoundaryEvent struct {
-	impl.BaseAttributes
+	gobpmnTypes.BaseAttributes
 	definitions.TBoundaries
 	AttachedToRef  string            `xml:"attachedToRef,attr,omitempty" json:"attachedToRef,omitempty"`
 	CancelActivity bool              `xml:"cancelActivity,attr,omitempty" json:"cancelActivity,omitempty"` // maybe @deprecated in new modeler
@@ -53,7 +53,7 @@ type TBoundaryEvent struct {
 
 // EndEvent ...
 type EndEvent struct {
-	impl.BaseAttributes
+	gobpmnTypes.BaseAttributes
 	camunda.CoreAttributes
 	attributes.Attributes
 	definitions.EndEvent
@@ -62,7 +62,7 @@ type EndEvent struct {
 
 // TEndEvent ...
 type TEndEvent struct {
-	impl.BaseAttributes
+	gobpmnTypes.BaseAttributes
 	camunda.TCoreAttributes
 	attributes.TAttributes
 	definitions.TEndEvent
@@ -71,7 +71,7 @@ type TEndEvent struct {
 
 // IntermediateCatchEvent ...
 type IntermediateCatchEvent struct {
-	impl.BaseAttributes
+	gobpmnTypes.BaseAttributes
 	camunda.CoreAttributes
 	attributes.Attributes
 	marker.TIncomingOutgoing
@@ -80,7 +80,7 @@ type IntermediateCatchEvent struct {
 
 // TIntermediateCatchEvent ...
 type TIntermediateCatchEvent struct {
-	impl.BaseAttributes
+	gobpmnTypes.BaseAttributes
 	camunda.TCoreAttributes
 	attributes.TAttributes
 	marker.TIncomingOutgoing
@@ -89,7 +89,7 @@ type TIntermediateCatchEvent struct {
 
 // IntermediateThrowEvent ...
 type IntermediateThrowEvent struct {
-	impl.BaseAttributes
+	gobpmnTypes.BaseAttributes
 	attributes.Attributes
 	marker.IncomingOutgoing
 	definitions.IntermediateThrowEvent
@@ -97,7 +97,7 @@ type IntermediateThrowEvent struct {
 
 // TIntermediateThrowEvent ...
 type TIntermediateThrowEvent struct {
-	impl.BaseAttributes
+	gobpmnTypes.BaseAttributes
 	attributes.TAttributes
 	marker.TIncomingOutgoing
 	definitions.TIntermediateThrowEvent
@@ -105,7 +105,7 @@ type TIntermediateThrowEvent struct {
 
 // StartEvent ...
 type StartEvent struct {
-	impl.BaseAttributes
+	gobpmnTypes.BaseAttributes
 	camunda.CoreAttributes
 	attributes.Attributes
 	definitions.StartEvent
@@ -120,7 +120,7 @@ type StartEvent struct {
 
 // TStartEvent ...
 type TStartEvent struct {
-	impl.BaseAttributes
+	gobpmnTypes.BaseAttributes
 	camunda.TCoreAttributes
 	attributes.TAttributes
 	definitions.TStartEvent
@@ -135,20 +135,20 @@ type TStartEvent struct {
 
 // Message ...
 type Message struct {
-	impl.BaseAttributes
+	gobpmnTypes.BaseAttributes
 }
 
 // TMessage ...
 type TMessage struct {
-	impl.BaseAttributes
+	gobpmnTypes.BaseAttributes
 }
 
 // Signal ...
 type Signal struct {
-	impl.BaseAttributes
+	gobpmnTypes.BaseAttributes
 }
 
 // TSignal ...
 type TSignal struct {
-	impl.BaseAttributes
+	gobpmnTypes.BaseAttributes
 }

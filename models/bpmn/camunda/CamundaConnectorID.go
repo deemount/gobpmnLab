@@ -3,7 +3,7 @@ package camunda
 import (
 	"fmt"
 
-	"github.com/deemount/gobpmnLab/models/bpmn/impl"
+	gobpmnTypes "github.com/deemount/gobpmnTypes"
 )
 
 // NewCamundaConnectorID ...
@@ -34,6 +34,6 @@ func (cconnectorId *CamundaConnectorID) SetID(typ string, suffix interface{}) {
 /* Content */
 
 // GetID ...
-func (cconnectorId CamundaConnectorID) GetID() impl.STR_PTR {
+func (cconnectorId CamundaConnectorID) GetID() gobpmnTypes.STR_PTR {
 	return &cconnectorId.ID
 }

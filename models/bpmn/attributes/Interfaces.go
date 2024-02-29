@@ -2,7 +2,7 @@ package attributes
 
 import (
 	"github.com/deemount/gobpmnLab/models/bpmn/camunda"
-	"github.com/deemount/gobpmnLab/models/bpmn/impl"
+	gobpmnTypes "github.com/deemount/gobpmnTypes"
 )
 
 type AttributesBaseElements interface {
@@ -25,6 +25,6 @@ type ExtensionElementsRepository interface {
 
 // PropertyRepository ...
 type PropertyRepository interface {
-	impl.IFBaseID
-	impl.IFBaseName
+	gobpmnTypes.IFBaseID
+	gobpmnTypes.IFBaseName
 }

@@ -6,8 +6,6 @@ import (
 	"reflect"
 )
 
-// http://www.inanzzz.com/index.php/post/2qdl/event-listener-and-dispatcher-example-with-golang
-
 func NewDispatcher() *Dispatcher {
 	return &Dispatcher{}
 }

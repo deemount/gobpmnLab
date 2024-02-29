@@ -4,9 +4,9 @@ import (
 	"fmt"
 
 	"github.com/deemount/gobpmnLab/models/bpmn/attributes"
-	"github.com/deemount/gobpmnLab/models/bpmn/impl"
 	"github.com/deemount/gobpmnLab/models/bpmn/loop"
 	"github.com/deemount/gobpmnLab/models/bpmn/marker"
+	gobpmnTypes "github.com/deemount/gobpmnTypes"
 )
 
 func NewCallActivity() CallActivityRepository {
@@ -116,12 +116,12 @@ func (ca *CallActivity) SetMultiInstanceLoopCharacteristics() {
 /** BPMN **/
 
 // GetID ...
-func (ca CallActivity) GetID() impl.STR_PTR {
+func (ca CallActivity) GetID() gobpmnTypes.STR_PTR {
 	return &ca.ID
 }
 
 // GetName ...
-func (ca CallActivity) GetName() impl.STR_PTR {
+func (ca CallActivity) GetName() gobpmnTypes.STR_PTR {
 	return &ca.Name
 }
 

@@ -1,6 +1,6 @@
 package camunda
 
-import "github.com/deemount/gobpmnLab/models/bpmn/impl"
+import gobpmnTypes "github.com/deemount/gobpmnTypes"
 
 // NewCamundaEntry ...
 func NewCamundaEntry() CamundaEntryRepository {
@@ -32,13 +32,13 @@ func (centry *CamundaEntry) SetValue(value string) {
 /* Attributes */
 
 // GetKey ...
-func (centry CamundaEntry) GetKey() impl.STR_PTR {
+func (centry CamundaEntry) GetKey() gobpmnTypes.STR_PTR {
 	return &centry.Key
 }
 
 /* Content */
 
 // GetValue ...
-func (centry CamundaEntry) GetValue() impl.STR_PTR {
+func (centry CamundaEntry) GetValue() gobpmnTypes.STR_PTR {
 	return &centry.Value
 }

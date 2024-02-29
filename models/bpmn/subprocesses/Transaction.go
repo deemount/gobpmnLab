@@ -5,8 +5,8 @@ import (
 
 	"github.com/deemount/gobpmnLab/models/bpmn/attributes"
 	"github.com/deemount/gobpmnLab/models/bpmn/flow"
-	"github.com/deemount/gobpmnLab/models/bpmn/impl"
 	"github.com/deemount/gobpmnLab/models/bpmn/marker"
+	gobpmnTypes "github.com/deemount/gobpmnTypes"
 )
 
 func NewTransaction() TransactionRepository {
@@ -99,12 +99,12 @@ func (transaction *Transaction) SetSequenceFlow(num int) {
 /** BPMN **/
 
 // GetID ...
-func (transaction Transaction) GetID() impl.STR_PTR {
+func (transaction Transaction) GetID() gobpmnTypes.STR_PTR {
 	return &transaction.ID
 }
 
 // GetName ...
-func (transaction Transaction) GetName() impl.STR_PTR {
+func (transaction Transaction) GetName() gobpmnTypes.STR_PTR {
 	return &transaction.Name
 }
 

@@ -4,8 +4,8 @@ import (
 	"fmt"
 
 	"github.com/deemount/gobpmnLab/models/bpmn/attributes"
-	"github.com/deemount/gobpmnLab/models/bpmn/impl"
 	"github.com/deemount/gobpmnLab/models/bpmn/marker"
+	gobpmnTypes "github.com/deemount/gobpmnTypes"
 )
 
 func NewEventBasedGateway() EventBasedGatewayRepository {
@@ -89,12 +89,12 @@ func (eventBasedGateway *EventBasedGateway) SetOutgoing(num int) {
 /** BPMN **/
 
 // GetID ...
-func (eventBasedGateway EventBasedGateway) GetID() impl.STR_PTR {
+func (eventBasedGateway EventBasedGateway) GetID() gobpmnTypes.STR_PTR {
 	return &eventBasedGateway.ID
 }
 
 // GetName ...
-func (eventBasedGateway EventBasedGateway) GetName() impl.STR_PTR {
+func (eventBasedGateway EventBasedGateway) GetName() gobpmnTypes.STR_PTR {
 	return &eventBasedGateway.Name
 }
 

@@ -6,8 +6,8 @@ import (
 	"log"
 
 	"github.com/deemount/gobpmnLab/models/bpmn/events/definitions"
-	"github.com/deemount/gobpmnLab/models/bpmn/impl"
 	"github.com/deemount/gobpmnLab/models/bpmn/marker"
+	gobpmnTypes "github.com/deemount/gobpmnTypes"
 )
 
 // NewBoundaryEvent ...
@@ -110,12 +110,12 @@ func (be *BoundaryEvent) SetOutgoing(num int) {
 /** BPMN **/
 
 // GetID ...
-func (be BoundaryEvent) GetID() impl.STR_PTR {
+func (be BoundaryEvent) GetID() gobpmnTypes.STR_PTR {
 	return &be.ID
 }
 
 // GetName ...
-func (be BoundaryEvent) GetName() impl.STR_PTR {
+func (be BoundaryEvent) GetName() gobpmnTypes.STR_PTR {
 	return &be.Name
 }
 

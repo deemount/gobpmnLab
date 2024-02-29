@@ -1,15 +1,15 @@
 package time
 
-import "github.com/deemount/gobpmnLab/models/bpmn/impl"
+import gobpmnTypes "github.com/deemount/gobpmnTypes"
 
 type TimeBaseDefintionType interface {
 	SetTimerDefinitionType()
-	GetTimerDefinitionType() impl.STR_PTR
+	GetTimerDefinitionType() gobpmnTypes.STR_PTR
 }
 
 type TimeBaseDefinition interface {
 	SetTimerDefinition(timerDefinition string)
-	GetTimerDefinition() impl.STR_PTR
+	GetTimerDefinition() gobpmnTypes.STR_PTR
 }
 
 type TimeBaseCoreElements interface {

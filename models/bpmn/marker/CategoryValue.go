@@ -3,7 +3,7 @@ package marker
 import (
 	"fmt"
 
-	"github.com/deemount/gobpmnLab/models/bpmn/impl"
+	gobpmnTypes "github.com/deemount/gobpmnTypes"
 )
 
 // NewCategoryValue ...
@@ -45,7 +45,7 @@ func (categoryValue *CategoryValue) SetValue(value string) {
 /** BPMN **/
 
 // GetID
-func (categoryValue CategoryValue) GetID() impl.STR_PTR {
+func (categoryValue CategoryValue) GetID() gobpmnTypes.STR_PTR {
 	return &categoryValue.ID
 }
 

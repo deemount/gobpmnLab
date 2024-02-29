@@ -4,8 +4,8 @@ import (
 	"fmt"
 
 	"github.com/deemount/gobpmnLab/models/bpmn/attributes"
-	"github.com/deemount/gobpmnLab/models/bpmn/impl"
 	"github.com/deemount/gobpmnLab/models/bpmn/marker"
+	gobpmnTypes "github.com/deemount/gobpmnTypes"
 )
 
 func NewManualTask() ManualTaskRepository {
@@ -85,29 +85,29 @@ func (manualTask *ManualTask) SetOutgoing(num int) {
 /** BPMN **/
 
 // GetID ...
-func (manualTask ManualTask) GetID() impl.STR_PTR {
+func (manualTask ManualTask) GetID() gobpmnTypes.STR_PTR {
 	return &manualTask.ID
 }
 
 // GetName ...
-func (manualTask ManualTask) GetName() impl.STR_PTR {
+func (manualTask ManualTask) GetName() gobpmnTypes.STR_PTR {
 	return &manualTask.Name
 }
 
 /** Camunda **/
 
 // GetCamundaAsyncBefore ...
-func (manualTask ManualTask) GetCamundaAsyncBefore() impl.BOOL_PTR {
+func (manualTask ManualTask) GetCamundaAsyncBefore() gobpmnTypes.BOOL_PTR {
 	return &manualTask.CamundaAsyncBefore
 }
 
 // GetCamundaAsyncAfter ...
-func (manualTask ManualTask) GetCamundaAsyncAfter() impl.BOOL_PTR {
+func (manualTask ManualTask) GetCamundaAsyncAfter() gobpmnTypes.BOOL_PTR {
 	return &manualTask.CamundaAsyncAfter
 }
 
 // GetCamundaJobPriority ...
-func (manualTask ManualTask) GetCamundaJobPriority() impl.INT_PTR {
+func (manualTask ManualTask) GetCamundaJobPriority() gobpmnTypes.INT_PTR {
 	return &manualTask.CamundaJobPriority
 }
 

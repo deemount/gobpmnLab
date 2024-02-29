@@ -4,8 +4,8 @@ import (
 	"fmt"
 
 	"github.com/deemount/gobpmnLab/models/bpmn/attributes"
-	"github.com/deemount/gobpmnLab/models/bpmn/impl"
 	"github.com/deemount/gobpmnLab/models/bpmn/marker"
+	gobpmnTypes "github.com/deemount/gobpmnTypes"
 )
 
 func NewBusinessRuleTask() BusinessRuleTaskRepository {
@@ -92,34 +92,34 @@ func (businessRuleTask *BusinessRuleTask) SetOutgoing(num int) {
 /** BPMN **/
 
 // GetID ...
-func (businessRuleTask BusinessRuleTask) GetID() impl.STR_PTR {
+func (businessRuleTask BusinessRuleTask) GetID() gobpmnTypes.STR_PTR {
 	return &businessRuleTask.ID
 }
 
 // GetName ...
-func (businessRuleTask BusinessRuleTask) GetName() impl.STR_PTR {
+func (businessRuleTask BusinessRuleTask) GetName() gobpmnTypes.STR_PTR {
 	return &businessRuleTask.Name
 }
 
 /** Camunda **/
 
 // GetCamundaAsyncBefore ...
-func (businessRuleTask BusinessRuleTask) GetCamundaAsyncBefore() impl.BOOL_PTR {
+func (businessRuleTask BusinessRuleTask) GetCamundaAsyncBefore() gobpmnTypes.BOOL_PTR {
 	return &businessRuleTask.CamundaAsyncBefore
 }
 
 // GetCamundaAsyncAfter ...
-func (businessRuleTask BusinessRuleTask) GetCamundaAsyncAfter() impl.BOOL_PTR {
+func (businessRuleTask BusinessRuleTask) GetCamundaAsyncAfter() gobpmnTypes.BOOL_PTR {
 	return &businessRuleTask.CamundaAsyncAfter
 }
 
 // GetCamundaJobPriority ...
-func (businessRuleTask BusinessRuleTask) GetCamundaJobPriority() impl.INT_PTR {
+func (businessRuleTask BusinessRuleTask) GetCamundaJobPriority() gobpmnTypes.INT_PTR {
 	return &businessRuleTask.CamundaJobPriority
 }
 
 // GetCamundaClass ...
-func (businessRuleTask BusinessRuleTask) GetCamundaClass() impl.STR_PTR {
+func (businessRuleTask BusinessRuleTask) GetCamundaClass() gobpmnTypes.STR_PTR {
 	return &businessRuleTask.CamundaClass
 }
 

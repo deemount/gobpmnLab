@@ -1,6 +1,6 @@
 package camunda
 
-import "github.com/deemount/gobpmnLab/models/bpmn/impl"
+import gobpmnTypes "github.com/deemount/gobpmnTypes"
 
 // NewCamundaOutputParameter ...
 func NewCamundaOutputParameter() CamundaOutputParameterRepository {
@@ -53,12 +53,12 @@ func (outputParameter *CamundaOutputParameter) SetCamundaMap() {
 /** BPMN **/
 
 // GetName ...
-func (outputParameter CamundaOutputParameter) GetLocalVariableName() impl.STR_PTR {
+func (outputParameter CamundaOutputParameter) GetLocalVariableName() gobpmnTypes.STR_PTR {
 	return &outputParameter.LocalVariableName
 }
 
 // GetVariableAssignmentValue ...
-func (outputParameter CamundaOutputParameter) GetVariableAssignmentValue() impl.STR_PTR {
+func (outputParameter CamundaOutputParameter) GetVariableAssignmentValue() gobpmnTypes.STR_PTR {
 	return &outputParameter.VariableAssignmentValue
 }
 

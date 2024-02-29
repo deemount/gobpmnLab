@@ -3,7 +3,7 @@ package elements
 import (
 	"fmt"
 
-	"github.com/deemount/gobpmnLab/models/bpmn/impl"
+	gobpmnTypes "github.com/deemount/gobpmnTypes"
 )
 
 // NewSignal ...
@@ -45,12 +45,12 @@ func (signal *Signal) SetName(suffix string) {
 /** BPMN **/
 
 // GetID ...
-func (signal Signal) GetID() impl.STR_PTR {
+func (signal Signal) GetID() gobpmnTypes.STR_PTR {
 	return &signal.ID
 }
 
 // GetName ...
-func (signal Signal) GetName() impl.STR_PTR {
+func (signal Signal) GetName() gobpmnTypes.STR_PTR {
 	return &signal.Name
 }
 

@@ -5,7 +5,7 @@ import (
 
 	"github.com/deemount/gobpmnLab/models/bpmn/attributes"
 	"github.com/deemount/gobpmnLab/models/bpmn/conditional"
-	"github.com/deemount/gobpmnLab/models/bpmn/impl"
+	gobpmnTypes "github.com/deemount/gobpmnTypes"
 )
 
 // NewSequenceFlow ...
@@ -103,22 +103,22 @@ func (sequenceFlow *SequenceFlow) SetExtensionElements() {
 /** BPMN **/
 
 // GetID ...
-func (sequenceFlow SequenceFlow) GetID() impl.STR_PTR {
+func (sequenceFlow SequenceFlow) GetID() gobpmnTypes.STR_PTR {
 	return &sequenceFlow.ID
 }
 
 // GetName ...
-func (sequenceFlow SequenceFlow) GetName() impl.STR_PTR {
+func (sequenceFlow SequenceFlow) GetName() gobpmnTypes.STR_PTR {
 	return &sequenceFlow.Name
 }
 
 // GetSourceRef ...
-func (sequenceFlow SequenceFlow) GetSourceRef() impl.STR_PTR {
+func (sequenceFlow SequenceFlow) GetSourceRef() gobpmnTypes.STR_PTR {
 	return &sequenceFlow.SourceRef
 }
 
 // GetTargetRef ...
-func (sequenceFlow SequenceFlow) GetTargetRef() impl.STR_PTR {
+func (sequenceFlow SequenceFlow) GetTargetRef() gobpmnTypes.STR_PTR {
 	return &sequenceFlow.TargetRef
 }
 

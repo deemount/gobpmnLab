@@ -1,6 +1,6 @@
 package camunda
 
-import "github.com/deemount/gobpmnLab/models/bpmn/impl"
+import gobpmnTypes "github.com/deemount/gobpmnTypes"
 
 // NewCamundaExecutionListener ...
 func NewCamundaExecutionListener() CamundaExecutionListenerRepository {
@@ -47,12 +47,12 @@ func (executionListener *CamundaExecutionListener) SetCamundaField(num int) {
 /* Attributes */
 
 // GetClass ..
-func (executionListener CamundaExecutionListener) GetClass() impl.STR_PTR {
+func (executionListener CamundaExecutionListener) GetClass() gobpmnTypes.STR_PTR {
 	return &executionListener.Class
 }
 
 // GetEvent ...
-func (executionListener CamundaExecutionListener) GetEvent() impl.STR_PTR {
+func (executionListener CamundaExecutionListener) GetEvent() gobpmnTypes.STR_PTR {
 	return &executionListener.Event
 }
 

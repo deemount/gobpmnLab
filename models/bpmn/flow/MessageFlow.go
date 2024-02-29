@@ -5,7 +5,7 @@ import (
 	"log"
 
 	"github.com/deemount/gobpmnLab/models/bpmn/attributes"
-	"github.com/deemount/gobpmnLab/models/bpmn/impl"
+	gobpmnTypes "github.com/deemount/gobpmnTypes"
 )
 
 // NewMessageFlow ...
@@ -101,22 +101,22 @@ func (messageFlow *MessageFlow) SetExtensionElements() {
 /** BPMN **/
 
 // GetID ...
-func (messageFlow MessageFlow) GetID() impl.STR_PTR {
+func (messageFlow MessageFlow) GetID() gobpmnTypes.STR_PTR {
 	return &messageFlow.ID
 }
 
 // GetName ...
-func (messageFlow MessageFlow) GetName() impl.STR_PTR {
+func (messageFlow MessageFlow) GetName() gobpmnTypes.STR_PTR {
 	return &messageFlow.Name
 }
 
 // GetSourceRef ...
-func (messageFlow MessageFlow) GetSourceRef() impl.STR_PTR {
+func (messageFlow MessageFlow) GetSourceRef() gobpmnTypes.STR_PTR {
 	return &messageFlow.SourceRef
 }
 
 // GetTargetRef ...
-func (messageFlow MessageFlow) GetTargetRef() impl.STR_PTR {
+func (messageFlow MessageFlow) GetTargetRef() gobpmnTypes.STR_PTR {
 	return &messageFlow.TargetRef
 }
 

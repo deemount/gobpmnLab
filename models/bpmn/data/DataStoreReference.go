@@ -4,7 +4,7 @@ import (
 	"fmt"
 
 	"github.com/deemount/gobpmnLab/models/bpmn/attributes"
-	"github.com/deemount/gobpmnLab/models/bpmn/impl"
+	gobpmnTypes "github.com/deemount/gobpmnTypes"
 )
 
 // NewDataStoreReference ...
@@ -60,12 +60,12 @@ func (dsr *DataStoreReference) SetExtensionElements() {
 /** BPMN **/
 
 // GetID ...
-func (dsr DataStoreReference) GetID() impl.STR_PTR {
+func (dsr DataStoreReference) GetID() gobpmnTypes.STR_PTR {
 	return &dsr.ID
 }
 
 // GetName ...
-func (dsr DataStoreReference) GetName() impl.STR_PTR {
+func (dsr DataStoreReference) GetName() gobpmnTypes.STR_PTR {
 	return &dsr.Name
 }
 

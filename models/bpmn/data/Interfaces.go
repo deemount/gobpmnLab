@@ -2,18 +2,18 @@ package data
 
 import (
 	"github.com/deemount/gobpmnLab/models/bpmn/attributes"
-	"github.com/deemount/gobpmnLab/models/bpmn/impl"
+	gobpmnTypes "github.com/deemount/gobpmnTypes"
 )
 
 // DataObjectRepository ...
 type DataObjectRepository interface {
-	impl.IFBaseID
+	gobpmnTypes.IFBaseID
 }
 
 // DataObjectReferenceRepository ...
 type DataObjectReferenceRepository interface {
-	impl.IFBaseID
-	impl.IFBaseName
+	gobpmnTypes.IFBaseID
+	gobpmnTypes.IFBaseName
 	attributes.AttributesBaseElements
 	SetDataObjectRef(suffix interface{})
 	GetDataObjectRef() *string
@@ -21,7 +21,7 @@ type DataObjectReferenceRepository interface {
 
 // DataStoreRepository ...
 type DataStoreReferenceRepository interface {
-	impl.IFBaseID
-	impl.IFBaseName
+	gobpmnTypes.IFBaseID
+	gobpmnTypes.IFBaseName
 	attributes.AttributesBaseElements
 }

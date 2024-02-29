@@ -2,8 +2,8 @@ package definitions
 
 import (
 	"github.com/deemount/gobpmnLab/models/bpmn/conditional"
-	"github.com/deemount/gobpmnLab/models/bpmn/impl"
 	"github.com/deemount/gobpmnLab/models/bpmn/time"
+	gobpmnTypes "github.com/deemount/gobpmnTypes"
 )
 
 // @EndEvent only
@@ -28,13 +28,13 @@ type DefinitionsGetElements interface {
 }
 
 type DefinitionsBase interface {
-	impl.IFBaseID
-	impl.IFBaseName
+	gobpmnTypes.IFBaseID
+	gobpmnTypes.IFBaseName
 }
 
 // CancelEventDefinitionRepository ...
 type CancelEventDefinitionRepository interface {
-	impl.IFBaseID
+	gobpmnTypes.IFBaseID
 }
 
 // CompensateEventDefinitionRepository ...
@@ -42,7 +42,7 @@ type CompensateEventDefinitionRepository interface{}
 
 // ConditionalEventDefinitionRepository ...
 type ConditionalEventDefinitionRepository interface {
-	impl.IFBaseID
+	gobpmnTypes.IFBaseID
 
 	SetCamundaVariableName(variableName string)
 	GetCamundaVariableName() *string
@@ -53,30 +53,30 @@ type ConditionalEventDefinitionRepository interface {
 
 // ErrorEventDefinitionRepository ...
 type ErrorEventDefinitionRepository interface {
-	impl.IFBaseID
+	gobpmnTypes.IFBaseID
 }
 
 // EscalationEventDefinitionRepository ...
 type EscalationEventDefinitionRepository interface {
-	impl.IFBaseID
+	gobpmnTypes.IFBaseID
 }
 
 // LinkEventDefinitionRepository ...
 type LinkEventDefinitionRepository interface {
-	impl.IFBaseID
+	gobpmnTypes.IFBaseID
 }
 
 // MessageEventDefinitionRepository ...
 type MessageEventDefinitionRepository interface {
-	impl.IFBaseID
+	gobpmnTypes.IFBaseID
 
 	SetMsgRef(suffix string)
-	GetMsgRef() impl.STR_PTR
+	GetMsgRef() gobpmnTypes.STR_PTR
 }
 
 // SignalEventDefinitionRepository ...
 type SignalEventDefinitionRepository interface {
-	impl.IFBaseID
+	gobpmnTypes.IFBaseID
 
 	SetSignalRef(suffix string)
 	GetSignalRef() *string
@@ -84,12 +84,12 @@ type SignalEventDefinitionRepository interface {
 
 // TerminateEventDefinitionRepository ...
 type TerminateEventDefinitionRepository interface {
-	impl.IFBaseID
+	gobpmnTypes.IFBaseID
 }
 
 // TimerEventDefinitionRepository ...
 type TimerEventDefinitionRepository interface {
-	impl.IFBaseID
+	gobpmnTypes.IFBaseID
 
 	SetTimeDate()
 	GetTimeDate() *time.TimeDate

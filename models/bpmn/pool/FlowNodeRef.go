@@ -3,7 +3,7 @@ package pool
 import (
 	"fmt"
 
-	"github.com/deemount/gobpmnLab/models/bpmn/impl"
+	gobpmnTypes "github.com/deemount/gobpmnTypes"
 )
 
 // NewFlowNodeRef ...
@@ -33,6 +33,6 @@ func (fnr *FlowNodeRef) SetID(typ string, suffix interface{}) {
 /* Content */
 
 // GetID ...
-func (fnr FlowNodeRef) GetID() impl.STR_PTR {
+func (fnr FlowNodeRef) GetID() gobpmnTypes.STR_PTR {
 	return &fnr.ID
 }

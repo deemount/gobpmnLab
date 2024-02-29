@@ -4,7 +4,7 @@ import (
 	"fmt"
 
 	"github.com/deemount/gobpmnLab/models/bpmn/attributes"
-	"github.com/deemount/gobpmnLab/models/bpmn/impl"
+	gobpmnTypes "github.com/deemount/gobpmnTypes"
 )
 
 // NewDataObjectReference ...
@@ -63,12 +63,12 @@ func (dor *DataObjectReference) SetExtensionElements() {
 /* Attributes */
 
 // SetID ...
-func (dor DataObjectReference) GetID() impl.STR_PTR {
+func (dor DataObjectReference) GetID() gobpmnTypes.STR_PTR {
 	return &dor.ID
 }
 
 // SetName ...
-func (dor DataObjectReference) GetName() impl.STR_PTR {
+func (dor DataObjectReference) GetName() gobpmnTypes.STR_PTR {
 	return &dor.Name
 }
 

@@ -3,7 +3,7 @@ package pool
 import (
 	"fmt"
 
-	"github.com/deemount/gobpmnLab/models/bpmn/impl"
+	gobpmnTypes "github.com/deemount/gobpmnTypes"
 )
 
 // NewLane ...
@@ -48,7 +48,7 @@ func (lane *Lane) SetFlowNodeRef(num int) {
 /** BPMN **/
 
 // GetID ...
-func (lane Lane) GetID() impl.STR_PTR {
+func (lane Lane) GetID() gobpmnTypes.STR_PTR {
 	return &lane.ID
 }
 

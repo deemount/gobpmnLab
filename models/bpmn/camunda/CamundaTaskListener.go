@@ -1,6 +1,6 @@
 package camunda
 
-import "github.com/deemount/gobpmnLab/models/bpmn/impl"
+import gobpmnTypes "github.com/deemount/gobpmnTypes"
 
 // NewCamundaTaskListener ...
 func NewCamundaTaskListener() CamundaTaskListenerRepository {
@@ -45,18 +45,18 @@ func (taskListener *CamundaTaskListener) SetCamundaField(num int) {
 /* Attributes */
 
 // GetClass ...
-func (taskListener CamundaTaskListener) GetClass() impl.STR_PTR {
+func (taskListener CamundaTaskListener) GetClass() gobpmnTypes.STR_PTR {
 	return &taskListener.Class
 }
 
 // GetEvent ...
 // can be: assignment, create, complete, delete, update, timeout
-func (taskListener CamundaTaskListener) GetEvent() impl.STR_PTR {
+func (taskListener CamundaTaskListener) GetEvent() gobpmnTypes.STR_PTR {
 	return &taskListener.Event
 }
 
 // GetID ...
-func (taskListener CamundaTaskListener) GetListenerID() impl.STR_PTR {
+func (taskListener CamundaTaskListener) GetListenerID() gobpmnTypes.STR_PTR {
 	return &taskListener.ListenerID
 }
 

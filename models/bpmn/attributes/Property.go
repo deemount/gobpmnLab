@@ -3,7 +3,7 @@ package attributes
 import (
 	"fmt"
 
-	"github.com/deemount/gobpmnLab/models/bpmn/impl"
+	gobpmnTypes "github.com/deemount/gobpmnTypes"
 )
 
 // NewProperty ...
@@ -42,12 +42,12 @@ func (prop *Property) SetName(name string) {
 /* Attributes */
 
 // GetID ...
-func (prop Property) GetID() impl.STR_PTR {
+func (prop Property) GetID() gobpmnTypes.STR_PTR {
 	return &prop.ID
 
 }
 
 // GetName ...
-func (prop Property) GetName() impl.STR_PTR {
+func (prop Property) GetName() gobpmnTypes.STR_PTR {
 	return &prop.Name
 }

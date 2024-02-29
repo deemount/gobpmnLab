@@ -3,7 +3,7 @@ package elements
 import (
 	"fmt"
 
-	"github.com/deemount/gobpmnLab/models/bpmn/impl"
+	gobpmnTypes "github.com/deemount/gobpmnTypes"
 )
 
 // NewMessage ...
@@ -41,12 +41,12 @@ func (msg *Message) SetName(suffix string) {
 /* Attributes */
 
 // GetID ...
-func (msg Message) GetID() impl.STR_PTR {
+func (msg Message) GetID() gobpmnTypes.STR_PTR {
 	return &msg.ID
 }
 
 // GetName ...
-func (msg Message) GetName() impl.STR_PTR {
+func (msg Message) GetName() gobpmnTypes.STR_PTR {
 	return &msg.Name
 }
 

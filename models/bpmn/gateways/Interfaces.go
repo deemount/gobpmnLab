@@ -3,18 +3,18 @@ package gateways
 import (
 	"github.com/deemount/gobpmnLab/models/bpmn/attributes"
 	"github.com/deemount/gobpmnLab/models/bpmn/camunda"
-	"github.com/deemount/gobpmnLab/models/bpmn/impl"
 	"github.com/deemount/gobpmnLab/models/bpmn/marker"
+	gobpmnTypes "github.com/deemount/gobpmnTypes"
 )
 
 type GatewayID interface {
 	SetID(typ string, suffix interface{})
-	GetID() impl.STR_PTR
+	GetID() gobpmnTypes.STR_PTR
 }
 
 type GatewayName interface {
 	SetName(name string)
-	GetName() impl.STR_PTR
+	GetName() gobpmnTypes.STR_PTR
 }
 
 type GatewayBase interface {

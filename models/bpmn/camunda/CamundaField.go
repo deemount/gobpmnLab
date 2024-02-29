@@ -1,6 +1,6 @@
 package camunda
 
-import "github.com/deemount/gobpmnLab/models/bpmn/impl"
+import gobpmnTypes "github.com/deemount/gobpmnTypes"
 
 // NewCamundaField ...
 func NewCamundaField() CamundaFieldRepository {
@@ -39,7 +39,7 @@ func (cf *CamundaField) SetCamundaString() {
 /* Attributes */
 
 // GetName ...
-func (cf CamundaField) GetName() impl.STR_PTR {
+func (cf CamundaField) GetName() gobpmnTypes.STR_PTR {
 	return &cf.Name
 }
 

@@ -1,7 +1,7 @@
 package definitions
 
 import (
-	"github.com/deemount/gobpmnLab/models/bpmn/impl"
+	gobpmnTypes "github.com/deemount/gobpmnTypes"
 )
 
 // NewLinkEventDefinition ...
@@ -31,6 +31,6 @@ func (led *LinkEventDefinition) SetID(typ string, suffix interface{}) {
 /** BPMN **/
 
 // GetID ...
-func (led LinkEventDefinition) GetID() impl.STR_PTR {
+func (led LinkEventDefinition) GetID() gobpmnTypes.STR_PTR {
 	return &led.ID
 }

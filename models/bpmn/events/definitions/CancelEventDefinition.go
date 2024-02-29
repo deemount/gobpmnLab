@@ -1,7 +1,7 @@
 package definitions
 
 import (
-	"github.com/deemount/gobpmnLab/models/bpmn/impl"
+	gobpmnTypes "github.com/deemount/gobpmnTypes"
 )
 
 // NewCancelEventDefinition ...
@@ -31,6 +31,6 @@ func (ced *CancelEventDefinition) SetID(typ string, suffix interface{}) {
 /** BPMN **/
 
 // GetID ...
-func (ced CancelEventDefinition) GetID() impl.STR_PTR {
+func (ced CancelEventDefinition) GetID() gobpmnTypes.STR_PTR {
 	return &ced.ID
 }

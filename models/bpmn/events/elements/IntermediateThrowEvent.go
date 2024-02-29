@@ -7,8 +7,8 @@ import (
 
 	"github.com/deemount/gobpmnLab/models/bpmn/attributes"
 	"github.com/deemount/gobpmnLab/models/bpmn/events/definitions"
-	"github.com/deemount/gobpmnLab/models/bpmn/impl"
 	"github.com/deemount/gobpmnLab/models/bpmn/marker"
+	gobpmnTypes "github.com/deemount/gobpmnTypes"
 )
 
 // NewIntermediateThrowEvent ...
@@ -97,12 +97,12 @@ func (intermediateThrowEvent *IntermediateThrowEvent) SetSignalEventDefinition()
 /** BPMN **/
 
 // GetID ...
-func (intermediateThrowEvent IntermediateThrowEvent) GetID() impl.STR_PTR {
+func (intermediateThrowEvent IntermediateThrowEvent) GetID() gobpmnTypes.STR_PTR {
 	return &intermediateThrowEvent.ID
 }
 
 // GetName ...
-func (intermediateThrowEvent IntermediateThrowEvent) GetName() impl.STR_PTR {
+func (intermediateThrowEvent IntermediateThrowEvent) GetName() gobpmnTypes.STR_PTR {
 	return &intermediateThrowEvent.Name
 }
 

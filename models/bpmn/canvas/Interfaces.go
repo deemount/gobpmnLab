@@ -1,6 +1,9 @@
 package canvas
 
-import "github.com/deemount/gobpmnLab/models/bpmn/impl"
+import (
+	gobpmnDiagram "github.com/deemount/gobpmnDiagram/pkg/canvas"
+	gobpmnTypes "github.com/deemount/gobpmnTypes"
+)
 
 type CanvasBoundsElements interface {
 	SetBounds()
@@ -14,23 +17,23 @@ type CanvasLabelElements interface {
 
 // BoundsRepository ...
 type BoundsRepository interface {
-	impl.IFBaseCoordinates
+	gobpmnDiagram.IFBaseCoordinates
 	SetSize(width, height int)
-	GetSize() (impl.INT_PTR, impl.INT_PTR)
+	GetSize() (gobpmnTypes.INT_PTR, gobpmnTypes.INT_PTR)
 	SetWidth(width int)
-	GetWidth() impl.INT_PTR
+	GetWidth() gobpmnTypes.INT_PTR
 	SetHeight(height int)
-	GetHeight() impl.INT_PTR
+	GetHeight() gobpmnTypes.INT_PTR
 }
 
 // WaypointRepository ...
 type WaypointRepository interface {
-	impl.IFBaseCoordinates
+	gobpmnDiagram.IFBaseCoordinates
 }
 
 // Diagram ...
 type DiagramRepository interface {
-	impl.IFBaseID
+	gobpmnTypes.IFBaseID
 
 	SetPlane()
 	GetPlane() *Plane
@@ -40,8 +43,8 @@ type DiagramRepository interface {
 
 // Edge ...
 type EdgeRepository interface {
-	impl.IFBaseID
-	impl.IFBaseElement
+	gobpmnTypes.IFBaseID
+	gobpmnTypes.IFBaseElement
 	CanvasLabelElements
 
 	SetWaypoint()
@@ -56,8 +59,8 @@ type LabelRepository interface {
 
 // PlaneRepository ...
 type PlaneRepository interface {
-	impl.IFBaseID
-	impl.IFBaseElement
+	gobpmnTypes.IFBaseID
+	gobpmnTypes.IFBaseElement
 
 	SetAttrProcessElement(suffix string)
 	SetAttrCollaborationElement(suffix string)
@@ -73,14 +76,14 @@ type PlaneRepository interface {
 
 // ShapeRepository ...
 type ShapeRepository interface {
-	impl.IFBaseID
-	impl.IFBaseElement
+	gobpmnTypes.IFBaseID
+	gobpmnTypes.IFBaseElement
 	CanvasBoundsElements
 	CanvasLabelElements
 
 	SetIsHorizontal(isHorizontal bool)
-	GetIsHorizontal() impl.BOOL_PTR
+	GetIsHorizontal() gobpmnTypes.BOOL_PTR
 
 	SetIsMarkerVisible(isMarkerVisible bool)
-	GetIsMarkerVisible() impl.BOOL_PTR
+	GetIsMarkerVisible() gobpmnTypes.BOOL_PTR
 }

@@ -7,10 +7,10 @@ import (
 	"github.com/deemount/gobpmnLab/models/bpmn/events/elements"
 	"github.com/deemount/gobpmnLab/models/bpmn/flow"
 	"github.com/deemount/gobpmnLab/models/bpmn/gateways"
-	"github.com/deemount/gobpmnLab/models/bpmn/impl"
 	"github.com/deemount/gobpmnLab/models/bpmn/loop"
 	"github.com/deemount/gobpmnLab/models/bpmn/marker"
 	"github.com/deemount/gobpmnLab/models/bpmn/tasks"
+	gobpmnTypes "github.com/deemount/gobpmnTypes"
 )
 
 // Subprocesses ...
@@ -31,7 +31,7 @@ type TSubprocesses struct {
 
 // AdHocSubProcess ...
 type AdHocSubProcess struct {
-	impl.BaseAttributes
+	gobpmnTypes.BaseAttributes
 	attributes.Attributes
 	camunda.CoreAttributes
 	marker.IncomingOutgoing
@@ -48,7 +48,7 @@ type AdHocSubProcess struct {
 
 // TSubProcess ...
 type TAdHocSubProcess struct {
-	impl.BaseAttributes
+	gobpmnTypes.BaseAttributes
 	attributes.TAttributes
 	camunda.TCoreAttributes
 	marker.TIncomingOutgoing
@@ -65,7 +65,7 @@ type TAdHocSubProcess struct {
 
 // CallActivity ...
 type CallActivity struct {
-	impl.BaseAttributes
+	gobpmnTypes.BaseAttributes
 	attributes.Attributes
 	camunda.CoreAttributes
 	marker.IncomingOutgoing
@@ -78,7 +78,7 @@ type CallActivity struct {
 
 // TCallActivity ...
 type TCallActivity struct {
-	impl.BaseAttributes
+	gobpmnTypes.BaseAttributes
 	attributes.TAttributes
 	camunda.TCoreAttributes
 	marker.TIncomingOutgoing
@@ -91,7 +91,7 @@ type TCallActivity struct {
 
 // SubProcess ...
 type SubProcess struct {
-	impl.BaseAttributes
+	gobpmnTypes.BaseAttributes
 	attributes.Attributes
 	camunda.CoreAttributes
 	marker.IncomingOutgoing
@@ -106,7 +106,7 @@ type SubProcess struct {
 
 // TSubProcess ...
 type TSubProcess struct {
-	impl.BaseAttributes
+	gobpmnTypes.BaseAttributes
 	attributes.Attributes
 	camunda.TCoreAttributes
 	marker.IncomingOutgoing
@@ -122,7 +122,7 @@ type TSubProcess struct {
 
 // Transaction ...
 type Transaction struct {
-	impl.BaseAttributes
+	gobpmnTypes.BaseAttributes
 	attributes.Attributes
 	camunda.CoreAttributes
 	marker.IncomingOutgoing
@@ -131,7 +131,7 @@ type Transaction struct {
 
 // TTransaction ...
 type TTransaction struct {
-	impl.BaseAttributes
+	gobpmnTypes.BaseAttributes
 	attributes.TAttributes
 	camunda.TCoreAttributes
 	marker.TIncomingOutgoing

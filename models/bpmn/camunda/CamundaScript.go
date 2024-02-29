@@ -3,7 +3,7 @@ package camunda
 import (
 	"fmt"
 
-	"github.com/deemount/gobpmnLab/models/bpmn/impl"
+	gobpmnTypes "github.com/deemount/gobpmnTypes"
 )
 
 // NewCamundaScript ...
@@ -29,6 +29,6 @@ func (cscript *CamundaScript) SetScriptFormat(format string) {
 /* Attributes */
 
 // GetScriptFormat ...
-func (cscript CamundaScript) GetScriptFormat() impl.STR_PTR {
+func (cscript CamundaScript) GetScriptFormat() gobpmnTypes.STR_PTR {
 	return &cscript.ScriptFormat
 }

@@ -3,7 +3,7 @@ package canvas
 import (
 	"fmt"
 
-	"github.com/deemount/gobpmnLab/models/bpmn/impl"
+	gobpmnTypes "github.com/deemount/gobpmnTypes"
 )
 
 // NewEdge ...
@@ -63,12 +63,12 @@ func (edge *Edge) SetLabel() {
 /* Attributes */
 
 // GetID ...
-func (edge Edge) GetID() impl.STR_PTR {
+func (edge Edge) GetID() gobpmnTypes.STR_PTR {
 	return &edge.ID
 }
 
 // GetElement ...
-func (edge Edge) GetElement() impl.STR_PTR {
+func (edge Edge) GetElement() gobpmnTypes.STR_PTR {
 	return &edge.Element
 }
 

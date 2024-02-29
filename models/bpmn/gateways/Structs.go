@@ -3,8 +3,8 @@ package gateways
 import (
 	"github.com/deemount/gobpmnLab/models/bpmn/attributes"
 	"github.com/deemount/gobpmnLab/models/bpmn/camunda"
-	"github.com/deemount/gobpmnLab/models/bpmn/impl"
 	"github.com/deemount/gobpmnLab/models/bpmn/marker"
+	gobpmnTypes "github.com/deemount/gobpmnTypes"
 )
 
 // DelegateParameter ...
@@ -40,7 +40,7 @@ type TGateways struct {
 
 // ComplexGateway ...
 type ComplexGateway struct {
-	impl.BaseAttributes
+	gobpmnTypes.BaseAttributes
 	camunda.CoreAttributes
 	attributes.Attributes
 	marker.IncomingOutgoing
@@ -48,7 +48,7 @@ type ComplexGateway struct {
 
 // TComplexGateway ...
 type TComplexGateway struct {
-	impl.BaseAttributes
+	gobpmnTypes.BaseAttributes
 	camunda.TCoreAttributes
 	attributes.Attributes
 	marker.TIncomingOutgoing
@@ -56,7 +56,7 @@ type TComplexGateway struct {
 
 // EventBasedGateway ...
 type EventBasedGateway struct {
-	impl.BaseAttributes
+	gobpmnTypes.BaseAttributes
 	camunda.CoreAttributes
 	attributes.Attributes
 	marker.IncomingOutgoing
@@ -64,7 +64,7 @@ type EventBasedGateway struct {
 
 // TEventBasedGateway ...
 type TEventBasedGateway struct {
-	impl.BaseAttributes
+	gobpmnTypes.BaseAttributes
 	camunda.TCoreAttributes
 	attributes.TAttributes
 	marker.TIncomingOutgoing
@@ -72,7 +72,7 @@ type TEventBasedGateway struct {
 
 // ExclusiveGateway ...
 type ExclusiveGateway struct {
-	impl.BaseAttributes
+	gobpmnTypes.BaseAttributes
 	camunda.CoreAttributes
 	attributes.Attributes
 	marker.IncomingOutgoing
@@ -80,7 +80,7 @@ type ExclusiveGateway struct {
 
 // TExclusiveGateway ...
 type TExclusiveGateway struct {
-	impl.BaseAttributes
+	gobpmnTypes.BaseAttributes
 	camunda.TCoreAttributes
 	attributes.TAttributes
 	marker.TIncomingOutgoing
@@ -88,7 +88,7 @@ type TExclusiveGateway struct {
 
 // InclusiveGateway ...
 type InclusiveGateway struct {
-	impl.BaseAttributes
+	gobpmnTypes.BaseAttributes
 	camunda.CoreAttributes
 	attributes.Attributes
 	marker.IncomingOutgoing
@@ -96,7 +96,7 @@ type InclusiveGateway struct {
 
 // TInclusiveGateway ...
 type TInclusiveGateway struct {
-	impl.BaseAttributes
+	gobpmnTypes.BaseAttributes
 	camunda.TCoreAttributes
 	attributes.TAttributes
 	marker.TIncomingOutgoing
@@ -104,7 +104,7 @@ type TInclusiveGateway struct {
 
 // ParallelGateway ...
 type ParallelGateway struct {
-	impl.BaseAttributes
+	gobpmnTypes.BaseAttributes
 	camunda.CoreAttributes
 	attributes.Attributes
 	marker.IncomingOutgoing
@@ -112,7 +112,7 @@ type ParallelGateway struct {
 
 // TParallelGateway ...
 type TParallelGateway struct {
-	impl.BaseAttributes
+	gobpmnTypes.BaseAttributes
 	camunda.TCoreAttributes
 	attributes.TAttributes
 	marker.TIncomingOutgoing
