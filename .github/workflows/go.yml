@@ -9,16 +9,17 @@ jobs:
     runs-on: ubuntu-latest
     steps:
 
-    - uses: actions/checkout@v3
+    - uses: actions/setup-go@v4
       with:
-        fetch-depth: 50 # Need git history for testing.
-
-    - uses: actions/setup-go@v3
-      with:
-        go-version: '1.19'
+        go-version: '1.21.x'
         cache: true
-
     - name: Test
       run: go test -v -race -coverpkg=./... -coverprofile=coverage.txt ./...
 
-    - uses: codecov/codecov-action@v3
+    - uses: actions/checkout@v4
+    - name: Setup Go ${{ matrix.go-version }}
+      uses: actions/setup-go@v4
+      with:
+        go-version: ${{ matrix.go-version }}
+    - name: Display Go version
+      run: go version
