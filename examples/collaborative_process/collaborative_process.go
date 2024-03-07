@@ -3,7 +3,7 @@ package collaborative_process
 import (
 	"log"
 
-	"github.com/deemount/gobpmnLab/factory"
+	//"github.com/deemount/gobpmnLab/factory"
 	"github.com/deemount/gobpmnLab/models/bpmn/canvas"
 	"github.com/deemount/gobpmnLab/models/bpmn/collaboration"
 	"github.com/deemount/gobpmnLab/models/bpmn/core"
@@ -11,6 +11,7 @@ import (
 	"github.com/deemount/gobpmnLab/models/bpmn/flow"
 	"github.com/deemount/gobpmnLab/models/bpmn/process"
 	"github.com/deemount/gobpmnLab/models/bpmn/tasks"
+	gobpmn_reflection "github.com/deemount/gobpmnReflection"
 )
 
 // Process ...
@@ -28,51 +29,51 @@ type Pool struct {
 	CustomerSupportIsExecutable bool
 	CustomerIsExecutable        bool
 	// pool related
-	Collaboration          factory.Builder
-	CustomerSupportID      factory.Builder
-	CustomerSupportProcess factory.Builder
-	CustomerID             factory.Builder
-	CustomerProcess        factory.Builder
+	Collaboration          gobpmn_reflection.Reflection
+	CustomerSupportID      gobpmn_reflection.Reflection
+	CustomerSupportProcess gobpmn_reflection.Reflection
+	CustomerID             gobpmn_reflection.Reflection
+	CustomerProcess        gobpmn_reflection.Reflection
 }
 
 // CustomerSupport ...
 type CustomerSupport struct {
-	CustomerSupportStartEvent     factory.Builder
-	FromCustomerSupportStartEvent factory.Builder
-	CheckIncomingClaimTask        factory.Builder
-	FromCheckIncomingClaimTask    factory.Builder
-	DenyWarrantyClaimTask         factory.Builder
-	FromDenyWarrantyClaimTask     factory.Builder
-	CustomerSupportEndEvent       factory.Builder
+	CustomerSupportStartEvent     gobpmn_reflection.Reflection
+	FromCustomerSupportStartEvent gobpmn_reflection.Reflection
+	CheckIncomingClaimTask        gobpmn_reflection.Reflection
+	FromCheckIncomingClaimTask    gobpmn_reflection.Reflection
+	DenyWarrantyClaimTask         gobpmn_reflection.Reflection
+	FromDenyWarrantyClaimTask     gobpmn_reflection.Reflection
+	CustomerSupportEndEvent       gobpmn_reflection.Reflection
 }
 
 // Customer ...
 type Customer struct {
-	CustomerStartEvent                   factory.Builder
-	FromCustomerStartEvent               factory.Builder
-	NoticeOfDefectTask                   factory.Builder
-	FromNoticeOfDefectTask               factory.Builder
-	WaitingForAnswerTask                 factory.Builder
-	TimerEventDefinitionWaitingForAnswer factory.Builder
-	FromWaitingForAnswerTask             factory.Builder
-	ReceiptWarrantyRefusalTask           factory.Builder
-	FromReceiptWarrantyRefusalTask       factory.Builder
-	CustomerEndEvent                     factory.Builder
+	CustomerStartEvent                   gobpmn_reflection.Reflection
+	FromCustomerStartEvent               gobpmn_reflection.Reflection
+	NoticeOfDefectTask                   gobpmn_reflection.Reflection
+	FromNoticeOfDefectTask               gobpmn_reflection.Reflection
+	WaitingForAnswerTask                 gobpmn_reflection.Reflection
+	TimerEventDefinitionWaitingForAnswer gobpmn_reflection.Reflection
+	FromWaitingForAnswerTask             gobpmn_reflection.Reflection
+	ReceiptWarrantyRefusalTask           gobpmn_reflection.Reflection
+	FromReceiptWarrantyRefusalTask       gobpmn_reflection.Reflection
+	CustomerEndEvent                     gobpmn_reflection.Reflection
 }
 
 // Message ...
 type Message struct {
-	CustomerToCustomerSupportMessage factory.Builder
-	CustomerSupportToCustomerMessage factory.Builder
+	CustomerToCustomerSupportMessage gobpmn_reflection.Reflection
+	CustomerSupportToCustomerMessage gobpmn_reflection.Reflection
 }
 
 // NewCollaborativeProcess refers to the definitions struct to start building the model
 // e.g. def: new(models.Definitions) use factory function, if zero value is insufficent (allocates memory)
 func New() Proxy {
-	p := Builder.Inject(Process{}).(Process)
+	p := Reflection.Inject(Process{}).(Process)
 	p.Def = core.NewDefinitions()
-	Builder.Build(p.Def)
-	log.Printf("examples/collaborative_process/collaborative_process.go (New): result of Builder.Map %#v", Builder.Map)
+	Reflection.Create(p.Def)
+	log.Printf("examples/collaborative_process/collaborative_process.go (New): result of Builder.Map %#v", Reflection.Map)
 	return &p
 }
 
@@ -109,15 +110,15 @@ func (p *Process) elements() {
 	// Collaboration
 	collaboration := p.collaboration()
 	collaboration.SetID("collaboration", p.Collaboration.Suffix)
-	collaboration.SetParticipant(Builder.NumPart)
-	collaboration.SetMessageFlow(Builder.NumMsg)
+	collaboration.SetParticipant(Reflection.Participant)
+	collaboration.SetMessageFlow(Reflection.Message)
 	// Processes
-	p.customerSupportProcess().SetStartEvent(Builder.NumStartEvent / Builder.NumPart)
-	p.customerSupportProcess().SetEndEvent(Builder.NumEndEvent / Builder.NumPart)
+	p.customerSupportProcess().SetStartEvent(Reflection.StartEvent / Reflection.Participant)
+	p.customerSupportProcess().SetEndEvent(Reflection.EndEvent / Reflection.Participant)
 	p.customerSupportProcess().SetTask(2)
 	p.customerSupportProcess().SetSequenceFlow(3)
-	p.customerProcess().SetStartEvent(Builder.NumStartEvent / Builder.NumPart)
-	p.customerProcess().SetEndEvent(Builder.NumEndEvent / Builder.NumPart)
+	p.customerProcess().SetStartEvent(Reflection.StartEvent / Reflection.Participant)
+	p.customerProcess().SetEndEvent(Reflection.EndEvent / Reflection.Participant)
 	p.customerProcess().SetTask(2)
 	p.customerProcess().SetIntermediateCatchEvent(1)
 	p.customerProcess().SetSequenceFlow(4)
@@ -125,7 +126,7 @@ func (p *Process) elements() {
 	diagram := p.diagram()
 	diagram.SetPlane()
 	plane := p.plane()
-	plane.SetShape(Builder.NumShape)
+	plane.SetShape(Reflection.Shape)
 	plane.SetEdge(9)
 }
 

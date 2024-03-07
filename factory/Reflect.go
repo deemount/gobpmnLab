@@ -24,6 +24,7 @@ func NewReflect(p interface{}) *Reflect {
 // Interface where Element is the interface {}
 func (ref *Reflect) Interface() *Reflect {
 	ref.Element = reflect.ValueOf(&ref.IF).Elem()
+	log.Printf("factory.reflect: interface valueof %+v", ref.Element)
 	return ref
 }
 

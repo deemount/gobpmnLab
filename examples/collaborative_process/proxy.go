@@ -1,7 +1,7 @@
 package collaborative_process
 
-import "github.com/deemount/gobpmnLab/factory"
+import gobpmn_reflection "github.com/deemount/gobpmnReflection"
 
-var Builder factory.Builder
+var Reflection gobpmn_reflection.Reflection
 
 type Proxy interface{ Build() Process }

@@ -4,7 +4,11 @@ go 1.21.7
 
 require (
 	github.com/bwmarrin/snowflake v0.3.0
-	github.com/deemount/gobpmnDiagram v0.0.0-20240228084542-d5aa3e526030
-	github.com/deemount/gobpmnTypes v0.0.0-20240228122426-16d080c21cc0
-	github.com/gocarina/gocsv v0.0.0-20231116093920-b87c2d0e983a
+	github.com/deemount/gobpmnDiagram v0.0.0-20240229104916-c562aa517000
+	github.com/deemount/gobpmnTypes v0.0.0-20240229104912-07789ef9169e
+)
+
+require (
+	github.com/deemount/gobpmnModels v0.0.0-20240229105207-e3c75acd45e8 // indirect
+	github.com/deemount/gobpmnReflection v0.0.0-20240307145548-be646f17720e
 )

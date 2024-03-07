@@ -205,8 +205,6 @@ func (h *Builder) inject(p interface{}) interface{} {
 
 					log.Printf("factory/Builder.go (inject): >> field injection %d of %d done", i+1, n.NumField())
 
-					break
-
 				// kind is a struct
 				case reflect.Struct:
 
@@ -251,8 +249,6 @@ func (h *Builder) inject(p interface{}) interface{} {
 					}
 
 					log.Printf("factory/Builder.go (inject): >> field injection %d of %d done", i+1, n.NumField())
-
-					break
 
 				}
 

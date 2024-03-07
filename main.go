@@ -3,8 +3,11 @@ package main
 import (
 	"context"
 	_ "embed"
+	"flag"
 	"log"
+	_ "net/http/pprof"
 	"os"
+	"runtime"
 	"runtime/pprof"
 	"time"
 
@@ -16,6 +19,9 @@ var bpmnFactory repository.BpmnFactory
 var bpmnEngine repository.BpmnEngine
 var processInfo *repository.ProcessInfo
 var instance repository.ProcessInstance
+
+var cpuprofile = flag.String("cpuprofile", "", "write cpu profile to `file`")
+var memprofile = flag.String("memprofile", "", "write memory profile to `file`")
 
 // init ...
 func init() {
@@ -33,16 +39,31 @@ func main() {
 
 	start := time.Now()
 
-	cpuFile, err := os.Create("cpu.prof")
-	if err != nil {
-		log.Fatal("could not create CPU profile: ", err)
-	}
-	defer cpuFile.Close() // error handling omitted
+	flag.Parse()
+	if *cpuprofile != "" {
+		cpuFile, err := os.Create(*cpuprofile)
+		if err != nil {
+			log.Fatal("could not create CPU profile: ", err)
+		}
+		defer cpuFile.Close() // error handling omitted
 
-	if err := pprof.StartCPUProfile(cpuFile); err != nil {
-		log.Fatal("could not start CPU profile: ", err)
+		if err := pprof.StartCPUProfile(cpuFile); err != nil {
+			log.Fatal("could not start CPU profile: ", err)
+		}
+		defer pprof.StopCPUProfile()
 	}
-	defer pprof.StopCPUProfile()
+
+	if *memprofile != "" {
+		f, err := os.Create(*memprofile)
+		if err != nil {
+			log.Fatal("could not create memory profile: ", err)
+		}
+		defer f.Close() // error handling omitted
+		runtime.GC()    // get up-to-date statistics
+		if err := pprof.WriteHeapProfile(f); err != nil {
+			log.Fatal("could not write memory profile: ", err)
+		}
+	}
 
 	logFile, _ := os.Create("logs/build.log")
 	defer logFile.Close()

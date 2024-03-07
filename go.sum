@@ -1,8 +1,10 @@
 github.com/bwmarrin/snowflake v0.3.0 h1:xm67bEhkKh6ij1790JB83OujPR5CzNe8QuQqAgISZN0=
 github.com/bwmarrin/snowflake v0.3.0/go.mod h1:NdZxfVWX+oR6y2K0o6qAYv6gIOP9rjG0/E9WsDpxqwE=
-github.com/deemount/gobpmnDiagram v0.0.0-20240228084542-d5aa3e526030 h1:JUW2Asc7lHZsRZRvTBOZq6EcMOMRoSdiJL7Mgg7jaGI=
-github.com/deemount/gobpmnDiagram v0.0.0-20240228084542-d5aa3e526030/go.mod h1:/7C8sWvN52YeOazqRnBKZOlbr9TJkmTnZEEcndxDcr8=
-github.com/deemount/gobpmnTypes v0.0.0-20240228122426-16d080c21cc0 h1:iDxuMwNp14g0F8WSkEvZwFmmcBr93x5lIduYZVfcack=
-github.com/deemount/gobpmnTypes v0.0.0-20240228122426-16d080c21cc0/go.mod h1:Dw7Jo8/vr0DzNHNMnbwQu0JSMWm2klNdo00rcxHCzJs=
-github.com/gocarina/gocsv v0.0.0-20231116093920-b87c2d0e983a h1:RYfmiM0zluBJOiPDJseKLEN4BapJ42uSi9SZBQ2YyiA=
-github.com/gocarina/gocsv v0.0.0-20231116093920-b87c2d0e983a/go.mod h1:5YoVOkjYAQumqlV356Hj3xeYh4BdZuLE0/nRkf2NKkI=
+github.com/deemount/gobpmnDiagram v0.0.0-20240229104916-c562aa517000 h1:HzDePTEVjIPVfmjjtY5eemw4brc+Tl8L1wAhXwQIB3Q=
+github.com/deemount/gobpmnDiagram v0.0.0-20240229104916-c562aa517000/go.mod h1:/7C8sWvN52YeOazqRnBKZOlbr9TJkmTnZEEcndxDcr8=
+github.com/deemount/gobpmnModels v0.0.0-20240229105207-e3c75acd45e8 h1:cJvfj3LECefB1EfWzKMuVsXsU7f/t3HDdJQOMO5jDpA=
+github.com/deemount/gobpmnModels v0.0.0-20240229105207-e3c75acd45e8/go.mod h1:8HkFs9SEoVS0iCV/f6arOQesRWxSnjSO6m4e5Bk1S04=
+github.com/deemount/gobpmnReflection v0.0.0-20240307145548-be646f17720e h1:U7HNNoF/vsN+xMBmvbK7+6ZkZWZoznHY76m+P7f5vno=
+github.com/deemount/gobpmnReflection v0.0.0-20240307145548-be646f17720e/go.mod h1:iNztbfEKxQmB9t8joWyDh4yr2JAUvW/tOSBDXyUd/38=
+github.com/deemount/gobpmnTypes v0.0.0-20240229104912-07789ef9169e h1:TZldh195mNWqFM7WQI5bIyX5T6ONdDkcKlTIqXUj8l8=
+github.com/deemount/gobpmnTypes v0.0.0-20240229104912-07789ef9169e/go.mod h1:Dw7Jo8/vr0DzNHNMnbwQu0JSMWm2klNdo00rcxHCzJs=
