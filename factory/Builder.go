@@ -128,6 +128,8 @@ func (h *Builder) inject(p interface{}) interface{} {
 
 	log.Println("factory/Builder.go (inject): > NewReflect of interface{} >>p<<. Start injecting fields")
 
+	//c := Count{}
+
 	ref := NewReflect(p)
 	ref.Interface().New().Maps().Reflection()
 
@@ -322,6 +324,7 @@ func (h *Builder) inject(p interface{}) interface{} {
 	}
 
 	p = ref.Set()
+
 	ref.countWords()
 
 	log.Printf("factory/Builder.go (inject): eof inject; detect %d of reflected public methods", reflect.TypeOf(p).NumMethod())

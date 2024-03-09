@@ -10,5 +10,5 @@ require (
 
 require (
 	github.com/deemount/gobpmnModels v0.0.0-20240229105207-e3c75acd45e8 // indirect
-	github.com/deemount/gobpmnReflection v0.0.0-20240307145548-be646f17720e
+	github.com/deemount/gobpmnReflection v0.0.0-20240309063712-14beeaaaa96e
 )

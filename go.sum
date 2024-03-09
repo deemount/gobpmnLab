@@ -4,7 +4,7 @@ github.com/deemount/gobpmnDiagram v0.0.0-20240229104916-c562aa517000 h1:HzDePTEV
 github.com/deemount/gobpmnDiagram v0.0.0-20240229104916-c562aa517000/go.mod h1:/7C8sWvN52YeOazqRnBKZOlbr9TJkmTnZEEcndxDcr8=
 github.com/deemount/gobpmnModels v0.0.0-20240229105207-e3c75acd45e8 h1:cJvfj3LECefB1EfWzKMuVsXsU7f/t3HDdJQOMO5jDpA=
 github.com/deemount/gobpmnModels v0.0.0-20240229105207-e3c75acd45e8/go.mod h1:8HkFs9SEoVS0iCV/f6arOQesRWxSnjSO6m4e5Bk1S04=
-github.com/deemount/gobpmnReflection v0.0.0-20240307145548-be646f17720e h1:U7HNNoF/vsN+xMBmvbK7+6ZkZWZoznHY76m+P7f5vno=
-github.com/deemount/gobpmnReflection v0.0.0-20240307145548-be646f17720e/go.mod h1:iNztbfEKxQmB9t8joWyDh4yr2JAUvW/tOSBDXyUd/38=
+github.com/deemount/gobpmnReflection v0.0.0-20240309063712-14beeaaaa96e h1:ErpmOMNk6eM1rmsyXwX1kS+7VFabxo5pHZ31/YreN2s=
+github.com/deemount/gobpmnReflection v0.0.0-20240309063712-14beeaaaa96e/go.mod h1:NhbSOQE5lfqYvNkZXsm6xWTq3Wpy5xBPaERNqM/0OgI=
 github.com/deemount/gobpmnTypes v0.0.0-20240229104912-07789ef9169e h1:TZldh195mNWqFM7WQI5bIyX5T6ONdDkcKlTIqXUj8l8=
 github.com/deemount/gobpmnTypes v0.0.0-20240229104912-07789ef9169e/go.mod h1:Dw7Jo8/vr0DzNHNMnbwQu0JSMWm2klNdo00rcxHCzJs=

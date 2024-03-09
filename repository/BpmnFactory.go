@@ -7,6 +7,7 @@ import (
 	"os"
 
 	"github.com/deemount/gobpmnLab/examples/collaborative_process"
+	//"github.com/deemount/gobpmnLab/examples/collaborative_process_factory"
 	"github.com/deemount/gobpmnLab/models/bpmn/core"
 )
 
@@ -72,6 +73,7 @@ func (factory *bpmnFactory) set() {
 	// 1
 	//factory.Repo = small_process.New().Build().Call()
 	factory.Repo = collaborative_process.New().Build().Call()
+	//factory.Repo = collaborative_process_factory.New().Build().Call()
 
 	// 2
 	// repositoryModel := examples.NewBlackBoxModel()
