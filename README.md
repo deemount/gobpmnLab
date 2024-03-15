@@ -107,6 +107,12 @@ There's actually no wiki for this repository installed ...
 
 **Start here** [gobpmn](https://github.com/deemount/gobpmn)
 
+## Other Examples
+
+In addition, a repository with available applications has now been created. Examples for execution are stored here.
+
++ [gobpmnByExample](https://github.com/deemount/gobpmnByExample)
+
 ## Modules
 
 + [gobpmnTypes](https://github.com/deemount/gobpmnTypes)
@@ -114,6 +120,8 @@ There's actually no wiki for this repository installed ...
 + [gobpmnCamunda](https://github.com/deemount/gobpmnCamunda)
 + [gobpmnDiagram](https://github.com/deemount/gobpmnDiagram)
 + [gobpmnBuilder](https://github.com/deemount/gobpmnBuilder)
++ [gobpmnCounter](https://github.com/deemount/gobpmnCounter)
++ [gobpmnHash](https://github.com/deemount/gobpmnHash)
 + [gobpmnReflection](https://github.com/deemount/gobpmnReflection)
 
 **Note:** gobpmnLab already imports the module gobpmnTypes and gobpmnDiagram (not complete).
